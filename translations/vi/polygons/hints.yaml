@@ -1,0 +1,5 @@
+inequality-impossible: Có thể có một số bộ ba là không thể. Nếu bạn bị tắc ở đâu đó, hãy thử những cái khác. 
+
+inequality-error-1: Nó không phải là một tam giác hợp lệ, vì 1 + 2 không lớn hơn 3.
+inequality-error-2: Nó không phải là một tam giác hợp lệ, vì 2 + 4 không lớn hơn 7.
+inequality-error-3: Nó không phải là một tam giác hợp lệ, vì 1 + 6 không lớn hơn 8.

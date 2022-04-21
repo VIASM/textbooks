@@ -1,0 +1,1923 @@
+# Diện tích và Các dạng hình học
+
+## Giới thiệu
+
+> section: introduction
+> sectionStatus: dev
+> id: performance-1
+> color: "#0F82F2"
+> level: Foundations
+
+Trên khắp thế giới, những nghệ sĩ biểu diễn trên đường phố khiến khán giả thích thú với những màn trình diễn cận cảnh và hấp dẫn của họ. Như ta thấy ở đây, tại Covent Gardens ở London, những người biểu diễn thường giăng dây để giữ khán giả bên ngoài không gian biểu diễn của họ.
+
+    figure: x-img(src="https://st3.depositphotos.com/1817276/19080/i/1600/depositphotos_190806246-stock-photo-london-circa-january-2018-knife.jpg" width=600 height=438)
+
+Hãy tưởng tượng bạn là một nghệ sĩ biểu diễn đường phố và bạn cần đặt một sợi dây màu đỏ để đánh dấu sân khấu của mình. Nhặt sợi dây màu đỏ bên dưới và tạo một sân khấu trên đá cuội sao cho:
+
+::: span
+
+1. Bạn buộc dây 200 __or more__ đá cuội.
+2. Bạn sử dụng 20 mét dây hoặc ít hơn.
+3. Không gian được bao kín hoàn toàn (hai đầu sợi dây chạm vào nhau).
+4. Sợi dây không bị bắt chéo.
+
+:::
+
+    // [TODO]: INTERACTIVE-01: Performance area 1 (pages 1-2)
+    figure: x-geopad(width=600 height=400)
+      svg
+
+Bây giờ, hãy tập trung vào hình dạng chúng ta tạo ra từ sợi dây và tưởng tượng nó như một hình được vẽ trên một tờ giấy. Hãy nhớ lại rằng chu vi là chiều dài của đường biên, hoặc đường ranh giới, của một hình và diện tích là phần không gian mà một hình bao phủ hoặc bao quanh.
+
+::: .reveal(when="rope-drawn")
+
+Hình của ta đã sử dụng ${firstArea.ropeUsed.toFixed(2)} mét dây. Vì thế, ${firstArea.ropeUsed.toFixed(2)} mét là [[chu vi | diện tích | thể tích ]] của hình đó.
+
+Hình của ta đã tạo ${firstArea.cobblestones} đá cuội. Do đó, ${firstArea.cobblestones} đá cuội là  [[diện tích | chu vi | thể tích ]] của hình đó.
+
+Hình đã sử dụng ${firstArea.ropeUsed.toFixed(2)} mét dây. Sau đây, ta tạo ra ba không gian biểu diễn khác nhau với cùng chiều dài của sợi dây.
+
+:::
+
+---
+
+> id: performance-2
+
+    // [TODO]: INTERACTIVE-02: Performance areas (page 2)
+    figure: x-geopad(width=600 height=400)
+      svg
+
+Ta sử dụng [[cùng | khác]] số lượng dây ở mỗi lần, nhưng đã tạo các hình [[khác | cùng]] số lượng đá cuội. Các hình dạng khác nhau với [[cùng | khác]] chu vi có thể [[khác | cùng]] diện tích.
+
+---
+
+Bây giờ, hãy cùng tìm hiểu sự khác biệt giữa chu vi và diện tích của một hình. Hãy cùng suy nghĩ qua năm ví dụ sau sẽ làm nổi bật sự khác biệt này.
+
+::: column.grow
+1. Nếu chúng ta cần biết số lượng thảm để mua trãi sàn phòng khách của chúng ta, chúng ta sẽ cần tìm [[diện tích | chu vi]] của sàn phòng khách đó.
+::: column(width=200)
+    x-img(width=200 height=133 src="https://st.depositphotos.com/1017986/4242/i/950/depositphotos_42423393-stock-photo-close-up-of-male-hands.jpg")
+:::
+::: column.grow
+2. Nếu chúng ta cần biết chiều dài hàng rào cần để bao quanh một sân, chúng ta sẽ cần tìm [[chu vi | diện tích]] của sân đó.
+::: column(width=200)
+    x-img(width=200 height=132 src="https://st.depositphotos.com/1653005/3304/i/950/depositphotos_33047243-stock-photo-horse-stables.jpg")
+:::
+::: column.grow
+3. Nếu chúng ta cần biết chúng ta cần dải ruy băng dài bao nhiêu để trang trí bên ngoài một chiếc gương, chúng ta sẽ cần tìm [[chu vi | diện tích]] của chiếc gương đó.
+::: column(width=200)
+    x-img(width=200 height=200 src="https://st2.depositphotos.com/1192512/5199/v/950/depositphotos_51997521-stock-illustration-big-mirror-with-blurry-reflection.jpg")
+:::
+::: column.grow
+4. Nếu chúng ta cần xác định đường bờ biển của một hòn đảo dài bao nhiêu, chúng ta sẽ cần tìm [[chu vi | diện tích]] của hòn đảo đó.
+::: column(width=200)
+    x-img(width=200 height=127.667 src="https://st2.depositphotos.com/2247853/12009/i/950/depositphotos_120091998-stock-photo-north-cape-of-kauai.jpg")
+:::
+::: column.grow
+5. Nếu chúng ta cần biết cần bao nhiêu vật liệu để thay thế sàn của một phòng tập thể dục, chúng ta sẽ cần tìm [[diện tích | chu vi]] của phòng tập thể dục đó.
+::: column(width=200)
+    x-img(width=200 height=133 src="https://static3.depositphotos.com/1006422/205/i/950/depositphotos_2050132-stock-photo-the-gymnasium.jpg")
+:::
+
+---
+
+Các câu lạc bộ bóng đá thường cần phải thay thế mặt sân cỏ sau khi nó đã bị mài mòn. Vào năm 2018, sân Estadio Azteca ở Thành phố Mexico trông như thế này trước khi sân được thay thế.
+
+    figure: x-img(width=600 height=450 src="https://pbs.twimg.com/media/Dr505QhUcAAkArx?format=jpg&name=medium")
+
+Các câu lạc bộ thường lựa chọn giữa các ô vuông cỏ hoặc mảng lát cỏ nhân tạo để thay thế cỏ đã mòn:
+
+::: column(width=300)
+    x-img(width=300 height=199 src="https://st.depositphotos.com/1022214/2042/i/950/depositphotos_20421735-stock-photo-artificial-turf.jpg")
+::: column(width=300)
+    x-img(width=300 height=219 src="https://st3.depositphotos.com/1011434/14373/i/1600/depositphotos_143733669-stock-photo-gardener-applying-turf-rolls.jpg")
+:::
+
+---
+
+> id: grass-placement
+
+Dưới đây là hình ảnh của một sân bóng đã cũ nát. Kéo các hình vuông cỏ mới lên sân đã mòn bên dưới để làm mô hình thay thế cỏ.
+
+    // [TODO]: INTERACTIVE-03: Field grass placement (page 6)
+    figure: .grass-placement.rect-placement
+      x-img(width=525 height=350 src="https://static4.depositphotos.com/1008169/329/i/950/depositphotos_3297355-stock-photo-grunge-soccer-field.jpg")
+      x-polypad(rotate="no")
+
+Hãy ước tính xem chúng ta sẽ cần bao nhiêu hình vuông cỏ để thay thế sân. Chỉ cần nhìn vào hình ảnh của sân và đoán nhanh. Nhập dự đoán ở đây: [TODO]
+
+::: column.grow
+Vì nó là một hình vuông và độ dài mỗi cạnh là 1 [[mét | centimét | kilomét]], ta gọi hình vuông này có kích thước là một mét vuông.
+::: column(width=200)
+    // [TODO]: DIAGRAM-01: Turf square (page 6)
+:::
+
+Nhớ lại ước tính của bạn về [[diện tích | chu vi ]] của sân là TODO [[mét vuông | mét | centimét vuông]]. Chúng ta sẽ tìm hiểu ở phần sau của chương này xem ước tính của bạn gần với đúng kết quả như thế nào!
+
+---
+
+> id: strip-placement
+
+Bây giờ cỏ mới đã được thay thế, chúng ta cần vẽ các đường kẻ trên sân.
+
+    figure: x-img(width=600 height=400 src="https://artificialgrassrecyclers.com/wp-content/uploads/2017/04/painting-turf.jpg")
+
+Kéo từng đường màu trắng lên sân để vẽ mô hình đường bao quanh sân. Một đường màu trắng bằng một hộp sơn.
+
+    // [TODO]: INTERACTIVE-04: Field stripes placement (page 7)
+    figure: .strip-placement.rect-placement
+      div.field(style="width:525px;height:350px;position:absolute;margin-left:75px;background-color:green")
+      x-polypad(rotate="no")
+
+Hãy ước tính xem ta sẽ cần bao nhiêu hộp sơn để sơn đường bao xung quanh sân. Chỉ cần nhìn vào hình ảnh của sân và đoán nhanh. Nhập dự đoán ở đây: [TODO]
+
+Mỗi hộp sơn có thể tạo thành một đường dài 1m. Hãy nhớ lại ước tính của bạn về [[chu vi | diện tích ]] của sân là TODO [[mét | mét vuông | centimét vuông]]. Một lần nữa, sau này chúng ta sẽ tìm hiểu xem ước tính của bạn gần với kết quả đến mức nào.
+
+---
+
+> id: centimeters
+
+Bây giờ, hãy chuyển sang suy nghĩ sâu hơn về diện tích của hình chữ nhật. Dưới đây là một loạt các centimét vuông. Hãy nhớ rằng, đây là những hình vuông có độ dài các cạnh là [[1]] centimét. Kéo các centimét vuông vào hình chữ nhật sau để lấp vào hình chữ nhật.
+
+    // [TODO]: INTERACTIVE-05: Rectangle squares (pages 8-9)
+    figure: x-geopad(width=600 height=400)
+      svg
+
+Hình chữ nhật này có [[3]] dòng, và mỗi dòng có [[5]] hình vuông, vì thế ta sử dụng `3 x 5 = input(15)` hình vuông tổng cộng.
+
+Mỗi hình vuông là một centimét vuông, do đó [[diện tích | chu vi]] của hình chữ nhật này là [[15]] [[centimét vuông | centimét | mét vuông]].
+
+Tiếp tục, độ dài cạnh của mỗi hình vuông là [[1]] centimét. Vì vậy, ta biết chiều dài của đáy của hình chữ nhật là [[5]] centimét và chiều cao của hình chữ nhật là [[3]] cm. Chu vi của hình chữ nhật là [[16]] [[centimét | centimét vuông]].
+
+---
+
+Trước khi chúng ta tiếp tục với diện tích và chu vi, hãy thảo luận về một số đơn vị thường được sử dụng cho chu vi và diện tích. Trong chương này, chúng ta sẽ sử dụng centimét, mét và kilomét.
+
+Một centimét là khoảng [[chiều rộng của một cái ghim kẹp | chiều dài của một cây đàn guitar | khoảng cách giữa hai vòng quanh một đường đua]].
+
+Một mét là khoảng [[chiều dài của một cây đàn guitar | chiều rộng của một cái ghim kẹp | khoảng cách giữa hai vòng quanh một đường đua]].
+
+Một kilomét là khoảng [[khoảng cách giữa hai vòng quanh một đường đua | chiều dài của một cây đàn guitar | chiều rộng của một cái ghim kẹp]].
+
+---
+
+Diện tích là khoảng không gian bên trong của một đối tượng. Để xác định diện tích của một hình, chúng ta đã lấp đầy không gian bên trong một đối tượng bằng các hình vuông. Chúng ta cũng có thể sử dụng các hình dạng khác. Bạn có thể nghiên cứu ý tưởng đó trong một chương về lưới tổ ong.
+
+Mét vuông là hình vuông có độ dài các cạnh là [[1]] [[mét | centimét | kilomét]], và centimét vuông là [[hình vuông | hình tròn | tam giác]] với độ dài các cạnh là [[1]] [[centimét | mét | kilomét]]. Vì vậy, một kilomét vuông là một hình vuông có độ dài các cạnh là [[1]] [[kilomét | mét | centimét]].
+
+Khi chúng ta nói về một số mét vuông nhất định, hãy nói 7 trong số chúng, chúng ta có thể viết là "7 mét vuông" hoặc “7 `"m"^2`”. Trên thực tế “`"m"^2`" được đọc là “mét vuông.” Bất kỳ lũy thừa nào của “2” thường được đọc là “bình phương”. Ví dụ, chúng ta có thể đọc `9^2` as “9 bình phương” bởi vì chúng ta sẽ cần phải nhân lên `9 x 9` khi tính [[diện tích | chu vi]] của một hình vuông có cạnh là 9.
+
+---
+
+Sắp xếp các đơn vị đo dưới đây thành đơn vị đo chiều dài và đơn vị đo diện tích:
+
+    // [TODO]: INTERACTIVE-06: Measurement units (pages 10-11)
+
+{.todo} Coming Soon!
+
+Bây giờ, hãy sắp xếp các đơn vị đo lường cho diện tích. Mỗi đơn vị đo lường được biểu diễn theo ba cách khác nhau. Kéo từng nhãn vào ô vuông chính xác.
+
+---
+
+> id: half-meters
+
+Dưới đây là một mét vuông và một thùng các hình vuông có mỗi cạnh là `1/2` mét. Hãy xem bạn cần điền bao nhiêu `1/2` mét vuông vào một mét vuông:
+
+    // INTERACTIVE-07: Square meter filling (pages 11-12)
+    figure: x-geopad(width=600 height=400)
+      svg
+
+Nó cần [[`4 1/2`|`4 1/4`|`4 3/4`]] centimét vuông để điền vào 1 mét vuông. Vì vậy, diện tích của một hình vuông với `1/2` mét mỗi cạnh là _{x-equation(solution="1/4" keys="frac" numeric)}_ diện tích của 1 mét vuông.
+
+---
+
+Hãy vận dụng hiểu biết của chúng ta về diện tích vào một ví dụ khác. Bắt đầu khám phá diện tích của hình chữ nhật bên dưới bằng cách kéo 3 hình bất kỳ ở bên trái vào hình chữ nhật màu xanh.
+
+    // [TODO]: INTERACTIVE-08: Rectangle filling (pages 12-13)
+
+{.todo} Coming Soon!
+
+Hãy xem liệu chúng ta có thể xác định được diện tích của hình chữ nhật màu xanh hay không. Cạnh đáy có độ dài là _{x-equation(solution="3.5" numeric)}_ centimét và chiều cao là _{x-equation(solution="2.5" numeric)}_ centimét. Diện tích của hình chữ nhật [[`8 3/4`|`8 1/2`|`8 1/4`]] [[centimét vuông | centimét | mét vuông]].
+
+---
+
+Diện tích của hình chữ nhật là `8 3/4` centimét vuông.
+
+    // [TODO]: ANIMATION-01: Rectangle area (page 14)
+
+---
+
+Ví dụ về diện tích đầu tiên là chúng ta có 3 hàng, mỗi hàng 5 centimét vuông vậy tổng cộng có [[15]] [[centimét vuông | centimét]]. `3 x 5 = input(15)`.
+
+Ví dụ này có [[`2 1/2` | `2 1/4` | `2 3/4`]] các dòng của `3 1/2` centimét vuông. Vì vậy, để tìm diện tích chúng ta có thể tính `2 blank(1/2, 1/4, 3/4) x 3 blank(1/2, 1/4, 3/4)` bằng với [[`8 3/4`|`8 1/2`|`8 1/4`]].
+
+Nếu bạn quên cách tính `2 1/2 x 3 1/2`, bạn có thể xem lại chương Nhân và Chia phân số. `2 1/2 x 3 1/2` nghĩa là `2 1/2` nhân với `3 1/2`.
+
+---
+
+    // [TODO]: ANIMATION-02: Areas (pages 15-16)
+
+{.todo} Coming Soon!
+
+Sự sắp xếp này xem khá quen thuộc! `2 1/2 x 3 1/2` = [[`8 3/4`|`8 1/2`|`8 1/4`]].
+
+---
+
+Vì vậy, bằng cách đếm số hàng và số cột, và [[nhân | cộng | trừ | chia]] những con số đó, chúng ta đã tìm ra công thức cho diện tích của bất kỳ [[hình chữ nhật | hình tròn | tam giác]].
+
+Diện tích Hình chữ nhật = số đơn vị của cạnh đáy [[ x | + | -]] số đơn vị của [[chiều cao | đường chéo]]. Chúng ta có thể viết tắt công thức này là:
+
+Diện tích Hình chữ nhật = cạnh đáy [[ x | + | -]] [[chiều cao | cạnh đáy | đường chéo]].
+
+---
+
+    // [TODO]: DIAGRAM-01: Rectangle area (page 16)
+
+{.todo} Coming Soon!
+
+Hãy nghĩ về chu vi của cùng một hình chữ nhật này. Dưới đây là một số phép tính sử dụng độ dài các cạnh của hình chữ nhật ở trên. Sắp xếp các phép tính này thành những phép tính sẽ cho bạn chu vi chính xác và những phép tính không phải.
+
+    // [TODO]: INTERACTIVE-09: Area calculation sorting (page 17)
+
+{.todo} Coming Soon!
+
+---
+
+Chu vi của hình chữ nhật là [[12]] [[centimét | mét vuông | centimét vuông]].
+
+---
+
+Hãy kết thúc chương này bằng cách quay lại công việc của ta với sân bóng. Bạn đoán diện tích của sân này là TODO [[mét vuông | mét]]. Dưới đây là hình ảnh của sân bóng cũng như hình ảnh ước tính của bạn:
+
+    // [TODO]: DIAGRAM-02: Field rectangle comparison (page 17)
+
+{.todo} Coming Soon!
+
+Có vẻ như ước tính của bạn về diện tích là [[quá lớn | quá nhỏ].
+
+---
+
+Bây giờ, hãy tìm diện tích thực tế của sân bóng.
+
+    // [TODO]: DIAGRAM-03: Field dimensions (page 18)
+
+{.todo} Coming Soon!
+
+Chiều dài của cạnh đáy là [[110]] [[mét | mét vuông]] và chiều cao là [[75]] [[mét | mét vuông]]. Điều này có nghĩa là, chúng ta sẽ cần [[75]] hàng của [[110]] mét vuông ô cỏ để che phủ sân bóng. Để tính diện tích, chúng ta cần nhân `75 x blank(110)`. Điều này cho ta diện tích [[8250]] [[mét vuông | mét]]. Ước tính của bạn là TODO mét vuông.
+
+---
+
+Hãy xem lại phỏng đoán chu vi của bạn. Bạn đoán chu vi của sân bóng là TODO [[mét | mét vuông]]. Dưới đây là hình ảnh của sân bóng như chu vi ước tính của bạn.
+
+    // [TODO] (DISCUSS): Talk to Philipp about the end of this chapter (I'm not sure what to include)
+
+{.todo} Coming Soon!
+
+---
+
+## Hình bình hành
+
+> section: parallelograms
+> sectionStatus: dev
+
+Tòa nhà văn phòng Dockland ở Hamburg, Đức có “hình dạng tạo ấn tượng khác biệt về một con tàu”.
+
+    // building img (page 1)
+    figure: x-img(width=600 height=400 src="https://st3.depositphotos.com/1034044/12761/i/950/depositphotos_127611452-stock-photo-the-dockland-office-building-in.jpg")
+
+Tuy nhiên, hầu hết các tòa nhà văn phòng, như Trụ sở Liên hợp quốc ở Thành phố New York, đều có mặt tiền hình chữ nhật.
+
+    // [TODO] DIAGRAM-01 building (page 2)
+    figure: x-img(width=499 height=571 src="images/un_building_diagram.jpg")
+
+Giả sử bề mặt chúng ta thấy trong hình này chỉ được làm bằng kính. Lượng kính được sử dụng trên bề mặt này là [[13398]] [[mét vuông | mét]].
+
+    // [TODO] DIAGRAM-02 building (page 3)
+    figure: x-img(width=500 height=203 src="images/slant_building_diagram.jpg")
+
+Tương tự như vậy, giả sử bề mặt chúng ta thấy trong Tòa nhà văn phòng Dockland cũng chỉ được làm bằng kính. Dự đoán lượng kính được sử dụng trên bề mặt này của tòa nhà này: TODO [[mét vuông | mét]].
+
+Điều gì mô tả tốt nhất cách bạn thực hiện ước tính của mình?
+A)	Tôi nhân 70 và 132.
+B)	Tôi đã thử so sánh kích thước của tòa nhà LHQ với tòa nhà này và sử dụng câu trả lời từ tòa nhà LHQ để ước tính.
+C)	Tôi không biết, vì vậy tôi chỉ nhập một số
+D)	Tôi đã làm một cách khác không được liệt kê ở đây.
+
+Đây là cách các học sinh khác trả lời câu hỏi này.
+
+Để kiểm tra ước tính của chúng ta, hãy tưởng tượng Tòa nhà văn phòng Dockland thực sự là ba tòa nhà riêng biệt trên sà lan hoặc cần trục có thể di chuyển xung quanh để tạo ra các cách sắp xếp khác nhau. Các đường màu đỏ cho thấy sự tách biệt tưởng tượng của ba mảnh. Di chuyển xung quanh một số mảnh để tạo thành hình chữ nhật.
+
+---
+
+> id: boat-building
+> goals: arranged
+
+    // INTERACTIVE-01: Building rectangle (pages 4-5)
+    figure: x-geopad(width=600, height=400)
+      svg
+
+---
+
+Thật tuyệt!
+
+Bây giờ chúng ta thấy tòa nhà là một hình chữ nhật, lượng kính trên bề mặt này của tòa nhà là `28.4 x input(132)` [[mét vuông | mét]].
+
+Một số học sinh ước lượng được lượng kính bằng cách nhân các số đo trong hình ban đầu:
+
+    // [TODO] DIAGRAM-03 building (page 5)
+
+{.todo} Coming Soon!
+
+Vì vậy, những học sinh này đã tính `input(70) x 132` bằng với 9,240 [[mét vuông]]. Ước tính này cách [[5,000 | 1,000 | 500]] [[mét vuông | mét]] so với câu trả lời thực tế! Con số này gấp khoảng 2,5 lần so với diện tích thực tế! Vì vậy, việc nhân các số đo này [[không | có]] đúng với diện tích của hình này. Trong chương này, chúng ta sẽ hướng tới việc phát triển một công thức để tìm diện tích của loại hình dạng này.
+
+---
+
+> id: glass-area
+
+Dưới đây là ý tưởng ban đầu của kiến trúc sư cho một phần của tòa nhà. Mỗi hình vuông đại diện cho một mét vuông kính và kiến trúc sư cần phải lên kế hoạch cho thép đi xung quanh toàn bộ phần kính.
+
+    // INTERACTIVE-02 Glass area (page 6)
+    figure: x-polypad
+
+Tổng lượng kính cần thiết là [[diện tích | chu vi]] của hình và được đo bằng [[mét vuông | mét]]. Lượng thép cần thiết để bao quanh tấm kính là [[chu vi | diện tích]] của hình và được đo bằng [[mét | mét vuông]].
+
+_{span.reveal(when='blank-0 blank-1 blank-2 blank-3')}The area is [[12]] [[square meters | meters | square centimeters]] and the perimeter is [[14]] [[meters | square meters | centimeters]]._
+
+    // Table, pairs with INTERACTIVE-02 above
+    table.reveal(when='blank-0 blank-1 blank-2 blank-3')
+      tr
+        th Field #
+        th Area
+        th Perimeter
+      tr
+        td 1
+        td.reveal(when='blank-4') 12
+        td.reveal(when='blank-6') 14
+      tr
+        td.reveal(when='figure-2') 2
+        td.reveal(when='figure-2') 12
+        td.perimeter2
+      tr
+        td.reveal(when='figure-3') 3
+        td.reveal(when='figure-3') 12
+        td.perimeter3
+
+::: .reveal(when='blank-4 blank-5 blank-6 blank-7')
+
+Di chuyển xung quanh các mảnh kính hình vuông để tạo thành một hình dạng khác nhau mà sử dụng cùng một lượng thủy tinh. Khi bạn có một hình ưng ý, hãy nhấp vào “Tôi hài lòng với hình của mình”.
+
+_{button.btn.submit-shape} I’m happy with my shape_
+
+:::
+
+_{span.reveal(when='figure-2')}Great work! Now make a different arrangement and then click “I’m happy with my shape” when you’re done._
+
+---
+
+Nhìn vào dữ kiện trong bảng. Lưu ý rằng tất cả các cách sắp xếp đều có cùng [[diện tích | chu vi]], nhưng chúng không có cùng [[chu vi | diện tích]].
+
+---
+
+Hãy xem cách một số học sinh khác tiếp cận nhiệm vụ này. Xem từng cách và quyết định xem cách sắp xếp mới có duy trì lượng kính như thiết kế ban đầu hay không:
+
+    // [TODO] ANIMATION-01: Glass area animations (page 7)
+{.todo} Coming Soon!
+
+Rất tuyệt! Chúng ta đã thiết lập một trong những ý tưởng cơ bản nhất về diện tích và chu vi của các hình có hai kích thước - Khi di chuyển xung quanh các phần của một hình, miễn là không có phần [[chồng lấp | tiếp xúc]] và tất cả các phần của hình này là [[được sử dụng | không được sử dụng]], [[diện tích | chu vi]] tổng cộng vẫn giữ nguyên còn chu vi [[thay đổi | giữ nguyên]].
+
+Thực sự đây là một ý tưởng quan trọng, nó sẽ đi với chúng ta trong phần còn lại của chương này.
+
+Khi di chuyển xung quanh các phần của một hình, miễn là không có phần nào chồng lên nhau và tất cả các phần của hình này đều được sử dụng, tổng diện tích vẫn giữ nguyên ngay cả khi chu vi có thể thay đổi.
+
+---
+
+> id: dough
+
+Dưới đây là một số bột nhào làm bánh cookie và một số khuôn cắt bánh quy hình vuông. Đặt 4 khuôn cắt bánh quy lên bột để biết bạn có thể làm được bao nhiêu chiếc bánh cookie với lượng bột này.
+
+    // INTERACTIVE-03: Cookie dough cutting (pages 8-9)
+    figure: x-geopad(width=600 height=400)
+      svg
+
+_{span.reveal(when='cutters-placed')}Super! How many cookies do you think you’ll be able to make? Just make a guess: __TODO: BLANK__ cookies. This is same as the [[area | perimeter ]] of cookie dough._
+
+---
+
+> id: dough-2
+
+Để xác định diện tích chính xác, chúng ta hãy di chuyển xung quanh một số bột nhào bánh quy, hãy nhớ đến ý tưởng chính của ta là di chuyển xung quanh các phần của các hình. Dùng dao cắt bỏ một ít bột và di chuyển nó quanh đế để xếp bột thành hình chữ nhật.
+
+    // INTERACTIVE-04: Dough cutting 2 (pages 9-11)
+    figure: x-geopad(width=600 height=400)
+      svg
+
+_{span.reveal(when='dough-arranged')}Great. We [[did not | did]] overlap any of the dough and we [[did | did not]] use all the dough, so the area of this new dough is [[the same | not the same]] as the area of the original dough._
+
+_{span.reveal(when='blank-0 blank-1 blank-2')}To determine the area of the dough, drag in squares or simply click the Auto-fill button._
+
+::: .reveal(when='area-filled')
+
+Tuyệt vời! Nhấp vào hoạt ảnh để xem hình tam giác di chuyển qua lại.
+
+{.todo} Coming Soon!
+
+Diện tích của hình chữ nhật mà chúng ta đã tạo là [[15]] [[đơn vị diện tích | đơn vị]], và diện tích của hình chữ nhật là [[bằng | khác]] so với diện tích của bột bánh cookie ban đầu. Vì vậy, diện tích của khối bột ban đầu là [[15]] [[đơn vị diện tích | đơn vị]]. Dự đoán ban đầu của bạn là TODO đơn vị diện tích. Tốt lắm! Chỉ khác TODO đơn vị diện tích!
+
+:::
+
+---
+
+Tuyệt vời. Hãy tiếp tục suy nghĩ về ý tưởng này. Dưới đây là một miếng bánh cookie khác. Xoay bột để nó có thể nằm gọn trên khay nướng.
+
+    // [TODO]? (DISCUSS: possibly redundant) INTERACTIVE-05: Dough cutting 3 (pages 12)
+{.todo} Coming Soon!
+
+Tốt! Bây giờ, bạn dùng dao để cắt bỏ một phần bột. Di chuyển miếng bột đó xung quanh để miếng bột tạo thành một hình chữ nhật.
+
+---
+
+Diện tích của hình chữ nhật mới là [[70]] [[cm vuông | cm ]].
+
+Chúng ta đã [[không | có]] chồng lên bất kỳ mảnh nào và đã [[có | không]] sử dụng tất cả các diện tích, do đó diện tích của hình chữ nhật là [[bằng | không bằng]] với diện tích của bột ban đầu. Vì vậy, diện tích của khối bột cũng là [[70]] [[cm vuông | cm ]].
+
+Làm rất tốt! Hãy làm điều này lại một lần nữa. Bạn có cùng một lượng bột ban đầu, nhưng một khay nướng có kích thước khác nhau. Xoay bột để nó có thể nằm gọn trên khay nướng.
+
+    // [TODO]? (DISCUSS: possibly redundant) INTERACTIVE-06: Dough cutting 4 (pages 13)
+{.todo} Coming Soon!
+
+Tốt! Bây giờ, bạn dùng dao để cắt bỏ một phần bột. Di chuyển miếng bột đó xung quanh để miếng bột tạo thành một hình chữ nhật.
+
+Diện tích của hình chữ nhật mới là [[70]] [[cm vuông | cm ]].
+
+Chúng ta đã [[không | có]] chồng lên bất kỳ mảnh nào và đã [[có | không]] sử dụng tất cả các diện tích, do đó diện tích của hình chữ nhật là [[bằng | không bằng]] với diện tích của bột ban đầu. Vì vậy, một lần nữa ta lại thấy diện tích của khối bột ban đầu là [[70]] [[cm vuông | cm ]].
+
+Hãy chú ý cách chúng ta bắt đầu với cùng một hình dạng bột bánh cookie và cắt nó theo hai cách khác nhau. Trong ví dụ đầu tiên, chúng ta tạo ra một hình chữ nhật có kích thước là [[5]] nhân [[14]]. Trong lần thử thứ 2, chúng ta đã tạo ra một hình chữ nhật có kích thước là [[7]] nhân [[10]]. Dù bằng cách nào, chúng ta đã xác định được diện tích của hình ban đầu là [[70]] [[cm vuông | cm]].
+
+Trước khi chúng ta tiếp tục, hãy thảo luận về chu vi của ba hình này.
+
+    // [TODO] ANIMATION-02: (page 14)
+{.todo} Coming Soon!
+
+Hãy nhớ rằng, khi chúng ta di chuyển các phần của bột xung quanh, diện tích [[giữ nguyên | thay đổi]]. Hãy xem điều gì đã xảy ra với chu vi:
+
+Chu vi của hình dạng bột bánh cookie ban đầu là [[48]] [[cm | cm vuông]].
+Chu vi của bột bánh cookie dạng hình chữ nhật đầu tiên là [[38]] [[cm | cm vuông]].
+Chu vi của bột bánh cookie dạng hình chữ nhật thứ hai là [[34]] [[cm | cm vuông]].
+
+Vì vậy, khi chúng ta di chuyển xung quanh các phần của khối bột, diện tích [[giữ nguyên | thay đổi]], nhưng chu vi [[thay đổi | giữ nguyên]]. Phần cuối cùng dành cho câu hỏi: hình dạng nào của 70 cm vuông của bột bánh quy sẽ có chu vi nhỏ nhất? Hình nào với 70 cm vuông của bột bánh cookie sẽ có chu vi lớn nhất? Câu hỏi này sẽ được khám phá trong các chương tiếp theo của Mathigon, nhưng hãy suy nghĩ về nó ngay bây giờ!
+
+Làm rất tốt! Bây giờ chúng ta hãy nghĩ về tất cả các hình dạng mà ta đã làm việc cho đến giờ:
+
+    // [TODO] DIAGRAM-04: Parallelograms
+{.todo} Coming Soon!
+
+Bạn có thể nhận thấy rằng tất cả các hình này đều có [[4]] cạnh và các cạnh đối diện là [[song song | vuông góc]].
+
+Tuyệt vời! Khi đó, sẽ có lý khi những hình này được gọi là [[hình bình hành | hình thang | lục giác]].  BẤT KỲ tứ giác nào có các cặp cạnh đối diện song song đều là hình bình hành. Bên dưới, hãy nhấp vào tất cả các hình dạng là hình bình hành:
+
+---
+
+> id: identify-parallelograms
+> goals: selected-0 selected-2 selected-4 selected-6 selected-8 selected-18
+
+    // INTERACTIVE-07: Parallelogram selection (page 16)
+    figure: .parallelogram-selection
+      include svg/shapes.svg
+
+---
+
+Tuyệt vời!
+
+Như bạn thấy, một số hình thỏa mãn các yêu cầu để trở thành một hình bình hành còn có những tên gọi khác. Ví dụ, hình này:
+
+    // [todo] DIAGRAM-05: Rectangle (page 16)
+{.todo} Coming Soon!
+
+có các cạnh đối [[song song | vuông góc]] và do đó là một [[hình bình hành | tam giác | hình cầu]], nhưng chúng ta thường gọi nó là một [[hình chữ nhật | hình thang | nguc giác]]. Một hình khác là hình bình hành nhưng chúng ta thường gọi với một cái tên khác là [[hình vuông | lục giác | hình tròn]]. Bạn có thể tìm hiểu thêm về các tên và mối quan hệ khác nhau của tất cả các loại tứ giác trong một chương khác của Mathigon.
+
+Chúng ta sắp thiết lập công thức tìm công thức của bất kỳ hình bình hành nào. Bước cuối cùng của chúng ta là khám phá các đỉnh cao của các tình huống thực tế liên quan đến các hình bình hành. Hãy nhìn lại bức ảnh về Tòa nhà Văn phòng Dockland ở Hamburg, Đức.
+
+    // [TODO] DIAGRAM-06: Building measurements
+    figure: x-img(width=500 height=200 src="images/slant_building_diagram_2.jpg")
+
+Hãy tưởng tượng có một quy tắc ở bến cảng Hamburg rằng tất cả các tòa nhà phải cao dưới 40 mét. Chiều cao của tòa nhà này là [[28.4]] [[mét | mét vuông]]. Mặc dù cạnh của tòa nhà là [[70]] [[mét | mét vuông]], chiều dài đó [[không | có]] thể hiện tòa nhà cao bao nhiêu. Vì vậy, tòa nhà này [[có | không]] đáp ứng quy tắc giả định rằng các tòa nhà phải dưới 40 mét.
+
+Tuyệt vời! Lưu ý rằng đường thẳng đại diện cho chiều cao của tòa nhà tạo thành góc [[vuông | nhọn | tù]] với chiều dài đáy.
+
+---
+
+> id: apartments
+
+Nhiều tòa nhà chung cư ở các thành phố trên thế giới có cầu thang bộ ở mặt ngoài tòa nhà để cư dân sử dụng trong trường hợp khẩn cấp. Đây là hình ảnh của một cái ở Harlem, thành phố New York. Hãy tưởng tượng hai ban công ở mỗi tầng được thay thế bởi một ban công lớn. _{button.btn.show-parallelogram} Show parallelogram_
+
+    // [TODO] INTERACTIVE-08: Apartments parallelogram (pages 18-19)
+    figure: x-geopad(width=600 height=400)
+      svg
+
+Hãy tưởng tượng bạn cần biết chiều cao giữa hai ban công trên. Vẽ một đường thẳng biểu diễn chiều cao này.
+
+---
+
+Tuyệt vời! Có vẻ như đường thẳng màu vàng này [[không phải là | là]] cùng độ dài với các bậc thang.
+
+Ý tưởng rất tốt. Hãy kiểm tra nó.
+
+Tuyệt vời! Trong cả hai ví dụ này, chúng ta thấy rằng chiều cao của một hình bình hành [[là | không phải là]] bằng độ dài cạnh của hình bình hành. Đúng hơn, chiều cao của một hình bình hành là độ dài của đoạn thẳng tạo một góc [[vuông | nhọn | tù]] với cạnh đáy.
+
+Bây giờ chúng ta đã sẵn sàng để nghĩ về một cách tiếp cận chung để tìm diện tích của bất kỳ hình bình hành nào. Cách tiếp cận của ta là di chuyển xung quanh các phần của hình bình hành để biến nó thành một [[hình chữ nhật | tam giác | hình tròn]] và khi đó sử dụng công thức [[`"base" x "height"` | `"base" + "base" + "height" + "height"`]] để tìm diện tích.
+
+Đôi khi, có thể dễ dàng hình dung việc sắp xếp lại hình bình hành thành hình chữ nhật và tìm cạnh đáy và chiều cao.
+
+    // [TODO] ANIMATION-03: Parallelogram -> triangle (page 20)
+{.todo} Coming Soon!
+
+Vì vậy, để tìm diện tích của hình bình hành này, hãy nhân cạnh đáy là [[10]] với chiều cao là [[3]] để có được diện tích bằng [[30]] [[cm vuông | cm]].
+
+Tuy nhiên, khi ta hình dung cạnh còn lại của cùng một hình bình hành là cạnh đáy, thì việc sắp xếp lại thành một hình chữ nhật sẽ trở nên khó khăn hơn một chút. Cắt nó ở một trong hai chỗ được như sau sẽ không dễ dàng cho chúng ta một hình chữ nhật.
+
+    // [TODO] DIAGRAM-07: Parallelogram cuts 1 (page 20)
+{.todo} Coming Soon!
+
+Tuy nhiên, nếu đây là một tòa nhà, hãy nghĩ về chiều cao của tòa nhà. Vẽ một đường thẳng để biểu diễn chiều cao đó.
+
+    // [TODO] DIAGRAM-07: Parallelogram cuts 2 (page 20)
+{.todo} Coming Soon!
+
+Tuyệt! Vì vậy, hãy xem liệu chúng ta có thể sắp xếp lại hình bình hành này thành một [[hình chữ nhật | tam giác | hình tròn ]] với chiều cao đó không.
+
+    // [TODO] ANIMATION-04: Parallelogram rearrange (page 20)
+{.todo} Coming Soon!
+
+Vì vậy, khi chúng ta lấy cùng một hình bình hành từ ví dụ đầu tiên, nhưng nghĩ đến cạnh ngắn hơn là cạnh đáy, chúng ta thấy cạnh đáy có chiều dài là [[4]] cm, chiều cao là [[7.5]] cm và diện tích vẫn là [[30]] [[cm vuông | cm]].
+
+Vì thế, để tìm diện tích của một hình bình hành bất kỳ, trước tiên chúng ta phải xác định được cạnh chúng ta muốn coi là [[cạnh đáy | đường chéo | tâm]]. Sau đó, chúng ta cần vẽ một đường tạo góc [[vuông | nhọn | tù ]] với cạnh đáy. Ta gọi đây là [[đường cao | đường chéo]] của hình bình hành. Cuối cùng, để tính diện tích của hình bình hành, ta lấy độ dài của cạnh đáy và chiều cao [[nhân | cộng | chia]] nhau. Vì vậy, công thức đơn giản cho diện tích của một hình bình hành là [[cạnh đáy | bán kính ]] [[ x | + | -]] [[chiều cao | đường kính]].
+
+Bây giờ chúng ta đã suy ra công thức tính diện tích của một hình bình hành, hãy làm một vài ví dụ để xác định các cặp đáy và chiều cao trong một vài hình bình hành.
+
+    // [TODO]? (DISCUSS: possibly redundant, see source doc comment) INTERACTIVE-09: (page 21)
+{.todo} Coming Soon!
+
+Nhấp vào một cạnh của hình bình hành được hiển thị.
+
+Lựa chọn rất tốt! Bây giờ, nhấp vào đoạn thẳng màu xanh biểu thị chiều cao của hình bình hành.
+
+Đúng rồi! Nhìn xem khi hình bình hành sắp xếp lại thành hình chữ nhật rồi trở lại hình bình hành ban đầu.
+
+Tuyệt vời! Bây giờ, hãy nhấp vào cạnh kia của hình bình hành.
+
+Bây giờ, hãy nhấp vào đoạn thẳng màu xanh biểu thị chiều cao của hình bình hành.
+
+Đúng rồi! Nhìn xem khi hình bình hành sắp xếp lại thành hình chữ nhật rồi trở lại hình bình hành ban đầu.
+
+Để kết thúc công việc của mình với các hình bình hành, chúng ta hãy xem xét hai ví dụ cuối cùng về hình bình hành trong kiến trúc.
+
+Năm 2006, các Kiến trúc sư từ công ty Tham & Videgard đã thiết kế một ngôi nhà cho một hòn đảo thuộc quần đảo ngoại ô Stockholm, Thụy Điển. Khi mô tả bản thiết kế của họ, Tham và Videgard viết “Hình dạng của thiết kế được tạo ra bởi các chi tiết cụ thể của địa điểm. Ngôi nhà nằm trên một mặt phẳng giữa hai mỏm đá” Như bạn có thể thấy trong hình thiết kế bên dưới, các kiến trúc sư đã phải đặt ngôi nhà trên một mảnh đất bằng phẳng giữa những gờ đá dốc. Vì vậy, một hình bình hành là hình dạng tốt nhất để tối đa hóa không gian sống trong ngôi nhà!
+
+    // IMAGE (page 22)
+    figure: x-img(width=600 height=537 src="images/siteplan.png")
+
+Dưới đây là một số hình ảnh thực tế của ngôi nhà:
+
+    // House images (page 23)
+
+::: column(width=300)
+
+    x-img(width=300 height=220.58 src="images/house-1.jpg")
+    x-img(width=300 height=220 src="images/house-3.jpg")
+
+::: column(width=300)
+
+    x-img(width=300 height=409 src="images/house-2.jpg")
+
+:::
+
+
+Cuối cùng, đây là một hình ảnh về bản thiết kế của ngôi nhà:
+
+    // IMAGE: House blueprint (page 23)
+    figure: x-img(width=600 height=742 src="images/floorplan.png")
+
+
+Sử dụng thông tin được cung cấp để tìm diện tích của ngôi nhà. TODO [[mét vuông | mét]].
+
+---
+
+## Tam giác
+
+> section: triangles
+> sectionStatus: dev
+
+Tòa nhà chọc trời One World Trade ở thành phố New York là một trong những tòa nhà cao nhất thế giới. Tòa nhà được khai trương vào năm 2014 sau 8 năm xây dựng. Tòa nhà còn được gọi là Tháp Tự do và được xây dựng trên địa điểm của Tháp Đôi trước đây đã bị phá hủy trong một cuộc tấn công khủng bố vào ngày 11 tháng 9 năm 2001.
+
+    figure: x-img(width=600 height=150 src="https://st2.depositphotos.com/1007963/8706/i/950/depositphotos_87060020-stock-photo-panoramic-view-of-the-lower.jpg")
+
+Cấu trúc dạng hình chữ nhật ở chân tháp. Kế đó, 8 hình tam giác tạo nên thiết kế của phần mặt bên ngoài còn lại của tòa tháp.
+
+::: column.fit
+    x-img(width=300 height=400 src="https://st2.depositphotos.com/1007963/8430/i/950/depositphotos_84303892-stock-photo-one-world-trade-center-in.jpg")
+::: column.fit
+    x-img(width=357 height=688 src="images/owtc_diagram.jpg")
+:::
+
+Như một phần của bất kỳ quy trình thiết kế tòa nhà nào, các kiến trúc sư cần tính toán lượng vật liệu cần thiết cho việc xây dựng - thép, bê tông, kính, v.v. Mỗi mặt của đáy hình chữ nhật có chiều rộng 61 mét và chiều cao 56 mét. Vì vậy, lượng kính cần thiết cho một mặt của đáy là [[3416]] mét vuông.
+
+    // [TODO]: IMAGE
+
+---
+
+> id: world-trade-center
+> goals: arranged
+
+Hãy tính lượng kính cần thiết để tạo thành một trong các hình tam giác. Trong chương hình bình hành, chúng ta đã chuyển các phần của một hình bình hành để tạo thành một hình chữ nhật. Sử dụng hai bản sao của tam giác để tạo ra một hình bình hành hoặc một hình chữ nhật.
+
+    // INTERACTIVE-01 (pages 2-3)
+    figure: .wtc
+      x-polypad
+
+---
+
+Chúng ta đã sử dụng hai tam giác giống nhau để tạo ra một hình bình hành. Diện tích của tam giác là [[phân nửa | gấp đôi]] diện tích của hình bình hành và có thể được tính bằng cạnh đáy x chiều cao. Chúng ta chỉ cần đảm bảo rằng chiều cao tạo thành một góc [[vuông | nhọn | tù]] với cạnh đáy. Diện tích của hình bình hành là [[21960]] mét vuông. Vì vậy, diện tích của tam giác là [[10980]] mét vuông.
+
+---
+
+> id: congruent-triangles
+> goals: arranged
+
+Ta vừa sử dụng hai tam giác bằng nhau để tạo ra một [[hình bình hành | tam giác | ngũ giác]]. Làm tương tự trên các hình tam giác này.
+
+_{button.btn.copies} Make copies_
+
+    // INTERACTIVE-02 (page 4)
+    figure: .congruent-tris
+      x-polypad
+
+---
+
+Có vẻ như khi chúng ta tạo một bản sao của một hình tam giác, chúng ta có thể sử dụng hai mảnh giống hệt nhau đó để tạo ra một [[hình bình hành | hình tròn | lục giác]] mà nó [[gấp đôi | gấp ba | phân nửa ]] kích thước của tam giác.
+
+---
+
+> id: area-3
+> goals: complete
+
+Bây giờ, hãy sử dụng ý tưởng này để tìm diện tích của hình tam giác bên dưới.
+
+    // INTERACTIVE-03 (page 5)
+    figure: .area
+      x-polypad
+      x-geopad(width=600 height=400)
+        svg
+
+Bắt đầu bằng cách tạo một hình bình hành từ hai trong số các hình tam giác.
+
+_{span.reveal(when='arranged')}Now, let’s find the area of the parallelogram. Click on the side of the parallelogram you’d like to use as the base._
+
+_{span.reveal(when='side-selected')}Draw in the height that matches up with the base you’ve chosen. We call exact matches like this “corresponding.”_
+
+---
+
+Diện tích của hình bình hành là TODO cm vuông. Hình bình hành tạo bởi hai tam giác bằng nhau nên diện tích của tam giác đó là TODO cm vuông.
+
+---
+
+Chúng ta có thể tổng quát hóa cách tiếp cận này để tạo ra một quy trình tìm diện tích của bất kỳ tam giác nào. Mọi tam giác đều có thể được xem là [[một nửa | một phần ba | gấp đôi]] của một hình bình hành. Công thức diện tích hình bình hành là b x h, vì vậy công thức diện tích tam giác phải là `(b * h) / input (2)`. Chúng ta cũng có thể viết nó là `input (1) / input (2) * b * h`. Tuyệt vời! Bây giờ chúng ta có thể thêm công thức này vào nhóm các công thức của mình!
+
+---
+
+> id: triangle-bases
+> goals: a-done b-done c-done
+
+Cũng giống như bất kỳ cạnh nào của hình bình hành có thể được sử dụng làm cạnh đáy, bất kỳ cạnh nào của hình tam giác đều có thể được sử dụng làm cạnh đáy khi tìm diện tích của tam giác.
+
+    // INTERACTIVE-04 (pages 6-8)
+
+::: tab
+
+#### Side A _{span.check(when="a-done")}_
+
+    figure: .side-a
+      x-geopad(width=600 height=200)
+        svg
+
+::: tab
+
+#### Side B _{span.check(when="b-done")}_
+
+    figure: .side-b
+      x-geopad(width=600 height=200)
+        svg
+
+::: tab
+
+#### Side C _{span.check(when="c-done")}_
+
+    figure: .side-c
+      x-geopad(width=600 height=200)
+        svg
+
+:::
+
+
+---
+
+Chúng ta thấy rằng khi sử dụng công thức Diện tích tam giác = `1/2 x b x h` , chúng ta có thể sử dụng BẤT KỲ cạnh nào làm cạnh đáy miễn là chúng ta chọn chiều cao phải tạo góc [[vuông | nhọn | tù]] với cạnh đáy đã chọn. Đôi khi, như chúng ta đã thấy trong ví dụ trước, cạnh đáy chúng ta chọn sẽ tạo ra đường cao BÊN NGOÀI hình tam giác.
+---
+
+    // [TODO]: Animation-01 (page 8)
+{.todo} Coming Soon!
+
+---
+
+Hình dung đường cao bên ngoài của một hình tam giác đôi khi có thể hơi khó. Hãy xem xét một tam giác thực tế để giúp bạn.
+
+    // [TODO]: Animation-02 (pages 8-9)
+{.todo} Coming Soon!
+
+---
+
+Khối bê tông trên cùng của cấu trúc leo núi này trông khá gần với một hình tam giác. Hãy tưởng tượng khối bê tông này lớn hơn nhiều và cao hơn nhiều so với mặt đất.
+
+Độ cao của người leo so mặt đất bằng với [[chiều cao | cạnh đáy ]] của tam giác!
+
+---
+
+> id: triangle-selection
+
+Biết rằng công thức tính diện tích tam giác là `1/2 x b x h` , nhưng chúng ta cần đảm bảo rằng có thể xác định chính xác chiều cao chính xác ứng với mỗi cạnh đáy. Tất cả các hình tam giác bên dưới có các cặp cạnh đáy-chiều cao có thể có được đánh dấu bằng màu xanh. Nhấp vào hình tam giác có các cặp cạnh đáy-chiều cao có thể được sử dụng chính xác để tìm diện tích của hình tam giác đã cho.
+
+    // [TODO]: INTERACTIVE-05 (pages 9-11)
+    figure: .tri-select
+      // [TODO]: run through imageoptim (preserve ids/classes)
+      include svg/tris.svg
+
+
+_{span.reveal(when='clicks')}Now, for each incorrect base-height pair, move the green line that is the incorrect height into the correct position so it is indeed the height matched up with the green base._
+
+---
+
+Bây giờ chúng ta đã hiểu sâu hơn về cách tìm diện tích hình tam giác, hãy tìm diện tích của hai hình tam giác bên dưới. Chọn đường thẳng bạn muốn sử dụng làm cạnh đáy và sau đó vẽ chiều cao tương ứng chính xác.
+
+    // [TODO]? (DISCUSS may be redundant): INTERACTIVE-06 (page 11)
+{.todo} Coming Soon!
+
+Diện tích của tam giác đầu tiên là [[0]] cm vuông và diện tích của tam giác thứ hai là [[0]] cm vuông.
+
+---
+
+Bây giờ, hãy nghĩ về chu vi của mỗi tam giác trên. Khi tìm chu vi của mỗi tam giác này, chiều cao [[ là | không phải là | đôi khi là]] một phần của chu vi. Nhấp vào bất kỳ đường nào trong tam giác để tìm độ dài của nó.
+
+Chu vi của tam giác đầu tiên là TODO [[cm | cm vuông]] và diện tích của tam giác thứ hai là TODO cm.
+
+---
+
+    // [TODO]: ANIMATION-03 (page 12)
+{.todo} Coming Soon!
+
+---
+
+Mỗi tam giác có cạnh đáy là [[4]] và chiều cao là [[5]], do đó diện tích của mỗi tam giác là [[10]] cm vuông.
+
+---
+
+Hãy tạo thêm 3 hình tam giác chính xác có cùng cạnh đáy và có chiều cao là 5.
+
+    // [TODO]? (DISCUSS to clarify UX): INTERACTIVE-07 (page 12)
+{.todo} Coming Soon!
+
+Tạo thêm một tam giác nữa có cùng đáy và cùng diện tích nhưng có chu vi nhỏ nhất có thể.
+
+---
+
+Nhận thấy rằng tam giác có diện tích nhỏ nhất có cạnh đáy là 4 và hai cạnh khác [[bằng | khác nhau]] về độ dài. Bạn có thể nhớ lại rằng đây được gọi là một tam giác cân.
+
+---
+
+Cho đến giờ, chúng ta đã sử dụng hai tam giác bằng nhau để tạo ra một hình bình hành có diện tích gấp đôi diện tích của một trong các tam giác đó. Tuy nhiên, cũng có những lựa chọn khác.
+
+    // [TODO]: ANIMATION-04 (page 13-15)
+{.todo} Coming Soon!
+
+Trong hai cách tiếp cận đầu tiên, tam giác ban đầu và bản sao được sử dụng để tạo thành một hình bình hành. Vậy diện tích của hình bình hành [[gấp đôi | bằng]] diện tích của tam giác. Trong cách tiếp cận cuối cùng sau, tam giác được cắt thành nhiều mảnh và các mảnh đó được sử dụng để tạo thành một hình bình hành, do đó diện tích của hình bình hành [[bằng | gấp đôi]] diện tích của tam giác. Chú ý trong ví dụ thứ ba, chiều cao của hình bình hành [[bằng một nửa | bằng]] chiều cao của tam giác ban đầu.
+
+---
+
+Chúng ta sử dụng các hình chữ nhật, hình bình hành và hình tam giác để ước tính diện tích của các quốc gia khác nhau.
+
+    // [TODO] (DISCUSS to clarify UX): INTERACTIVE-08 (pages 15-17)
+{.todo} Coming Soon!
+
+---
+
+## Đa giác
+
+> section: polygons
+> sectionStatus: dev
+> id: voronoi-1
+> goals: eight-points
+
+Các khu học vụ cần ước tính chính xác số học sinh có thể theo học tại trường của họ. Dưới đây là bản đồ các trường tiểu học ở London. Nhìn chung, học sinh theo học tại trường gần nơi họ sống nhất. Hãy nhấp vào bất kỳ nơi đâu trên bản đồ để xem khoảng cách giữa điểm đó và tất cả các trường trên bản đồ.
+
+    figure: x-geopad(width=600 height=400)
+      img(src="images/map-temp.png" width=600 height=400)
+      canvas(width=600 height=400)
+      svg
+
+{.reveal(when="one-point")} Chọn 4 điểm khác trên bản đồ.
+
+{.reveal(when="five-points")} _{button.btn.show-voronoi} Create voronoi diagram_
+
+{.reveal(when="voronoi-diagram")} Chúng ta vừa tạo một sơ đồ Voronoi. Mỗi vùng chứa tất cả các điểm trên bản đồ gần trường học nhất trong vùng đó. Hãy nhấp vào một vài điểm ở các vùng khác nhau để kiểm tra.
+---
+
+Người đầu tiên nghĩ về những điều này là [Rene Descartes](bio:descartes) 400 năm trước - ông ấy cũng là một triết gia nổi tiếng! Nhưng chúng được đặt theo tên một nhà toán học người Nga, [Gregory Feodosevich Voronoy](bio:voronoy). Nhà vật lý John Snow đã sử dụng một phiên bản của biểu đồ Voronoi vào năm 1854 trong một [cholera epidemic](https://plus.maths.org/content/uncovering-cause-cholera) ở London để xác định vị trí một máy bơm nước bị nhiễm dịch bệnh trên Phố Broad ở London.
+
+Trong ví dụ của chúng ta, sử dụng biểu đồ Voronoi có thể giúp các trường ước tính số lượng học sinh sẽ theo học. Ở London, khoảng 1500 người sống trong mỗi km vuông. Để sử dụng thống kê này, trước tiên chúng ta cần biết [[diện tích | chu vi]] của mỗi vùng trong sơ đồ.
+
+---
+> id: voronoi-2
+
+    figure: x-geopad(width=600 height=400)
+      svg
+
+Một số vùng này có hình dạng mà chúng ta đã học trong các chương trước. [This shape](->.triangle-cell) là một hình tam giác và chúng ta có thể tìm diện tích bằng cách _{x-equation(solution="1/2" keys="frac")}_ `x base x height`.
+
+{.reveal(when="eqn-0")} Nhấp vào cạnh của hình tam giác bạn muốn sử dụng làm cạnh đáy.
+
+{.reveal(when="side-selected")} Bây giờ hãy vẽ chiều cao tương ứng với cạnh đáy mà bạn đã chọn.
+
+{.reveal(when="height-drawn")} Diện tích của tam giác này là [TODO] [[0]] [[km vuông | km]].
+
+{.text-center.reveal(when="blank-0 blank-1")} `(1500 "\ people") / (1 "\ square km") = (input(0) "\ people") / ([TODO] "\ square km")`
+
+---
+> id: voronoi-3
+
+[TODO] những người sống gần trường đó nhất và đó có thể là một điểm khởi đầu tốt để nhà trường sử dụng để ước tính có bao nhiêu học sinh có thể theo học tại trường đó. Tiếp theo, các trường sẽ sử dụng các số liệu thống kê khác để ước tính xem trong số đó có bao nhiêu em là học sinh tiểu học.
+
+Các diện tích dạng khác thì phức tạp hơn. Một số có [4 sides](->.four-sided). Một số có [5 sides](->.five-sided). Và một số có [6 sides](->.six-sided).
+
+    // [TODO]: Probably don't need geopad for this
+    figure: x-geopad(width=600 height=400)
+      svg
+
+---
+> id: sort-polygons
+> goals: cards-sorted
+
+Tất cả các vùng này trong biểu đồ Voronoi là những ví dụ về đa giác. Đa giác là một hình dạng khép kín, hai chiều với các cạnh thẳng không cắt nhau. Một đa giác không có bất kỳ lỗ hở nào trong hình. Hãy nhấp vào thẻ bên dưới và kéo thẻ đó sang phía "Đa giác" hoặc "Không phải đa giác".
+
+    include ../shared/components/binary-swipe/binary-swipe
+
+::: x-binary-swipe(a-title="Polygons" b-title="Not Polygons")
+
+{div.card.c-red(solution="a" comment="polygon-regular")} Card #1 - Regular Polygon
+
+{div.card.c-teal(solution="b" comment="not-polygon-curved")} Card #2 - NOT a Polygon
+
+{div.card.c-green(solution="b" comment="not-polygon-hole")} Card #3 - NOT a Polygon
+
+{div.card.c-orange(solution="a" comment="polygon-irregular")} Card #4 - Irregular Polygon
+
+{div.card.c-blue(solution="a" comment="polygon-irregular")} Card #5 - Irregular Polygon
+
+{div.card.c-yellow(solution="b" comment="not-polygon-closed")} Card #6 - Not a polygon
+
+{div.card.c-teal(solution="a" comment="polygon-regular")} Card #7 - Regular polygon
+
+{div.card.c-orange(solution="b" comment="not-polygon-crossing")} Card #8 - Not a Polygon
+
+{div.card.c-blue(solution="b" comment="not-polygon-curved")} Card #9 - Not a polygon
+
+{div.card.c-red(solution="a" comment="polygon-irregular")} Card #10 - Irregular Polygon
+
+{div.card.c-purple(solution="a" comment="polygon-voronoi")} Card #11 - Polygon
+
+:::
+
+---
+
+Một đa giác đều sẽ có độ dài các cạnh [[tất cả đều bằng nhau | tất cả đều khác nhau]]
+
+---
+> id: populations
+
+Hãy cùng xem lại biểu đồ Voronoi và tìm xem có bao nhiêu người sống ở một trong những khu vực có 5 cạnh. Lưu ý [region outlined in white](->.population-pentagon) trong hình ảnh dưới đây.
+
+    // [TODO]: Voronoi region area exercise
+    figure: x-geopad(width=600 height=400).voronoi-1
+      svg
+
+Chỉ cần nhìn vào khu vực này, có vẻ như có [[nhiều hơn | ít hơn]] học sinh sẽ theo học tại trường ở vùng này hơn là trường ở vùng tam giác mà chúng ta đã xét ở trên. Khu vực này nhìn tương tự nhau về kích thước, vì vậy khó có thể chắc chắn nếu chỉ nhìn qua bằng mắt. Hãy tìm diện tích của nó bằng cách chia nó thành hình chữ nhật và các hình tam giác và so sánh diện tích với diện tích của vùng hình tam giác.
+
+::: .reveal(when="blank-0")
+
+| The total area is equal to the area of the rectangle plus the area of [[2]] triangles. | Total Area = Area of Rect + Area of Triangle 1 + Area of Triangle 2 |
+| Area of a rectangle = b x h and Area of a triangle = [[`1/2`|`1/4`|`3/4`]] x b x h | Total Area = `b x h + 1/2 x b x h + 1/2 x b x h` |
+| Click on the base and height of the rectangle | Total area = `TODO x TODO + 1/2 x b x h + 1/2 x b x h` |
+| Click on the base you want to use for triangle #1 and then draw in the corresponding height. | Total area = `TODO x TODO + 1/2 x TODO x TODO + 1/2 x b x h` |
+| Click on the base you want to use for triangle #2 and then draw in the corresponding height. | Total area = `TODO x TODO + 1/2 x TODO x TODO + 1/2 x TODO x TODO` Calculate the area of each shape |
+| Calculate the area of each shape | Total area = TODO [[#]] + [[#]] + [[#]] |
+| Calculate the total area | Total area = TODO [[#]] sq km |
+
+:::
+
+{.reveal(when="area-calculated")} [TODO]: People equation
+
+{.reveal(when="people-calculated")} Vì vậy, thực tế có nhiều học sinh sẽ theo học tại trường ở vùng ngũ giác hơn là vùng tam giác.
+
+---
+> id: polygon-names
+> goals: names-matched
+
+Ta đặt các tên khác nhau cho đa giác dựa trên số cạnh của chúng. Bạn có thể sẽ nhớ một số tên. Hãy kéo tên gọi lên trên các hình dạng chính xác.
+
+    include ../shared/components/relation/relation
+    x-relation
+      .item(slot="domain" match="5") Pentagon
+      .item(slot="domain" match="6") Hexagon
+      .item(slot="domain" match="7") Septagon/Heptagon
+      .item(slot="domain" match="8") Octagon
+      .item(slot="domain" match="9") Nonagon
+      .item(slot="domain" match="10") Decagon
+      .item(slot="range" name="5") 5 sides
+      .item(slot="range" name="6") 6 sides
+      .item(slot="range" name="7") 7 sides
+      .item(slot="range" name="8") 8 sides
+      .item(slot="range" name="9") 9 sides
+      .item(slot="range" name="10") 10 sides
+
+---
+> id: jerusalem
+
+### Đa giác trong cuộc sống thực tế
+
+Hãy thực hành sử dụng những tên gọi này bằng cách xem một số ví dụ về các đa giác trên thế giới.
+
+Dome of the Rock là một đền thờ Hồi giáo ở Thành phố cổ Jerusalem. Được xây dựng vào năm 692 trước Công nguyên, có đáy là một [[hình bát giác | hình ngũ giác | hình lục giác]].
+
+::: column(width=300)
+
+    x-img(src="https://static4.depositphotos.com/1010232/271/i/950/depositphotos_2712874-stock-photo-dome-of-the-rock-jerusalem.jpg" width=300 height=199)
+
+::: column(width=300)
+
+    x-img(src="https://ak7.picdn.net/shutterstock/videos/20482537/thumb/8.jpg" with=300 height=169)
+
+:::
+
+---
+> id: giants-causeway
+
+Ghềnh đá Giant’s Causeway ở Bắc Ireland được tạo thành từ hơn 40.000 cột đá bazan đa giác (một loại đá lửa) nhô ra khỏi biển. Cột được viền trắng trong [the photo](->.column-photo) là một [[hình lục giác | hình ngũ giác | hình bát giác]].
+
+::: column(width=300)
+
+    x-img(src="https://st2.depositphotos.com/1457640/9876/i/950/depositphotos_98761548-stock-photo-giants-causeway-and-cliffs-in.jpg" width=300 height=200)
+
+::: column(width=300)
+
+    object(type="image/svg+xml" data="/content/shapes/images/giants-causeway-shape.svg" width=300 height=219).column-photo
+
+:::
+
+---
+> id: signs
+
+Hầu hết các biển báo giao thông là các hình đa giác - một số là đa giác đều và một số thì không đều:
+
+::: column(width=160 parent="padded-thin")
+
+    // https://depositphotos.com/9417440/stock-illustration-set-of-14-highway-sign.html
+    x-img(src="images/sign-1.jpg" width=160 height=160)
+
+{.caption} [[Bát giác đều | Lục giác đều | Ngũ giác đều]]
+
+::: column(width=160)
+
+    x-img(src="images/sign-2.jpg" width=160 height=160)
+
+{.caption} Ngũ giác [[không đều | đều]] 
+
+::: column(width=160)
+
+    x-img(src="images/sign-3.jpg" width=160 height=160)
+
+{.caption} Tam giác đều
+
+::: column(width=160)
+
+    x-img(src="images/sign-4.jpg" width=160 height=160)
+
+{.caption} [[Tứ giác | Tam giác | Hình thoi]] đều
+
+:::
+
+---
+> id: animals
+
+Đa giác xuất hiện trong tất cả các loại vật thể tự nhiên, có thể kể tên một số như tổ ong và sao biển. Sao biển 10 cạnh là một [[hình mười cạnh | hình chín cạnh | hình tám cạnh]]:
+
+::: column(width=300)
+
+    x-img(src="https://static8.depositphotos.com/1491329/1068/i/950/depositphotos_10680850-stock-photo-worker-bees-on-honeycomb.jpg" width=300 height=199)
+
+::: column(width=300)
+
+    x-img(src="https://st.depositphotos.com/1054213/2023/i/950/depositphotos_20238089-stock-photo-starfish-asterias-rubens.jpg" width=300 height=200)
+
+:::
+
+---
+> id: nature-voronoi
+
+Mặt đất của một sa mạc khô cằn, các họa tiết trên da của hươu cao cổ và cánh chuồn chuồn trông rất giống với sơ đồ Voronoi!
+
+::: column(width=150)
+
+    x-img(src="https://static9.depositphotos.com/1013513/1148/i/950/depositphotos_11488218-stock-photo-drought-land-and-hot-weather.jpg" width=150 height=100)
+
+::: column(width=150)
+
+    x-img(src="https://static5.depositphotos.com/1011160/517/i/950/depositphotos_5177840-stock-photo-texture-of-dry-cracked-soil.jpg" width=150 height=100)
+
+::: column(width=150)
+
+    x-img(src="https://st.depositphotos.com/1594920/1698/i/950/depositphotos_16982455-stock-photo-somali-giraffe-commonly-known-as.jpg" width=150 height=109)
+
+::: column(width=150)
+
+    x-img(src="https://static3.depositphotos.com/1003348/177/i/950/depositphotos_1773326-stock-photo-dragonfly.jpg" width=150 height=100)
+
+:::
+
+---
+> id: flags
+> goals: flags-matched
+
+Cuối cùng, nhiều lá cờ sử dụng dạng đa giác. Kéo tên của mỗi quốc gia vào đúng lá cờ. Chỉ cần phỏng đoán nếu bạn không chắc chắn!
+
+    x-relation
+      .item(slot="domain" match="canada" comment=true)
+        object(type="image/svg+xml" data="https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg")
+      .item(slot="domain" match="south-africa" comment=true)
+        object(type="image/svg+xml" data="https://upload.wikimedia.org/wikipedia/commons/a/af/Flag_of_South_Africa.svg")
+      .item(slot="domain" match="finland" comment=true)
+        object(type="image/svg+xml" data="/content/shapes/images/finland.svg")
+      .item(slot="domain" match="nepal" comment=true)
+        object(type="image/svg+xml" data="https://upload.wikimedia.org/wikipedia/commons/9/9b/Flag_of_Nepal.svg")
+      .item(slot="range" name="canada") Canada
+      .item(slot="range" name="south-africa") South Africa
+      .item(slot="range" name="finland") Finland
+      .item(slot="range" name="nepal") Nepal
+
+---
+> id: poly-verts
+> goals: verts-moved
+
+Hình lục giác trên cờ Nam Phi và hình ngũ giác trên cờ Nepal có thể không phải là hình ảnh chuẩn mà bạn có thể nghĩ trong đầu về một hình ngũ giác và hình lục giác. Hãy di chuyển xung quanh các đỉnh (đây là những điểm mà các cạnh giao nhau) trong các đa giác đều dưới đây để tạo ra một số đa giác không đều của riêng bạn.
+
+::: column.grow(width=220)
+
+    // pentagon
+    x-geopad(width=220 height=220): svg
+      circle.move(name="a" cx=16.304 cy=71.944)
+      circle.move(name="b" cx=119.065 cy=15.526)
+      circle.move(name="c" cx=204.477 cy=95.823)
+      circle.move(name="d" cx=154.503 cy=201.868)
+      circle.move(name="e" cx=38.206 cy=187.109)
+      path(name="pentagon" x="polygon(a,b,c,d,e)")
+
+::: column.grow(width=220)
+
+    // hexagon
+    x-geopad(width=220 height=220): svg
+      circle.move(name="f" cx=17.191 cy=123.874)
+      circle.move(name="g" cx=51.786 cy=35.629)
+      circle.move(name="h" cx=145.507 cy=21.466)
+      circle.move(name="i" cx=204.632 cy=95.55)
+      circle.move(name="j" cx=170.037 cy=183.795)
+      circle.move(name="k" cx=76.316 cy=197.958)
+      path(name="hexagon" x="polygon(f,g,h,i,j,k)")
+
+::: column.grow(width=220)
+
+    // octagon
+    x-geopad(width=220 height=220): svg
+      circle.move(name="l" cx=202.682 cy=93.196)
+      circle.move(name="m" cx=163.59 cy=31.852)
+      circle.move(name="n" cx=92.572 cy=16.119)
+      circle.move(name="o" cx=31.229 cy=55.21)
+      circle.move(name="p" cx=15.495 cy=126.229)
+      circle.move(name="q" cx=54.587 cy=187.572)
+      circle.move(name="r" cx=125.605 cy=203.306)
+      circle.move(name="s" cx=186.948 cy=164.214)
+      path(name="octagon" x="polygon(l,m,n,o,p,q,r,s)")
+
+:::
+
+---
+> id: simple-tangram
+> goals: tangram-complete
+
+### Tangram
+
+Dưới đây là 7 đa giác. Di chuyển và xoay các đa giác để lấp đầy hoàn toàn hình vuông
+
+    figure
+      .simple-tangram-bg
+      x-polypad
+
+::: .reveal(when="tangram-complete")
+
+Tập hợp 7 đa giác này được gọi là tangram. Tangram là một trò chơi xếp hình cổ đại của Trung Quốc được phát minh hơn 1.000 năm trước vào thời nhà Tống. Trong tiếng Trung, câu đố được gọi là 七巧板. Phát âm “Chi-Chiao Pan,” và được dịch là "bảy mảnh ghép thông minh." Mục tiêu của trò chơi là sử dụng tất cả 7 mảnh ghép để tạo thành một số hình ảnh khác biệt. Dưới đây chỉ là một số hình dạng bạn có thể thử tạo tại [Tangram](https://mathigon.org/tangram) trên Mathigon!
+
+    // [TODO]: Image
+{.todo} Coming Soon!
+
+Năm 1815, Shan Chiao xuất bản “Những dạng hình mới của Tangram” chứa 374 câu đố tangram!
+
+:::
+
+---
+> id: football-polygons
+
+### Diện tích của Đa giác
+
+Bây giờ chúng ta đã hiểu rõ về đa giác, hãy cùng nghiên cứu về diện tích của các đa giác. Quả bóng đá dưới đây được tạo thành từ 12 [[hình ngũ giác | hình lục giác | hình bát giác]] màu đen và 20 [[hình lục giác | hình ngũ giác | hình bát giác]] màu trắng. Thuật ngữ toán học của hình dạng 3D này là một khối hai mươi mặt cụt. Quả bóng đá có hình tròn hơn một chút so với một khối hình đa diện bị vát cụt thực sự vì các ngũ giác và lục giác phình ra do áp suất không khí bên trong.
+
+    figure: x-img(src="images/soccer_ball_temp.jpg" width=161 height=164)
+
+Hầu hết các quả bóng đá được làm bằng da tổng hợp. Các nhà sản xuất làm ra nhiều quả bóng đá đến nỗi họ rất chú trọng đến số lượng da tổng hợp mà họ cần để sản xuất mỗi quả bóng đá. Hãy cùng tìm số lượng da tổng hợp cần thiết để tạo nên một quả bóng đá chuyên nghiệp.
+
+    // [TODO]: Football 'unfolding' animation
+
+    // [TODO]: Pentagon and hexagon diagram/animation
+
+| Một quả bóng được tạo thành từ [[12]] ngũ giác và [[20]] lục giác | Tổng diện tích = 12 ngũ giác + 20 lục giác |
+| Hãy chia ngũ giác thành [[5]] tam giác bằng nhau và chia lục giác thành [[6]] tam giác bằng nhau.. Lưu ý - tại điểm này, các tam giác sẽ xuất hiện trên ngũ giác và lục giác | Tổng diện tích = 12 x (Diện tích 5 tam giác) + 20 x (Diện tích 6 tam giác) |
+| The area formula for a triangle is [[`1/2`|`1/4`|`3/4`]] x base x height. | Tổng diện tích = `12 x (5 x 1/2 x b x h) + 20 x (6 x 1/2 x b x h)` |
+| Trong hình ngũ giác, hãy nhấp vào cạnh bạn muốn sử dụng làm cạnh đáy và sau đó vẽ chiều cao. | Total area = `12 x (5 x 1/2 x 4.56 x 3.138) + 20 x (6 x 1/2 x b x h)` |
+| Tính diện tích của một ngũ giác và một lục giác | Tổng diện tích  = 12 x [[35.7732]] + 20 x [[54.0223]] |
+| Tính diện tích của 12 ngũ giác và 20 lục giác | Tổng diện tích = [[429.28]] + [[1080.45]] |
+| Tính diện tích tổng cộng | Tổng diện tích = [[1509.73]] cm vuông |
+{.grid}
+
+Gần đây, các nhà sản xuất bóng đá đã bắt đầu thử nghiệm với các mẫu có hình dạng khác nhau ngoài hình lục giác và ngũ giác. Dưới đây là một số quả bóng đá chính thức trong các giải đấu World Cup nam gần đây.
+
+::: column(width=160 parent="padded-thin")
+
+    // https://commons.wikimedia.org/wiki/File:Teamgeist_Ball_World_Cup_2006_Brazil_vs._Croatia.jpg
+    x-img(src="images/ball-2006.jpg" width=160 height=160 credit="Jürgen Siebert, CC-BY-SA")
+
+{.caption} 2006 World Cup
+
+::: column(width=160)
+
+    x-img(src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Jo%27bulani.jpg" width=160 height=160)
+
+{.caption} 2010 World Cup
+
+::: column(width=160)
+
+    x-img(src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Deutsches_Fu%C3%9Fballmuseum_2015_3.jpg/1280px-Deutsches_Fu%C3%9Fballmuseum_2015_3.jpg" width=160 height=160)
+
+{.caption} 2014 World Cup
+
+::: column(width=160)
+
+    x-img(src="https://upload.wikimedia.org/wikipedia/commons/5/50/Adidas_Telstar_18_in_Russia_vs._Argentina.jpg" width=160 height=160)
+
+{.caption} 2018 World Cup
+
+:::
+
+Trong khi những thiết kế này rất sáng tạo và thú vị, một số nghiên cứu đã chỉ ra rằng các mẫu có hình dạng khác nhau tác động đến cách quả bóng di chuyển trong không khí!
+
+---
+> id: area-methods
+
+Dưới đây là một đa giác từ một sơ đồ Voronoi khác. Mỗi lưới đại diện cho 1 km vuông. Hãy tìm diện tích của vùng này theo một vài cách khác nhau.
+
+    // [TODO]: Polygon image
+
+    // [TODO]: Polygon area methods exercise
+{.todo} Coming Soon!
+
+Bất kể chúng ta thực hiện cách tiếp cận nào, diện tích của hình ngũ giác là 27.5 đơn vị diện tích!
+
+---
+> id: currys-paradox-1
+> goals: blank-0 blank-1 triangle-rearranged triangle-slid
+
+### Nghịch lý Curry
+
+Trong suốt quá trình nghiên cứu về diện tích, ta thường sử dụng ý tưởng rằng khi các phần của một hình được di chuyển xung quanh, diện tích hình đó vẫn giữ nguyên - miễn là các phần đó không chồng lên nhau và tất cả các phần đều được sử dụng.
+
+    figure
+      svg.solution-outline
+      x-polypad(rotate="no")
+    x-gesture(target="#currys-paradox-1 x-polypad svg" slide="25,325" offset="-50, -150")
+
+{.reveal(when="triangle-complete")} Chúng ta đã tạo ra một hình tam giác có cạnh đáy là 13 đơn vị và chiều cao là 5 đơn vị. Diện tích của tam giác này là [[32.5]] đơn vị diện tích. Vậy diện tích của 4 mảnh này phải là [[32.5]] đơn vị diện tích.
+
+::: .reveal(when="blank-0 blank-1")
+
+    x-slider(steps=1000 speed=1 continuous).rearrange-triangle
+
+:::
+
+{.reveal(when="triangle-rearranged")} Tam giác này cũng có đáy là [[13]] và chiều cao là [[5]] nên diện tích của tam giác được giữ nguyên là 32.5 đơn vị diện tích. Tuy nhiên, giờ có vẻ như diện tích của 4 mảnh ghép là [[nhỏ hơn | lớn hơn]] diện tích của tam giác! Làm thế nào điều này có thể xảy ra khi chúng ta mong đợi diện tích của các hình dạng không đổi khi chúng ta di chuyển chúng xung quanh? Di chuyển thanh trượt qua lại để xem lại.
+
+---
+> id: currys-paradox-2
+> goals: blank-0 blank-1 blank-2 blank-3 blank-4
+
+Tình huống này được gọi là Nghịch lý Curry. Nghịch lý là một phát biểu hoặc một tình huống mâu thuẫn với chính nó. Nghịch lý này, do nhà toán học Mỹ đưa ra [Haskell Curry](bio:curry), là diện tích của 4 mảnh đầu tiên có vẻ bằng 32.5 đơn vị diện tích và sau đó chúng dường như lại bằng 31.5 đơn vị diện tích!
+
+Hãy chia hình và tìm diện tích của mỗi phần để giúp chúng ta biết điều gì đang xảy ra ở đây.
+
+    figure: x-polypad(rotate="no")
+
+Hình tam giác màu đỏ có cạnh đáy là 8 và chiều cao là 3 nên diện tích của hình tam giác màu đỏ này là [[12]] đơn vị diện tích. Diện tích của hình tam giác màu xanh là [[5]] đơn vị diện tích. Diện tích của hình lục giác màu xanh lá cây là [[8]] đơn vị diện tích và diện tích của hình lục giác màu cam là [[7]] đơn vị diện tích. Vì vậy, tổng diện tích của tất cả các mảnh ghép khi kéo rời xa nhau là [[32]] đơn vị diện tích. Tuy nhiên, trong cách sắp xếp đầu tiên, chúng dường như tạo thành một tam giác có diện tích là 32.5 đơn vị diện tích và trong cách sắp xếp thứ hai, chúng dường như có diện tích là 31.5 đơn vị diện tích. Diện tích của 4 mảnh ghép này dường như đang thay đổi khi chúng ta di chuyển chúng xung quanh! Chuyện gì đang xảy ra ở đây?
+
+---
+> id: currys-paradox-3
+> goals: first-zoom
+
+
+Tốt, hóa ra không phải các hình mà chúng ta đã tạo ra bằng 4 mảnh ghép trên thực sự là các tam giác. Dưới đây là cách sắp xếp thứ nhất. Có vẻ như các hình tam giác màu đỏ và màu xanh xếp thẳng hàng một cách hoàn hảo, nhưng chúng không như vậy. Di chuyển thanh trượt bên dưới để phóng to đường màu xanh lá cây nối các góc của hai tam giác.
+
+    figure: x-polypad(rotate="no")
+    x-slider(steps=1000 speed=1 continuous)
+
+---
+> id: currys-paradox-4
+
+Trong khi tam giác màu xanh và màu đỏ dường như thẳng hàng vì thế các đầu mút nối với nhau bằng một đường thẳng, chúng không giống như vậy. Sử dụng công thức ½ x b x h để tìm diện tích của hình này [shape](->.paradox-poly) được tạo bởi 4 mảnh ghép là không chính xác vì hình này [[không phải là | là]] một tam giác. Diện tích của hình này là 32 đơn vị diện tích. Sử dụng công thức `1/2 x b x h`, ta được 32.5 đơn vị diện tích. `1/2` đơn vị bổ sung có từ khoảng cách giữa đường màu xanh lá cây và đường thực tế nối các đầu mút của tam giác màu đỏ và màu xanh.
+
+    figure: x-polypad(rotate="no")
+
+---
+> id: currys-paradox-5
+> goals: second-zoom
+
+Trong cách sắp xếp thứ hai, các hình này dường như cũng tạo thành một hình tam giác có cùng diện tích tổng cộng, nhưng ta đã sử dụng thêm một đơn vị diện tích. Vì vậy, suy nghĩ đầu tiên của chúng ta là diện tích của 4 hình này giảm đi một. Di chuyển thanh trượt bên dưới để phóng to đường màu xanh lá cây nối các góc của hai hình tam giác.
+
+    figure: x-polypad(rotate="no")
+    x-slider(steps=1000 speed=1 continuous).zoom-s-2
+
+---
+> id: currys-paradox-6
+
+Thêm đơn vị diện tích thừa vào việc sắp xếp 4 mảnh này sẽ làm cho các hình tam giác nhô ra bên ngoài đường màu xanh lá cây. Vì vậy, sự sắp xếp này cũng không phải là một hình tam giác! Tổng diện tích của các mảnh không đổi là 32!
+
+Vì vậy, ta đã hiểu được nghịch lý này. Diện tích của hình tam giác màu xanh lá cây là 32.5 đơn vị diện tích và diện tích của 4 mảnh ghép là 32 đơn vị diện tích. Các mảnh ghép KHÔNG vừa khít hoàn toàn bên trong hình tam giác. Khi ta chỉ thử sử dụng 4 mảnh, ta vẫn có `1/2` của một đơn vị diện tích để lấp vào trong hình tam giác. Lúc đầu, chúng ta chỉ không nhận thấy thiếu `1/2` đơn vị diện tích.
+
+    figure: x-polypad(rotate="no")
+
+Trong cách sắp xếp thứ hai, chúng ta đã bổ sung thêm vào một đơn vị diện tích để làm cho 4 mảnh ghép nằm gọn bên trong hình tam giác màu xanh lá cây. Một lần nữa, nó có vẻ vừa vặn, nhưng nó thực sự là nó lớn hơn `1/2` đơn vị diện tích. Bằng mắt thường chúng ta khó có thể nhận thấy `1/2` đơn vị diện tích thừa này.
+
+Phù! Ý tưởng cơ bản của ta rằng diện tích của các hình không đổi bất kể sự sắp xếp của các hình đó vẫn đúng. Chúng ta sẽ sử dụng ý tưởng này để nghiên cứu về các hình tròn trong một vài chương tiếp theo.
+
+---
+
+## Hình tròn và Chu vi
+
+> section: circles
+> sectionStatus: dev
+
+Trong các chương trước, chúng ta đã khám phá và tìm hiểu về các hình có độ dài các cạnh là đoạn thẳng. Tất nhiên, có nhiều điều thú vị nữa - tất cả các loại thực phẩm, các điểm tham quan giải trí, các đồ vật trong tự nhiên và lốp xe, mà ta chỉ kể tên một vài thứ - tất cả đều có các cạnh là đường cong.
+
+::: column.grow(width=110)
+
+    x-img(src="https://st.depositphotos.com/1689882/1219/i/950/depositphotos_12195072-stock-photo-grapefruit-isolated-on-white-background.jpg" width=110 height=110)
+
+::: column.grow(width=110)
+
+    x-img(src="https://static3.depositphotos.com/1005504/200/i/950/depositphotos_2003912-stock-photo-london-eye.jpg"  width=110 height=110)
+
+::: column.grow(width=110)
+
+    x-img(src="https://st.depositphotos.com/1872017/1625/i/950/depositphotos_16253565-stock-photo-top-view-of-pizza-margherita.jpg" width=110 height=110)
+
+::: column.grow(width=110)
+
+    x-img(src="https://st.depositphotos.com/1001469/2018/i/950/depositphotos_20187853-stock-photo-automobile-tire-isolated-on-white.jpg" width=110 height=110)
+
+::: column.grow(width=110)
+
+    x-img(src="https://lh3.googleusercontent.com/ur9ajZgRO1ENrL4gl5CrRuMe2DOucBJoKeFP7wsgNqv6axRuCqDOUoM7xVufuSeQf0uGITvFzT5li2WE05052xknJMMRiv_HNquH6gGTFnYYzL-p4PmlMHLDL82-0ufc9kwEH16b" width=110 height=110)
+
+:::
+
+Như bạn có thể biết, một đường tròn là đường nối tất cả các điểm có cùng khoảng cách với một điểm ở tâm.
+
+    // TODO ANIMATION-01: Construct circle
+
+Đường đua Mô tô Indianapolis ở Indiana, Hoa Kỳ là một trong những đường đua nổi tiếng nhất trên thế giới.
+
+::: column.grow(width=350)
+
+    x-img(src="https://st3.depositphotos.com/2942339/35223/i/1600/depositphotos_352234002-stock-photo-indianapolis-circa-march-2020-gate.jpg" width=350 height=255)
+
+::: column.grow(width=350)
+
+    x-img(src="https://image.shutterstock.com/z/stock-photo-may-indianapolis-in-helio-castroneves-of-brazil-heads-through-the-turns-to-practice-1407372011.jpg" width=350 height=257)
+
+:::
+
+Indianapolis 500 là chặng đua nổi tiếng nhất tại trường đua. Trong cuộc đua này, ô tô phải chạy 500 dặm. Cuộc đua này bắt đầu vào năm 1911 và nó là cuộc đua xe lâu đời nhất thế giới vẫn diễn ra cho đến ngày nay. Các đội hỗ trợ các tay đua phải thay thế nhiều lần trong một cuộc đua. Lớp cao su trên vỏ xe nhanh chóng bị mòn do nhiệt sinh ra khi lái xe ở tốc độ cao. Cần thay lốp sau khoảng 52,000 vòng quay. Mặc dù điều này có vẻ nhiều, nhưng lốp xe ô tô trung bình có thể kéo dài đến [[31,000,000 | 310,000 | 3,100,000]] vòng đua.
+
+Các tay đua dừng pit trong cuộc đua để thay lốp và nạp nhiên liệu.
+
+::: column(width=560)
+
+    iframe(width="560" height="315" src="https://www.youtube-nocookie.com/embed/ql5h00xcHLQ" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+
+:::
+
+Các đội cần biết khi nào nên dừng pit. Nếu họ đợi quá lâu và làm mòn lốp, tốc độ của họ sẽ giảm và dẫn đến nguy cơ xảy ra...
+
+::: column(width=560)
+
+    iframe(width="560" height="315" src="https://www.youtube-nocookie.com/embed/ZMZJ3ZaEcIQ" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+
+:::
+
+---
+> id: wheels
+
+Hãy thử xác định số vòng mà ô tô có thể chạy trước khi cần dừng pit. Để trả lời điều này, chúng ta cần nghĩ về quãng đường di chuyển của một chiếc lốp trong một vòng quay. Dưới đây là 4 loại xe có kích cỡ lốp rất khác nhau. Di chuyển từng xe để lốp xe quay hết một vòng.
+
+    // INTERACTIVE-01: Wheel distances (page 3)
+
+    figure: .wheel-distances
+      include svg/wheels.svg
+      button.btn.reset Reset
+
+---
+
+Quãng đường xe đi được trong một vòng quay của lốp xe bằng khoảng cách [[vòng quanh | ngang qua]] lốp xe. Nói chung, độ dài xung quanh một hình là [[chu vi | diện tích]] của hình đó. Tuy nhiên, chu vi hình tròn có một cái tên duy nhất - circumference.
+
+    // DIAGRAM: Tire and track
+    figure: x-img(width=500 height=228 src="images/track_diagram.jpg")
+
+Để xác định ô tô đi được bao xa trong một vòng quay của lốp xe, chúng ta cần biết [[chu vi | diện tích] của mỗi lốp. Chúng ta cũng cần biết độ dài của mỗi vòng. Các đường thẳng là khá đơn giản. Tuy nhiên, mỗi lượt trong số bốn lượt kết hợp với nhau để tạo thành [[nguyên | một nửa]] đường tròn, vì vậy ta cũng sẽ cần một cách để tính toán độ dài vòng quanh cả đường tròn đó.
+
+Chúng ta có thể sử dụng một đoạn dây và thước để xác định độ dài vòng quanh lốp xe. Hoặc chúng ta có thể sử dụng một số loại dụng cụ đo lường linh hoạt. Hoặc chúng ta có thể đi bộ quanh một đường tròn để xác định độ dài. Tuy nhiên, sẽ rất hữu ích nếu có mối quan hệ nào đó giữa khoảng cách ngang qua đường tròn và khoảng cách vòng quanh đường tròn. Các đường thẳng sẽ dễ dàng hơn để đo bằng các công cụ như thước kẻ và thước dây. Chúng ta sẽ khám phá ý tưởng đó trong chương này.
+
+---
+> id: encasement-estimation
+> goals: eight-sides
+
+Trong các chương hình học trước, chúng ta đã sử dụng những gì đã học về các hình trước đó để giúp ta trong những hình mới. Ví dụ, chúng ta sắp xếp lại các hình bình hành thành hình chữ nhật để hiểu cách tìm diện tích hình bình hành. Trước tiên, chúng ta hãy tìm cách ước tính độ dài xung quanh lốp xe bằng cách sử dụng những gì chúng ta biết về chu vi của đa giác. Đặt hình vuông bao quanh hình tròn để nó hoàn toàn bao quanh hình tròn đó.
+
+    // INTERACTIVE-02: Tire circumference estimation (page 5)
+
+    figure: .tire-circumference
+      img(src="https://st.depositphotos.com/1001469/2018/i/950/depositphotos_20187853-stock-photo-automobile-tire-isolated-on-white.jpg")
+      svg
+
+Lốp xe nằm gọn vừa khít trong hình vuông nên chu vi của lốp [[nhỏ hơn | lớn hơn]] chu vi của hình vuông. Chu vi của _{span.shape-name}square_ là [[108]] cm nên độ dài bao quanh lốp nhỏ hơn 108 cm.
+
+    // [TODO]: consider using inline variable slider instead
+    x-slider.tire-encasement.reveal(steps=4 when="blank-0 blank-1")
+
+---
+
+Khi chúng ta tăng số lượng các cạnh của đa giác, ước tính của ta ngày càng gần hơn với độ dài vòng quanh lốp xe. Quá trình này giúp ta ước tính gần đúng chu vi của hình tròn. Nhưng nếu chúng ta cần chính xác thì sao? Chúng ta có thể sử dụng các đoạn thẳng trong một hình tròn để giúp tìm chu vi không? Trước khi khám phá thêm vấn đề này, chúng ta hãy tìm hiểu một số tên gọi các thành phần của hình tròn.
+
+BÁN KÍNH của một hinh tròn là đoạn thẳng nối từ tâm của hinh tròn đến một điểm trên hinh tròn. ĐƯỜNG KÍNH của hinh tròn là đoạn thẳng đi qua tâm và nối hai điểm trên hinh tròn.
+
+    // TODO DIAGRAM: Radius and diameter
+
+---
+
+> id: radii-diameters
+> goals: radii-diameters-drawn
+
+Vẽ 3 bán kính và 3 đường kính trên hình tròn bên dưới:
+
+    figure: x-geopad(width=400 height=400)
+      svg
+
+---
+
+Bây giờ, hãy xác định các thành phần của hình tròn trong các đối tượng sau đây:
+
+::: column.grow(width=110)
+
+    x-img(src="https://st.depositphotos.com/1689882/1219/i/950/depositphotos_12195072-stock-photo-grapefruit-isolated-on-white-background.jpg" width=110 height=110)
+
+::: column.grow(width=110)
+
+    x-img(src="https://static3.depositphotos.com/1005504/200/i/950/depositphotos_2003912-stock-photo-london-eye.jpg"  width=110 height=110)
+
+::: column.grow(width=110)
+
+    x-img(src="https://st.depositphotos.com/1872017/1625/i/950/depositphotos_16253565-stock-photo-top-view-of-pizza-margherita.jpg" width=110 height=110)
+
+::: column.grow(width=110)
+
+    x-img(src="https://st.depositphotos.com/1001469/2018/i/950/depositphotos_20187853-stock-photo-automobile-tire-isolated-on-white.jpg" width=110 height=110)
+
+::: column.grow(width=110)
+
+    x-img(src="https://lh3.googleusercontent.com/ur9ajZgRO1ENrL4gl5CrRuMe2DOucBJoKeFP7wsgNqv6axRuCqDOUoM7xVufuSeQf0uGITvFzT5li2WE05052xknJMMRiv_HNquH6gGTFnYYzL-p4PmlMHLDL82-0ufc9kwEH16b" width=110 height=110)
+
+:::
+
+Một trong những đoạn thẳng màu trắng trên quả bưởi là một [[bán kính | đường kính | chu vi]]. Một tay quay của bánh xe đu quay là một [[bán kính | đường kính | chu vi]]. Lớp vỏ cứng của bánh pizza là [[chu vi | bán kính | đường kính]]. Chiều cao của lốp xe là [[đường kính | bán kính | chu vi]]. Chiều rộng của khúc gỗ là [[đường kính | bán kính | chu vi]].
+
+Mặc dù nó không điển hình khi nghĩ về "đường kính" của một hình vuông, nhưng nó có thể là đường thẳng từ cạnh này sang cạnh kia và đi qua tâm.
+
+    // ANIMATION-02: Diameter of a square
+
+Ta cần [[4]] “đường kính” của một hình vuông để quấn vòng quanh một hình vuông và khi đó được chu vi của hình vuông. Khi nhập vào 4: Trong một hình vuông, độ dài vòng quanh dài gấp 4 lần độ dài bề ngang. Hãy cùng suy nghĩ về câu hỏi này với các hình tròn. Bạn nghĩ cần bao nhiêu đường kính của hình tròn để quấn quanh hình tròn đó? TODO.
+
+---
+
+> id: diameter-circumference
+> goals: diameters-drawn
+
+Hãy cùng tìm hiểu!
+
+    // INTERACTIVE-04: 'Wrapping' circumference (page 7)
+    figure: .diameter-drawing
+      x-geopad(width=400 height=400)
+        svg
+      button.btn.reset Reset
+
+1. Vẽ một đường tròn.
+2. Kéo đường kính bên ngoài của hình tròn và quấn nó vòng quanh chu vi.
+3. Tiếp tục làm điều này cho đến khi bạn sử dụng các đường kính đủ để bao phủ chu vi.
+4. Lặp lại quá trình này với hai hình tròn có kích thước khác nhau.
+
+---
+
+    // HANDS-ON ICON
+
+Đây là thời điểm tuyệt vời để rời khỏi thiết bị của bạn và làm thử điều này tại nhà. Tìm bất kỳ vật thể hình tròn nào. Nó có thể là một cái gì đó trong nhà bếp của bạn như một cái ly, một cái đĩa hoặc một hộp rau. Hoặc nó có thể là một cái gì đó trong phòng của bạn như đồng hồ tròn, một biển hiệu, hoặc một cái chai lọ gì đó. Bất cứ cái gì hình tròn đều được! Sử dụng một đoạn dây và đánh dấu chiều dài của đường kính. Sau đó dùng thước để đánh dấu trên đoạn dây độ dài 3 đoạn đường kính. Quấn sợi dây xung quanh vật hình tròn và xem độ dài của ba đoạn đường kính gần đi hết một vòng quanh hình tròn như thế nào!
+
+Bạn đã dự đoán rằng sẽ cần TODO đường kính để quấn quanh vòng tròn. Có vẻ như cần nhiều hơn [[3]] đường kính một chút để vừa khít với một vòng tròn. Nhưng điều "nhiều hơn một chút" này là gì? Chúng ta có thể xác định đường kính này là bao nhiêu không? Nó là `1/10` của đường kính phải không? `1/5` của đường kính phải không? Hay `1/4` của đường kính? Trước khi trả lời câu hỏi này, hãy thực hiện theo ý tưởng này.
+
+::: column.grow(width=350)
+
+    x-img(src="https://static8.depositphotos.com/1051392/952/i/950/depositphotos_9520930-stock-photo-3d-running-around-diagram.jpg" width=350 height=219)
+
+::: column.grow(width=350)
+
+    x-img(src="https://static6.depositphotos.com/1016225/556/i/950/depositphotos_5562081-stock-photo-barefoot-frame.jpg" width=350 height=350)
+
+:::
+
+Hãy tưởng tượng bạn sẽ chạy quanh một đường tròn có đường kính 500 mét và bạn muốn ước tính xem mình sẽ chạy được bao xa. Độ dài vòng quanh đường đua này dài bằng [[3]] lần độ dài bề ngang, vì vậy bạn sẽ chạy khoảng [[1500]] mét. Tức là 1.5 km. Khoảng cách thực tế là [[nhiều hơn | ít hơn]] số này một chút, nhưng là ước tính cho quãng đường bạn sẽ chạy như cách này là khá tốt.
+
+::: column(width=400)
+
+    x-img(src="https://st2.depositphotos.com/2222024/5609/i/950/depositphotos_56093859-stock-photo-happy-little-orange-havanese-puppy.jpg" width=400 height=267)
+
+:::
+
+Bây giờ hãy tưởng tượng bạn muốn xây một hàng rào để bao quanh một sân chơi hình tròn cho con chó của bạn. Bạn đã đo độ dài bề ngang của hình tròn là 60 mét và bạn biết độ dài vòng quanh hình tròn là khoảng gấp [[3]] lần độ dài trên. Do đó, bạn mua 180 mét hàng rào. Bạn sử dụng tất cả hàng rào để cố gắng tạo ra một vòng tròn hoàn hảo và phát hiện ra rằng bạn đã mua [[không đủ hàng rào | quá nhiều hàng rào | vừa đủ số lượng hàng rào]].
+
+Cần nhiều hơn 3 lần đường kính một chút để bằng chu vi. Sử dụng 3 làm ước lượng gần đúng là ổn cho một số ước tính chung, nhưng chúng ta cần tiếp tục nghiên cứu để biết được tính toán chính xác hơn về chu vi của một hình tròn.
+
+---
+
+> id: finding-pi
+
+Hãy xem liệu chúng ta có thể xác định được cần thêm bao nhiêu đường kính thứ 4 để quấn hoàn toàn quanh hình tròn. Vẽ một đường bên dưới và quan sát khi nó được tạo thành một đường tròn.
+
+::: column.grow
+
+    // INTERACTIVE-05: Finding PI (pages 9-10)
+    x-geopad(width=200 height=200)
+      svg
+
+::: column(width=450)
+
+    table.finding-pi.reveal(when="line-drawn")
+      tr
+        th CIRCUMFERENCE
+        th DIAMETER
+        th.reveal(when="blank-1") NUMBER OF DIAMETERS NEEDED TO EQUAL CIRCUMFERENCE
+      tr
+        td.circumference 0
+        td.diameter 0
+        td.reveal(when="blank-1")
+          x-blank(solution="3.14")
+
+:::
+
+Hãy nghĩ xem cần bao nhiêu đường kính để tạo thành chu vi. Việc xác định số lần của một số để tạo ra một số khác được biểu diễn bằng [[phép chia | phép nhân | phép trừ]].
+
+Chia độ dài của chu vi cho độ dài của đường kính sẽ xác định được cần có bao nhiêu đường kính để đạt được chu vi. Thực hiện phép chia đó và nhập giá trị vào bảng.
+
+Hãy thử lại với một đường thẳng có độ dài khác.
+
+---
+
+Một chút của đường kính thứ 4 cần để quấn quanh một vòng tròn là 0.14 lần đường kính. Mặc dù phải mất 4 đường kính của một hình vuông để quấn quanh hình vuông đó, nhưng ta chỉ cần [[3.14]] lần đường kính để vừa với khít một vòng hình tròn.
+
+    // HANDS-ON ICON
+
+Bây giờ là thời điểm tuyệt vời khác để rời khỏi thiết bị của bạn và làm thử điều này trên bất kỳ hình tròn nào ở nhà. Dùng thước để đo đường kính của hình tròn. Sau đó, quấn một đoạn dây xung quanh hình tròn và đánh dấu điểm xuất phát đặt đoạn dây. Đo độ dài đoạn dây này bằng thước. Chia chu vi cho đường kính. Bạn có nhận được kết quả gần với 3.14 không?
+
+Giờ ta đã thiết lập ý tưởng rằng chu vi của hình tròn có thể được tính bằng cách đo đường kính của hình tròn và [[nhân | chia]] nó với [[ 3.14 | 4 | 5]]. Ý tưởng này được viết dưới dạng công thức là C = 3.14 x D. Hãy thêm công thức này vào bộ công thức của chúng ta. Vì đường kính là [[gấp đôi | một nửa]] bán kính, chúng ta cũng có thể đo bán kính, nhân đôi nó và sau đó nhân với 3.14. Điều này cho ta một phiên bản khác của công thức: C = 3.14 x [[2]] x R.
+
+::: column(width=400)
+
+    x-img(src="https://st2.depositphotos.com/2222024/5609/i/950/depositphotos_56093859-stock-photo-happy-little-orange-havanese-puppy.jpg" width=400 height=267)
+
+:::
+
+Bây giờ chúng ta có thể tính toán chính xác số lượng hàng rào cần thiết để bao quanh một hình tròn có đường kính 60 mét. Nhớ lại rằng 180 mét là [[không đủ | quá nhiều]] hàng rào. Nếu đường kính là 60, chúng ta tìm chu vi bằng cách nhân 60 với [[3.14]]. Chu vi thực tế là [[188.4]]. Nếu bạn chỉ có thể mua hàng rào những đoạn dài nguyên cả mét, bạn nên mua [[189]] mét hàng rào. Nếu chỉ sử dụng 180 mét hàng rào như chúng ta đã ước tính lúc đầu sẽ để lại một khoảng hở gần 10 mét!
+
+Một số nền văn minh cổ đại đã suy nghĩ về câu hỏi cần bao nhiêu đường kính để bằng chu vi của một hình tròn. Một bảng đất sét Babylon có niên đại từ năm 1900 trước Công nguyên đến năm 1600 trước Công nguyên đã mô tả số lượng đường kính cần thiết là `3 1/8`, hay 3.125. Nó chỉ là lệch [[0.15]] so với 3.14 mà chúng ta đã thiết lập ở trên. Rhind Mathematical Papyrus từ khoảng năm 1650 cho thấy người Hy Lạp đã sử dụng 3.16 làm số lượng đường kính cần thiết. Nó chỉ lệch [[0.02]] so với 3.14.
+
+::: column(width=600)
+
+    x-img(src="https://media.britishmuseum.org/media/Repository/Documents/2014_10/5_19/595e9f4b_efb3_481a_9257_a3bb013ab718/mid_00366139_001.jpg" width=600 height=109)
+
+:::
+
+Shatapatha Brahmans, một văn bản Ấn Độ từ 400-300 năm trước Công nguyên, cho thấy rằng người Ấn Độ đã sử dụng 3.139. Nó chỉ lệch [[0.001]] so với 3.14.
+
+Người ta phát hiện rằng 3.14 không phải là số chính xác của đường kính cần thiết để đạt được chu vi. Vào thế kỷ thứ 3 trước Công nguyên, nhà toán học người Hy Lạp Archimedes đã đặt các đa giác bên trong và bên ngoài các hình tròn để ước tính được con số là 3.1418. 400 năm sau, nhà toán học Hy Lạp Ptolemy sử dụng các đa giác có 360 cạnh để ước tính được con số là 3.1418.
+
+Thông qua kết quả của những người này và các nhà toán học khác trên thế giới, con số ngày càng trở nên chính xác hơn. Khi mô tả con số này, các nhà toán học sẽ nói những điều như “đại lượng mà khi nhân đường kính với nó, sẽ đạt được chu vi,” hoặc những mô tả dài dòng khác.
+
+Năm 1706, William Jones, một nhà toán học xứ Wales, đã đơn giản hóa mọi thứ bằng cách sử dụng một chữ cái trong bảng chữ cái Hy Lạp để làm đại diện cho con số này. Tác phẩm tiếng Hy Lạp “perimetros” tạm dịch là “vòng quanh” vì vậy Jones đã sử dụng chữ cái đầu tiên của từ “perimetros”. Bảng chữ cái Hy Lạp sử dụng các ký hiệu khác với bảng chữ cái tiếng Anh. Trong tiếng Hy Lạp, “perimetros” được viết là περίμετρος. Chữ cái đầu tiên của từ này là `pi` và được phát âm là “Pi” trong tiếng Anh. Nhà toán học người Thụy Sĩ, Leonard Euler, đã phổ biến kí hiệu `pi` khi ông bắt đầu sử dụng nó vào năm 1737. Thật ngẫu nhiên khi cách phát âm tiếng Anh của chữ cái Hy Lạp `pi` cũng là tên của một món tráng miệng hình tròn!
+
+::: column(width=480)
+
+    x-img(src="https://media.giphy.com/media/3ohjUZawOtwng26rN6/giphy.gif" width=480 height=360)
+
+:::
+
+Vậy giá trị chính xác của `pi` là gì? Có phải là 3.14? 3.141? Hóa ra là các nhà toán học đã phát hiện ra các mô hình và quy tắc để có thể xác định từng chữ số tiếp theo của `pi`. Ngày nay, các nhà toán học có các chương trình trên siêu máy tính để xác định các chữ số của `pi`. Các nhà toán học hiện biết được hơn 30 nghìn tỷ chữ số sau dấu thập phân! 5 chữ số đầu tiên của `pi` sau số thập phân là 3.14159. Bạn sẽ tìm hiểu thêm về khai triển thập phân của `pi` trong các chương của mathigon tới. Phép gần đúng phân số được sử dụng phổ biến nhất của `pi` is `22/7` hay `3 1/7` vì nó bằng 3.142857.
+
+Đừng để sự mở rộng thập phân của `pi` làm giảm đi sự đơn giản ở đây. Số `pi` đại diện cho cần bao nhiêu lần đường kính của hình tròn để bằng chu vi.
+
+Trong phần còn lại của chương này, chúng ta sẽ sử dụng giá trị gần đúng của 3.14.
+
+Ta đã viết các công thức dưới dạng C = 3.14 x D và C = 3.14 x 2 x [[R | D]]. Bây giờ chúng ta biết chữ cái Hy Lạp `pi` được sử dụng để biểu thị số đường kính chính xác cần thiết để bằng chu vi, chúng ta có thể thay thế 3.14 bằng` pi` trong các công thức này. `C = pi x blank(D, R)` hay `C = pi x input(2) x R`. Các công thức thường được viết mà không có ký hiệu nhân như sau: `C = pi D` and `C = 2 pi R`. Hãy cập nhật bộ công thức của chúng ta các phiên bản của công thức này.
+
+---
+
+> id: circular-highways
+
+Giao thông là một mối quan tâm ở các thành phố trên thế giới. Trong một nỗ lực để đảm bảo giao thông bên ngoài trung tâm thành phố, nhiều thành phố có các đường cao tốc vòng quanh thành phố. Hãy cùng khám phá ba ví dụ trên khắp thế giới.
+
+    // INTERACTIVE-06: Circular highways (pages 13-14)
+    // [TODO]: Document tabs (if not documented already)
+
+::: tab
+
+#### Rome _{span.check(when="blank-0 blank-1")}_
+
+    figure: .rome
+      .map
+        include svg/rome.svg
+        x-geopad(width=400 height=400)
+          svg
+      button.btn.reset Reset
+
+Vẽ trong một hình tròn bao phủ đường cao tốc được hiển thị. _{span.reveal(when="rome-circle")}Draw in a diameter of the circle._ _{span.reveal(when="rome-diameter")}The distance around this road is [[64.37]] [[km | m | cm]]._
+
+::: tab
+
+#### Moscow _{span.check(when="blank-2")}_
+
+    figure: .moscow
+      .map
+        include svg/moscow.svg
+        x-geopad(width=400 height=400)
+          svg
+      button.btn.reset Reset
+
+Vẽ trong một hình tròn bao phủ đường cao tốc được hiển thị. _{span.reveal(when="moscow-circle")}Draw in a radius of the circle._ _{span.reveal(when="moscow-radius")}The distance around this road is [[15.1]] km._
+
+::: tab
+
+#### London _{span.check(when="blank-5")}_
+
+    figure: .london
+      .map
+        include svg/london.svg
+        x-geopad(width=400 height=400)
+          svg
+      button.btn.reset Reset
+
+Vẽ trong một hình tròn bao phủ đường cao tốc được hiển thị. _{span.reveal(when="london-circle")}The distance around this highway is about [[170]] km. If you instead wanted to drive straight across the circle through the center, this distance is [[54]] km._ _{span.reveal(when="blank-3 blank-4")}This distance is the [[diameter | radius ]] of the circle._
+
+:::
+
+---
+
+::: column(width=400)
+
+    x-img(src="https://st4.depositphotos.com/13193824/19879/i/1600/depositphotos_198799636-stock-photo-young-smiling-woman-sunglasses-riding.jpg" width=400 height=292)
+
+:::
+
+Một chiếc lốp xe đạp đường trường trung bình có đường kính 68 cm. Nhớ lại rằng quãng đường mà một chiếc lốp đi được trong một vòng quay bằng với [[chu vi | đường kính]] của lốp xe. Trong một vòng quay của lốp của một chiếc xe đạp đường trường, chiếc xe đó đã đi được [[214]] cm. Đường vòng quanh Moscow là 15.1 km. Nó bằng 1,510,000 cm. Nếu bạn đạp xe quanh đường vòng này, bánh xe của bạn sẽ phải thực hiện khoảng [[7056]] vòng quay!
+
+    // DIAGRAM: Track
+
+Bây giờ chúng ta đã sẵn sàng để trả lời câu hỏi từ đầu chương! Nhớ lại rằng lốp xe cần được thay sau khoảng 52,000 vòng quay và chúng ta muốn biết có bao nhiêu vòng quanh đường đua tương đương với 52,000 vòng quay của lốp.
+
+Đường kính của lốp xe là [[27]] inch nên chu vi là [[85]] inch. 52,000 vòng quay cho quãng đường di chuyển là [[4420000]] inch. Nó tương đương với khoảng 70 dặm.
+
+Bây giờ, hãy tính quãng đường quanh 1 vòng đua. 4 đoạn thẳng có tổng khoảng cách là [[7,920]] feet. Kết hợp 4 lượt của vết xe sẽ tạo ra [[`1` | `1/2` | `2`]] đường tròn.
+
+    // ANIMATION-03: Lap distance
+
+Bán kính của hình tròn là [[840.8]] feet, vì vậy độ dài vòng quanh hình tròn là [[5280]] feet. Do đó, tổng quãng đường của 1 vòng đua là [[13200]] feet. Nó tương đương với 2.5 dặm.
+
+Mỗi bộ lốp có tuổi thọ 70 dặm và quãng đường một vòng đua là 2.5 dặm, vì vậy, nên thay lốp sau [[28]] vòng đua.
+
+Cuộc đua được gọi là Indy 500 vì ô tô phải chạy 500 dặm. Mỗi vòng đua là 2.5 dặm, vì vậy cuộc đua dài [[200]] vòng. Điều đó có nghĩa là cần phải thay khoảng [[7]] lốp xe trong suốt cuộc đua. Đó là rất nhiều lốp xe!
+
+Hãy kết thúc chương này với một câu hỏi cuối cùng. Bạn nghĩ cái nào dài hơn - chiều cao của lon đựng bóng tennis hay độ dài vòng quanh lon? [[chiều cao của lon | độ dài vòng quanh lon]].
+
+    // DIAGRAM: Tennis ball can comparison
+{.todo} Coming Soon!
+
+Một quả bóng tennis có đường kính 6.7 cm và lon đựng chứa được 3 quả bóng mà không có chỗ thừa ở phía trên hoặc phía dưới. Do đó, chiều cao của lon là [[20.1]] cm.
+
+Độ dài vòng quanh lon bằng [[chu vi | đường kính | bán kính]] của nắp lon.
+
+    // DIAGRAM: Tennis ball lid overlay
+{.todo} Coming Soon!
+
+Chu vi của nắp là 3.14 x [[D | R]]. Độ dài vòng quanh lon là [[21]] cm. Khoảng cách dài hơn là [[độ dài vòng quanh lon | chiều cao của lon]].
+
+Chúng ta có thể đã trả lời câu hỏi này mà không cần thực hiện bất kỳ phép tính nào! Chiều cao của lon bằng [[3]] đường kính của quả bóng tennis. Độ dài vòng quanh lon là 𝞹 [[đường kính | bán kính]]. Số 𝞹 là [[lớn hơn | nhỏ hơn]] 3, vì vậy độ dài vòng quanh bất kỳ lon nào (giống như lon bóng này) có thể chứa được đúng 3 quả bóng hình tròn lớn hơn chiều cao của lon đó!
+
+::: column(width=400)
+
+    x-img(src="https://images-na.ssl-images-amazon.com/images/I/61ZdvJup6PL._AC_SX679_.jpg" width=400 height=691)
+
+:::
+
+---
+
+## Diện tích của Hình tròn
+
+> section: circle-area
+> sectionStatus: dev
+
+    // DIAGRAM: Pizzas w/diameters (page 1)
+    figure: x-img(width=500 height=166 src="images/pizza_sizes_diagram.jpg")
+
+Tại một cửa hàng pizza địa phương, Tetromino’s Pizza, 1 chiếc bánh pizza lớn có giá tương đương với 2 chiếc bánh pizza cỡ vừa. Bạn nghĩ mình nên mua tùy chọn nào nếu muốn có càng nhiều bánh pizza càng tốt? [[1 cái loại lớn | 2 cái loại vừa]]. Để quyết định mua loại nào tốt hơn, chúng ta cần biết [[diện tích | chu vi]] của mỗi bánh pizza hình tròn này.
+
+---
+
+> id: slicing-1
+
+Như chúng ta đã thực hiện trong các chương trước, hãy sử dụng những gì chúng ta biết về các đa giác để giúp ta hiểu về diện tích của hình tròn. Ước tính diện tích của mỗi chiếc bánh pizza bằng cách cắt chúng thành 8 hình tam giác bằng nhau.
+
+    // INTERACTIVE-01: Pizza slicing (pages 1-2)
+    figure: x-geopad(width=1000 height=400)
+      include svg/pizza.svg
+
+{.reveal(when="large-slices medium-slices")} Nhớ lại rằng diện tích của một [triangle](/course/shapes/parallelograms-triangles) có thể được tính bằng cách sử dụng công thức `1/2 x "base" x "height"`, miễn là chiều cao phải tạo thành một góc [[vuông | nhọn | tù]] với cạnh đáy.
+
+---
+
+Hình tam giác lớn hơn có [[170.52]] cm vuông pizza và tam giác nhỏ hơn có [[90.28]] cm vuông pizza. Tổng cộng, 1 chiếc bánh pizza lớn có khoảng [[1364]] cm vuông pizza và 2 chiếc pizza cỡ vừa có khoảng [[1444]] cm vuông pizza. Vì vậy, có vẻ như 2 bánh pizza cỡ vừa được nhiều pizza hơn.
+
+---
+
+Quá trình này rất hữu ích để đưa ra các ước tính đúng, nhưng câu trả lời của chúng ta là [[ít hơn | nhiều hơn]] diện tích thực tế. Có khi nào 1 chiếc bánh pizza lớn thực sự cho nhiều bánh pizza hơn? Chúng ta hãy tiếp tục tìm hiểu để xem liệu chúng ta có thể phát triển một quy trình để tính diện tích chính xác của một hình tròn hay không.
+
+---
+
+> id: slicing-2
+
+Trong chương [Circumference](/course/shapes/circles), chúng ta đã suy nghĩ về độ dài xung quanh một hình vuông để giúp biết về độ dài xung quanh một hình tròn. Hãy thực hiện cách tiếp cận tương tự với diện tích. Dưới đây là một chiếc bánh pizza hình vuông có bán kính là “R.” Mặc dù không điển hình khi nghĩ về bán kính của hình vuông, đoạn thẳng này là khoảng cách ngắn nhất từ tâm của hình vuông đến cạnh của nó.
+
+    // INTERACTIVE-02: Square slice of square pizza (pages 2-4)
+    figure: .slices-2
+      include svg/square_pizza.svg
+
+Cắt một miếng hình vuông của chiếc bánh pizza hình vuông có độ dài các cạnh “R.”
+
+{.reveal(when="sliced")} Diện tích của một trong những mảnh đó là [[`R x R` | `R + R` | `2 x R`]]. Nhớ rằng ta có thể viết là `R^2`.
+
+{.reveal(when="blank-0")} Nếu mỗi người nhận được một trong các miếng cỡ `R^2`, cái bánh pizza này có thể phục vụ [[4]] người.
+
+{.reveal(when="blank-1")} Do đó diện tích của hình vuông này là _{x-equation(solution="4r^2" keys="sup" short-var)}_. Độ dài mỗi cạnh của hình vuông là _{x-equation(solution="2r" short-var)}_, chúng ta cũng có thể tìm diện tích của hình vuông bằng cách _{x-equation(solution="2r × 2r" keys="×" short-var)}_. Nó bằng với `4R^2`. Dù bằng cách nào, ta thấy rằng cần 4 hình vuông “R x R” để điền vào một hình vuông khi R là bán kính của hình vuông đó. Hãy xem liệu chúng ta có thể sử dụng ý tưởng này để khám phá cách tính diện tích của một hình tròn hay không.
+
+---
+
+Dưới đây là một chiếc bánh pizza hình tròn có dán nhãn bán kính.
+
+    // TODO INTERACTIVE-03: Square slice of round pizza (pages 4-6)
+{.todo} Coming Soon!
+
+Vẽ một hình vuông với độ dài cạnh “R.”
+
+Có bao nhiêu hình vuông “R x R” này mà bạn nghĩ có thể làm từ chiếc bánh pizza này nếu việc sắp xếp lại chiếc bánh pizza được cho phép TODO.
+
+4 miếng `R^2` [[lớn hơn | nhỏ hơn]] diện tích của chiếc bánh pizza. Nhấp vào một mảnh để xóa nó khỏi hình.
+
+Hãy xem phần thừa của `R^2` so với `1/4` của chiếc bánh pizza còn lại như thế nào.
+
+`3R^2` không đủ để che phủ toàn bộ chiếc bánh pizza. Chúng ta cần [[nhiều hơn | ít hơn]] `3R^2` một chút để phủ cái bánh pizza. Bạn có nhớ lại một con số khác mà chúng ta đã biết khi nghĩ đến hình tròn nó lớn hơn 3 một chút không? Bạn có nghĩ rằng đây có thể là cùng một con số không? Hãy tiếp tục khám phá ý tưởng này và tìm hiểu nhé!
+
+Trước khi trả lời câu hỏi này, hãy quay lại câu hỏi ban đầu về chiếc bánh pizza của chúng ta bằng cách sử dụng ý tưởng `3R^2`
+
+    // DIAGRAM: Pizzas w/diameters (page 7)
+{.todo} Coming Soon!
+
+Chiếc bánh pizza lớn có đường kính là 44 cm, do đó bán kính là [[22]] cm. Diện tích của bánh `R^2` với bán kính là [[484]] cm vuông, vì vậy `3R^2` của chiếc bánh pizza lớn là [[1452]] cm vuông. Bán kính của chiếc bánh pizza cỡ vừa là [[16]] cm nên `3R^2` của 1 chiếc bánh pizza cỡ vừa là [[768]] cm vuông. Diện tích của hai chiếc pizza cỡ vừa này là [[1536]] cm vuông.
+
+| | 1 Pizza lớn | 2 Pizza vừa |
+| Diện tích ước tính bằng cách sử dụng diện tích hình tam giác | 1364 cm vuông |1444 cm vuông |
+| Diện tích ước tính sử dụng công thức `3R^2` | 1452 cm vuông | 1536 cm vuông |
+
+Vì vậy, sử dụng `3R^2` làm ước tính cho việc tìm diện tích của một hình tròn sẽ cho chúng ta một ước tính tốt hơn là chia hình tròn thành các hình tam giác. Tuy nhiên, `3R^2` vẫn đánh giá chưa đủ diện tích của một hình tròn.
+
+Những chiếc pizza được giao đôi khi có thể để quá lâu và bị nguội. Mọi người thường hâm nóng lại pizza trước khi ăn.
+
+    // https://www.shutterstock.com/image-photo/tasty-pizza-box-isolated-on-white-116973259
+    figure: x-img(src="https://image.shutterstock.com/z/stock-photo-tasty-pizza-in-box-isolated-on-white-116973259.jpg" width=300 height=220)
+
+---
+
+> id: slices-arrangement
+> goals: height-selected
+
+    // TODO: Figure out why the next step isn't triggering on 'height-selected' being scored
+
+Thật không may, hầu hết các chiếc pizza đều quá lớn để có thể vừa với những chiếc lò nướng tiêu chuẩn. Hãy sắp xếp lại 8 miếng bánh lên khay nướng này để có thể vừa với lò nướng.
+
+    // INTERACTIVE-04: Pizza slices arrangement (pages 8-9)
+    figure: x-geopad(width=640 height=700)
+      include svg/pizza_2.svg
+
+{.reveal(when="arranged")} Việc cắt thành 8 miếng bánh pizza là khá phổ biến, nhưng nó có thể được cắt thành bất kỳ số lượng miếng bánh bằng nhau. Nếu chúng ta tăng số lượng các miếng lên ${n1}{n1|8|8,16,1}, hình dạng mỗi miếng bắt đầu trông càng giống một [[hình bình hành | tam giác | hình vuông]].
+
+{.reveal(when="blank-0")} Chúng ta đã sử dụng tất cả các bánh pizza và các miếng cắt không chồng lên nhau, do đó, diện tích của hình bình hành [[bằng | khác]] với diện tích của hình tròn. Công thức tính diện tích hình bình hành là đáy x chiều cao khi chiều cao tạo thành [[góc vuông | góc nhọn | góc tù]] với cạnh đáy._{span.reveal(when="blank-1 blank-2")} Click on the side of the parallelogram you want to use as the base._ _{span.reveal(when="blank-1 blank-2 base-selected")} Select the height that corresponds with this base._
+
+---
+
+Di chuyển thanh trượt qua lại để xem cạnh đáy và chiều cao của hình bình hành trong hình tròn.
+
+    // INTERACTIVE-05: QA formula sequence (page 9)
+
+| Câu hỏi và câu trả lời của học sinh | Công thức tính diện tích hình bình hành |
+| | cạnh đáy x chiều cao |
+| Chiều cao của hình bình hành bằng [[bán kính \| đường kính \| chu vi]] của hình tròn. | cạnh đáy x bán kính |
+| Cạnh đáy của hình bình hành bằng một nửa của [[chu vi \| bán kính \| đường kính]] của hình tròn. | `1/2` của Chu vi x Bán kính |
+| Viết tắt chu vi bằng C và bán kính bằng [[R \| D]] | `1/2 x C x R` |
+
+Diện tích hình bình hành bằng diện tích hình tròn nên ta có thể tìm diện tích hình tròn bằng công thức `1/2 x C x R`!
+
+---
+
+> id: pizza-rings
+
+Mọi người thích ăn pizza theo đủ mọi cách khác thường.
+
+    figure: x-img(src="https://media.giphy.com/media/ToMjGpPXUoKCyBGW7lu/giphy.gif" width=300 height=300)
+
+Ví dụ, một số người cắt bánh pizza của họ thành từng lát tròn thay vì thành cắt miếng.
+
+    // DIAGRAM: Pizza rings (page 10)
+
+Chiếc bánh pizza này trở nên khó sắp xếp hơn một chút trên khay nướng nhưng hoàn toàn có thể.
+
+    // INTERACTIVE-06: Circle rings (pages 10-11)
+
+::: column(width=340)
+
+    svg.circle-area.blue(width=340 height=245)
+      g.labels
+        line.reveal(x1=20 y1=156 x2=20 y2=206 marker-start="url(#area-arrow)" marker-end="url(#area-arrow)" when="blank-1")
+        line.reveal(x1=34 y1=218 x2=355 y2=218 marker-start="url(#area-arrow)" marker-end="url(#area-arrow)" when="blank-2")
+        text.reveal(x=10 y=185 when="blank-1") r
+        text.reveal(x=165 y=236 when="blank-2") 2πr
+    x-slider(steps=400)
+
+:::
+
+Di chuyển thanh trượt để xem các miếng tròn được sắp xếp trên khay nướng. Nếu chúng ta tăng số lượng miếng tròn lên đến ${n2}{n2|4|4,15,1}, hình dạng nó bắt đầu ngày càng giống một [[tam giác | hình bình hành | hình tròn]].
+
+Chúng ta đã sử dụng tất cả các bánh pizza và các miếng tròn không chồng lên nhau, vì vậy diện tích của hình tam giác [[bằng | khác]] với diện tích của hình tròn. Công thức về diện tích của một tam giác là _{x-equation(solution="1/2" keys="frac")}_ `x "base" x "height"` khi chiều cao tạo với cạnh đáy một góc vuông. _{span.reveal} Click on the side of the triangle you want to use as the base._ _{span.reveal} Draw in the height that corresponds with this base._
+
+Di chuyển thanh trượt qua lại để xem cạnh đáy và chiều cao của tam giác trong hình tròn.
+
+---
+
+    // INTERACTIVE-07: QA formula sequence (page 11)
+
+| Câu hỏi và câu trả lời của học sinh | Công thức về Diện tích Tam giác |
+| | `1/2 x "base" x "height"` |
+| Chiều cao của tam giác bằng [[bán kính \| đường kính \| chu vi]] của hình tròn. | `1/2 x "base" x "radius"` |
+| Cạnh đáy của tam giác bằng [[chu vi \| bán kính \| đường kính]] của hình tròn. | `1/2` của Chu vi x Bán kính |
+| Viết tắt chu vi bằng C và bán kính bằng [[R \| D]] | `1/2 x C x R` |
+
+Vì vậy, cho dù chúng ta cắt bánh pizza theo hình tam giác hay hình tròn, chúng ta sẽ có một công thức tính diện tích của hình tròn là `1/2 x C x R`.
+
+    // HANDS-ON ICON
+
+Bạn có thể nghĩ ra một cách khác để sắp xếp lại các phần của một hình tròn thành các hình khác mà chúng ta biết cách tìm diện tích của nó không? Đây có thể là thời điểm tốt để rời khỏi thiết bị của bạn và tự mình thử điều này. Có lẽ bạn sẽ nghĩ ra một cách mới để sắp xếp lại một hình tròn để chứng minh công thức diện tích là `1/2 x C x R`.
+
+Một cách để tìm diện tích hình tròn là nhân độ dài bán kính với độ dài chu vi rồi nhân với  _{x-equation(solution="1/2" keys="frac")}_. Tuy nhiên, để xác định chiều dài của chu vi, chúng ta sẽ phải sử dụng một công thức khác. Vì vậy, trong khi `1/2 x C x R` là một cách tiếp cận đúng để tìm diện tích của một hình tròn, các nhà toán học thích có các công thức càng đơn giản càng tốt. Hãy xét công thức `1/2 x C x R` và xem liệu chúng ta có thể đơn giản hóa nó không.
+
+    // INTERACTIVE-08: QA formula sequence (pages 12-13)
+
+| Câu hỏi và câu trả lời của học sinh | Công thức |
+| | `1/2 x C x R` |
+| Công thức tính [chu vi](/course/shapes/circles) của hình tròn _{x-equation(solution="πD" keys="π" short-var)}_ | `1/2 x pi x D x R` |
+| Khi nhân, thay đổi thứ tự của các thừa số [[có \| không]] cho cùng kết quả. | `1/2 x D x pi x R` |
+| Một nửa đường kính bằng [[bán kính \| chu vi]]. | `R x pi x R` |
+| Khi nhân, thay đổi thứ tự của các thừa số [[có \| không]] cho cùng kết quả. | `pi x R x R` |
+| Nhân một thừa số với chính nó cũng giống như nâng nó lên thành số mũ của [[2]]. | `pi R^2` |
+
+Công thức cho diện tích hình tròn là `pi R^2`. Đừng quên điều này thú vị như thế nào! Hãy nhớ rằng trước đó trong chương này, chúng ta đã cố gắng xác định xem cần bao nhiêu `R^2` để bao phủ một hình tròn:
+
+    // DIAGRAM: Round pizza with square area segments (page 13)
+{.todo} Coming Soon!
+
+Ta thấy rằng `4R^2` là [[quá lớn | quá nhỏ]] và `3R^2` là hơi [[nhỏ | lớn]] một chút. Bây giờ chúng ta sẽ chứng minh số lượng chính xác của `R^2` - `pi` “`R^2`” cần thiết để phủ hình tròn. Nhớ lại chương Chu vi, chúng ta thường tính gần đúng `pi` với 3.14.
+
+`pi` là một con số quyền lực! nó không chỉ cho chúng ta biết có bao nhiêu [[đường kính | bán kính]] cần thiết để có độ dài chu vi, nó cũng cho chúng ta biết cần bao nhiêu `R^2` để phủ đủ một hình tròn.
+
+Khi sử dụng công thức `pi R^2`, trước tiên hãy nhớ nhân bán kính với chính nó và sau đó nhân tích đó với `pi`. Hãy thêm công thức này vào bộ công thức của chúng ta.
+
+Bây giờ ta đã sẵn sàng để trả lời câu hỏi ban đầu của mình. Lựa chọn nào sẽ có nhiều bánh pizza hơn?
+
+    // DIAGRAM: Pizzas w/diameters (page 14)
+{.todo} Coming Soon!
+
+    // INTERACTIVE-08: QA formula sequence (page 14)
+
+| Câu hỏi và câu trả lời của học sinh | Diện tích 1 Pizza lớn | Diện tích 2 Pizza vừa |
+| Nhập công thức sẽ sử dụng | `pi R^2` | `2 pi R^2` |
+| Bán kính của chiếc bánh pizza lớn là [[22]] và bán kính của bánh pizza trung bình là [[16]] cm | `pi(22)^2` | `2pi(16)^2` |
+| Hãy sử dụng [[3.14]] như một giá trị gần đúng cho `pi` | `3.14 x (22)^2` | 2 x 3.14 x (16)^2 |
+| Bây giờ, bình phương bán kính. | 3.14 x [[484]] | 2 x 3.14 x [[256]] |
+| Kết quả của phép nhân | [[1519.76]] | [[1607.68]] |
+
+::: .reveal
+
+| 1 Pizza lớn | 2 Pizza vừa |
+| Diện tích ước tính bằng cách sử dụng diện tích tam giác | 1364 cm vuông | 1444 cm vuông |
+| Diện tích ước tính sử dụng `3R^2` | 1452 cm vuông | 1536 cm vuông |
+| Diện tích ước tính sử dụng `3.14R^2` | 1519.76 cm vuông | 1607.68 cm vuông |
+
+:::
+
+Bây giờ cuối cùng ta đã có thể kết luận rằng [[2 pizza vừa | 1 pizza lớn]] có nhiều pizza hơn!
+
+Một số người không ăn lớp viền trên bánh pizza. Nếu chúng ta so sánh 1 chiếc bánh pizza cỡ lớn với 2 chiếc bánh pizza cỡ vừa không có viền, bạn nghĩ lựa chọn nào sẽ tốt hơn? [[2 pizza vừa | 1 bánh pizza lớn]].
+
+Lớp viền trên những chiếc pizza này dày 4 cm.
+
+    // DIAGRAM: Pizzas w/diameters and crust thickness (page 15)
+{.todo} Coming Soon!
+
+Nếu chúng ta chỉ quan tâm đến việc tìm diện tích của chiếc bánh pizza không có viền bánh, thì đường kính của hình tròn của bánh pizza lớn phần không viền là [[36]] cm và đường kính của bánh pizza vừa phần không viền là [[24]] cm.
+
+    // INTERACTIVE-09: QA formula sequence (pages 15-16)
+
+| Câu hỏi và câu trả lời của học sinh | Diện tích 1 Pizza lớn không viền | Diện tích 2 Pizza vừa không viền |
+| Nhập công thức sẽ sử dụng | `pi R^2` | `2 pi R^2` |
+| Bán kính của bánh pizza lớn là [[18]] và bán kính của bánh pizza cỡ vừa là [[12]] cm | `pi (18)^2` | `2 pi (12)^2` |
+| Hãy sử dụng [[3.14]] như một giá trị gần đúng cho `pi` | `3.14 x (18)^2` | `2 x 3.14 x (12)^2` |
+| Bây giờ, bình phương bán kính. | 3.14 x [[324]] | 2 x 3.14 x [[144]] |
+| Kết quả phép nhân | [[1017.36]] | [[904.32]] |
+
+So sánh điều này với kết quả trước đó của chúng ta:
+
+| | 1 Pizza lớn | 2 Pizza vừa |
+| Diện tích có viền | 1519.76 cm vuông | 1607.68 cm vuông |
+| Diện tích không viền | 1017.36 cm vuông | 904.32 cm vuông |
+
+Nếu bạn ăn phần viền bánh, thì tốt hơn khi mua [[2 pizza vừa | 1 pizza lớn]]. Nếu bạn không ăn viền bánh, thì tốt hơn hết là bạn nên mua [[1 pizza lớn | 2 pizza vừa]].
+
+Dưới đây là ba chiếc bánh pizza hình vuông khác nhau với những viên pepperoni có kích thước khác nhau trên mỗi chiếc bánh pizza.
+
+    // TODO INTERACTIVE-10: Pepperoni coverage (page 17)
+{.todo} Coming Soon!
+
+Hãy tìm lượng của mỗi chiếc bánh pizza không có pepperoni. Đầu tiên, hãy sắp xếp lại những chiếc pizza theo thứ tự mà bạn cho là từ ít nhất đến nhiều nhất về lượng pizza KHÔNG được bao phủ bởi pepperoni.
+
+Để tìm diện tích của mỗi chiếc bánh pizza không được phủ bởi pepperoni, chúng ta có thể tìm diện tích của cả chiếc bánh pizza và sau đó [[trừ | cộng | chia]] diện tích của phần pepperoni.
+
+| | Diện tích Pizza A KHÔNG phủ pepperoni | Diện tích Pizza B KHÔNG phủ pepperoni | Diện tích Pizza C KHÔNG phủ pepperoni |
+| | Diện tích của Hình vuông - Diện tích của [[1]] Hình tròn | Diện tích của Hình vuông - Diện tích của [[4]] Hình tròn | Diện tích của Hình vuông - Diện tích của [[9]] Hình tròn |
+| Công thức tính diện tích của hình vuông là cạnh đáy x [[chiều cao \| độ dài đường chéo]] | (b x h) - (1 hình tròn) | (b x h) - (4 hình tròn) | (b x h) - (9 hình tròn) |
+| Công thức tính diện tích của hình tròn là [[`pi R^2` \| `pi D` \| `2 pi R`]] | `(b x h) - pi R^2` | `(b x h) - 4 pi R^2` | `(b x h) - 9 pi R^2` |
+| Cạnh đáy và chiều cao của hình vuông là [[30]] cm. | `(30 x 30) - pi R^2` | `(30 x 30) - 4 pi R^2` | `(30 x 30) - 9 pi R^2` |
+| Bán kính của pepperoni trong Pizza A là [[15]] cm và sử dụng [[3.14]] tính gần đúng cho `pi`. | `(30 x 30) - (3.14)(15)^2` | `(30 x 30) - 4(3.14)(7.5)^2` | `(30 x 30) - 9(3.14)(5)^2` |
+| Tính diện tích của hình vuông và phần pepperoni. | [[900]] - [[706.5]] | [[900]] - [[706.5]] | [[900]] - [[706.5]] |
+| Nhập câu trả lời cuối cùng! | [[193.5]] cm vuông | [[193.5]] cm vuông | [[193.5]] cm vuông |
+
+Hóa ra tất cả các bánh pizza đều [[cùng | khác]] diện tích phần bánh pizza không phủ pepperoni!

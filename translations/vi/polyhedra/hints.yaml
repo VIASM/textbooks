@@ -1,0 +1,24 @@
+not-a-polygon-1: Một trong các cạnh của hình này là cạnh cong, nên nó không phải là một hình đa giác.
+not-a-polygon-2: Đây không phải là hình đa giác, vì nó có chứa một lỗ hổng. 
+not-a-polygon-3: Hình này có chứa một cạnh cong, vì thế nó không thể là hình đa giác. 
+
+no-overlap: Hãy cẩn thận! - Các cạnh không được phép cắt nhau, nếu không nó sẽ không thể trở thành hình đa giác. 
+angles-repeat: Tuyệt! Bây giờ hãy thử di chuyển một số đỉnh của hình tứ giác và xem điều gì xảy ra. 
+
+not-a-diagonal: Nó không phải là đường chéo của hình tứ giác. 
+not-a-diagonal-1: Nó không phải là đường chéo của hình bình hành. 
+
+Not-concave-1: “Hình tam giác không thể lõm: tất cả các góc của nó đều bé hơn 180°."
+not-concave-2: Đa giác này lồi - tất cả các góc của nó đều bé hơn 180°.
+Not-concave-3: Đa giác này lồi - tất cả các đường chéo đều nằm bên trong đa giác, và tất cả các góc đều bé hơn 180°.
+
+Not-regular-1: Ở đa giác này, một số cạnh có độ dài khác nhau – vì vậy nó không phải là đa giác đều.
+not-regular-2: Tất cả các cạnh có cùng độ dài, nhưng một số góc có kích thước khác nhau. Vì thế nó _không_ phải là một đa giác.
+not-regular-3: Nó là một hình trong, không phải đa giác!
+parall-error-1: Điều này không đúng – các góc có thể có nhiều kích thước khác nhau, miễn là chúng cộng lại bằng 360°.
+parall-error-2: Điều này đúng nếu hình bình hành là hình thoi, nhưng nó không đúng cho một hình bình hành _bất kì_.
+parall-error-3: Điều này đúng nếu hình bình hành trở thành hình chữ nhật, nhưng nó không đsung cho một hình bình hành _bất kì_.
+parall-error-4: "Không: các cạnh kề nhau trong một hình bình hành không cần phải bằng nhau."
+
+move-polyhedra: " [hình đa diện ba chiều](->#poly1) có tính tương tác. Thử xoay nó!"
+use-euler: Nhớ rằng bạn có thể sử dụng __Công thức Euler’s__ để tìm ra số lượng mặt, đỉnh và cạnh. 
