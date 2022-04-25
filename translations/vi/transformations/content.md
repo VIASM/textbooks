@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
 # Các phép biến hình và Tính đối xứng
-=======
-﻿# Các phép biến hình và Tính đối xứng
->>>>>>> Stashed changes
 
 ## Giới thiệu
 
@@ -202,7 +198,6 @@ x-geopad(width=220 height=140 grid=20 no-points): svg
 {.caption} Tịnh tiến bởi  ([[4]], [[-2]]) :::
 
 ---
-<<<<<<< Updated upstream
 
 > id: translations-1 goals: drag-0 drag-1 drag-2
 
@@ -210,15 +205,6 @@ Bây giờ đến lượt bạn - hãy tịnh tiến các hình sau đây:
 
 ::: column(width=220)
 
-=======
-
-> id: translations-1 goals: drag-0 drag-1 drag-2
-
-Bây giờ đến lượt bạn - hãy tịnh tiến các hình sau đây:
-
-::: column(width=220)
-
->>>>>>> Stashed changes
 ```
 svg(width=220 height=140)
   each i in [10,30,50,70,90,110,130,150,170,190,210]
@@ -682,19 +668,11 @@ x-geopad.draw(width=220 height=180 grid=20 no-points): svg
 ---
 
 > id: palindromes goals: p0 p1 p2
-<<<<<<< Updated upstream
 
 Các hình, chữ và ảnh có thể có tính đối xứng, và các con số, các từ và các đoạn văn cũng vậy!
 
 Ví dụ như “25352” và “ANNA” khi đọc xuôi và đọc ngược đều giống nhau. Các con số và các từ như vậy được gọi là [**Palindrome**](gloss:palindrome). Bạn có thể nghĩ ra thêm các palindrome khác không?
 
-=======
-
-Các hình, chữ và ảnh có thể có tính đối xứng, và các con số, các từ và các đoạn văn cũng vậy!
-
-Ví dụ như “25352” và “ANNA” khi đọc xuôi và đọc ngược đều giống nhau. Các con số và các từ như vậy được gọi là [**Palindrome**](gloss:palindrome). Bạn có thể nghĩ ra thêm các palindrome khác không?
-
->>>>>>> Stashed changes
 ```
 form.palindromes.text-center.form-field
   input(type="text")
@@ -710,15 +688,9 @@ form.palindromes.text-center.form-field
 > id: palindromes-1
 
 Nếu chúng ta bỏ qua khoảng cách và dấu câu, các câu ngắn dưới đây cũng có tính đối xứng trục. Bạn có thể tự nghĩ ra một câu như vậy không?
-<<<<<<< Updated upstream
 
 {.text-center} Never odd or even.<br> A [[nut]] for a jar of tuna.<br> Yo, banana [[boy]]!
 
-=======
-
-{.text-center} Never odd or even.<br> A [[nut]] for a jar of tuna.<br> Yo, banana [[boy]]!
-
->>>>>>> Stashed changes
 {.reveal(when="blank-0 blank-1")} Tuy nhiên các Palindrome không chỉ để cho vui, chúng có vai trò quan trọng trong thực tế. Vài năm trước, các nhà khoa học phát hiện ra rằng [DNA](gloss:dna) của chúng ta có tính palindrome. Điều này giúp chúng ta chống chịu các sự đột biến và tổn thương tốt hơn – bởi mỗi mảnh DNA có một bản sao dự phòng.
 
 ---
@@ -780,19 +752,11 @@ img(src="images/flower.jpg" width=200 height=200)
 ---
 
 > id: rotational-symmetry-2 goals: r0 r1 r2
-<<<<<<< Updated upstream
 
 Giờ hãy hoàn thiện các hình sau sao cho chúng có tính đối xứng quay:
 
 ::: column(width=220)
 
-=======
-
-Giờ hãy hoàn thiện các hình sau sao cho chúng có tính đối xứng quay:
-
-::: column(width=220)
-
->>>>>>> Stashed changes
 ```
 x-geopad.draw(width=220 height=180 grid=20 no-points): svg
   circle.red(x="point(5,4)")
@@ -830,191 +794,206 @@ x-geopad.draw(width=220 height=180 grid=20 no-points): svg
 
 ---
 
-## Các nhóm đối xứng và Hoa văn đối xứng trong Mỹ thuật
+## Nhóm đối xứng và Các hoa văn đối xứng trong Mỹ thuật
 
-> id: groups section: symmetry-groups
+> id: groups
+> section: symmetry-groups
 
-```
-// HINT: To recognise different configurations, we need to highlight the
-// four corners in different colours.
-```
+    // HINT: To recognise different configurations, we need to highlight the
+    // four corners in different colours.
 
-Một số hình có hơn một tính đối xứng - [hình vuông](gloss:square) là một ví dụ điển hình.
+Có một số hình có nhiều hơn một sự đối xứng – ví dụ trực quan nhất 
+cho điều này chính là [hình vuông](gloss:square).
 
 ::: column(width=400 parent="padded-thin")
 
-```
-.cubes
-  img.cube.reveal(src="images/cube-0.svg" width=80 height=80 when="blank-1 blank-2 blank-3" delay=1000 animation="pop")
-  img.cube.reveal(src="images/cube-1.svg" width=80 height=80 when="blank-1" animation="pop")
-  img.cube.reveal(src="images/cube-2.svg" width=80 height=80 when="blank-2" animation="pop")
-  img.cube.reveal(src="images/cube-3.svg" width=80 height=80 when="blank-3" animation="pop")
-  img.cube.reveal(src="images/cube-4.svg" width=80 height=80 when="blank-0" animation="pop")
-  img.cube.reveal(src="images/cube-5.svg" width=80 height=80 when="blank-0" delay=200 animation="pop")
-  img.cube.reveal(src="images/cube-6.svg" width=80 height=80 when="blank-0" delay=400 animation="pop")
-  img.cube.reveal(src="images/cube-7.svg" width=80 height=80 when="blank-0" delay=600 animation="pop")
-```
+    .cubes
+      img.cube.reveal(src="images/cube-0.svg" width=80 height=80 when="blank-1 blank-2 blank-3" delay=1000 animation="pop")
+      img.cube.reveal(src="images/cube-1.svg" width=80 height=80 when="blank-1" animation="pop")
+      img.cube.reveal(src="images/cube-2.svg" width=80 height=80 when="blank-2" animation="pop")
+      img.cube.reveal(src="images/cube-3.svg" width=80 height=80 when="blank-3" animation="pop")
+      img.cube.reveal(src="images/cube-4.svg" width=80 height=80 when="blank-0" animation="pop")
+      img.cube.reveal(src="images/cube-5.svg" width=80 height=80 when="blank-0" delay=200 animation="pop")
+      img.cube.reveal(src="images/cube-6.svg" width=80 height=80 when="blank-0" delay=400 animation="pop")
+      img.cube.reveal(src="images/cube-7.svg" width=80 height=80 when="blank-0" delay=600 animation="pop")
 
-::: column.grow(width=200) Bạn đã chỉ ra rằng hình vuông có [[4]] trục đối xứng ở phần trước.
+::: column.grow(width=200)
+Phần phần trước, ta đã biết rằng một hình vuông có [[4]] trục đối xứng.
 
-{.reveal(when="blank-0")} It also has rotational symmetry by [[90]]°, [[180]]° and [[270]]°.
+{.reveal(when="blank-0")} Hình vuông cũng có các phép đối xứng quay với góc [[90]]°,
+[[180]]° và [[270]]°.
 
-{.reveal(when="blank-1 blank-2 blank-3")} Cuối cùng, chúng ta có thể nghĩ rằng “không làm gì cả” cũng là một dạng đặc biệt của tính đối xứng – vì kết quả mà ta nhận được (hiển nhiên) cũng chính là hình ban đầu. Đây được gọi là **phép đồng nhất**.
+{.reveal(when="blank-1 blank-2 blank-3")} Cuối cùng, chúng ta có thể nghĩ rằng
+“không làm gì cả” cũng là một dạng đặc biệt của sự đối xứng – vì kết quả mà ta 
+nhận được (hiển nhiên) cũng chính là hình ban đầu. Đây được gọi là __phép đồng nhất__.
 
-{.reveal(when="blank-1 blank-2 blank-3" delay=1000)} Tổng cộng, chúng ta đã tìm được [[8]] “phép đối xứng khác nhau cho một hình vuông”. :::
+{.reveal(when="blank-1 blank-2 blank-3" delay=1000)} Tổng cộng, chúng ta đã tìm được [[8]]
+“phép đối xứng khác nhau cho một hình vuông”.
+:::
 
 ---
+> id: add-symmetries
+> goals: sum-0 sum-1
 
-> id: add-symmetries goals: sum-0 sum-1
-
-Bây giờ, chúng ta có thể thực hiện một vài phép Toán Số học với các phép đối xứng này. Ví dụ, chúng ta có thể *cộng* hai phép đối xứng để tạo ra một phép đối xứng mới:
-
-::: column(width=260)
-
-```
-.text-center
-  img.cube(src="images/cube-1.svg" width=54 height=54)
-  mo +
-  img.cube(src="images/cube-1.svg" width=54 height=54)
-  mo =
-  span.sym-sum.pending(tabindex=0): img.cube(src="images/cube-2.svg" width=54 height=54)
-x-gesture(target=".sym-sum")
-```
+Bây giờ, chúng ta có thể thực hiện một vài phép Toán Số học với các phép
+đối xứng này. Ví dụ, chúng ta có thể _cộng_ hai phép đối xứng để tạo ra một
+phép đối xứng mới:
 
 ::: column(width=260)
 
-```
-.text-center
-  img.cube(src="images/cube-2.svg" width=54 height=54)
-  mo +
-  img.cube(src="images/cube-6.svg" width=54 height=54)
-  mo =
-  span.sym-sum.pending(tabindex=0): img.cube.ani-sym(src="images/cube-4.svg" width=54 height=54)
-```
+    .text-center
+      img.cube(src="images/cube-1.svg" width=54 height=54)
+      mo +
+      img.cube(src="images/cube-1.svg" width=54 height=54)
+      mo =
+      span.sym-sum.pending(tabindex=0): img.cube(src="images/cube-2.svg" width=54 height=54)
+    x-gesture(target=".sym-sum")
+
+::: column(width=260)
+
+    .text-center
+      img.cube(src="images/cube-2.svg" width=54 height=54)
+      mo +
+      img.cube(src="images/cube-6.svg" width=54 height=54)
+      mo =
+      span.sym-sum.pending(tabindex=0): img.cube.ani-sym(src="images/cube-4.svg" width=54 height=54)
 
 :::
 
 ---
+> id: calculator
+> title: Symmetry Calculator
+> goals: calculate
 
-> id: calculator title: Symmetry Calculator goals: calculate
+Bất cứ khi nào bạn cộng hai phép đối xứng của một hình vuông, bạn sẽ có một
+phép đối xứng mới. Bạn có thể dùng thử “máy tính cho phép đối xứng” dưới đây:
 
-Bất cứ khi nào bạn cộng hai phép đối xứng của một hình vuông, bạn sẽ có một phép đối xứng mới. Bạn có thể dùng thử “máy tính cho phép đối xứng” dưới đây:
-
-```
-.calculator
-  .display
-    .operator +
-    .operator =
-    .clear ×
-  .button(tabindex=0) + #[img.cube(src="images/cube-0.svg" width=40 height=40)]
-  .button(tabindex=0) + #[img.cube(src="images/cube-1.svg" width=40 height=40)]
-  .button(tabindex=0) + #[img.cube(src="images/cube-2.svg" width=40 height=40)]
-  .button(tabindex=0) + #[img.cube(src="images/cube-3.svg" width=40 height=40)]
-  .button(tabindex=0) + #[img.cube(src="images/cube-4.svg" width=40 height=40)]
-  .button(tabindex=0) + #[img.cube(src="images/cube-5.svg" width=40 height=40)]
-  .button(tabindex=0) + #[img.cube(src="images/cube-6.svg" width=40 height=40)]
-  .button(tabindex=0) + #[img.cube(src="images/cube-7.svg" width=40 height=40)]
-```
+    .calculator
+      .display
+        .operator +
+        .operator =
+        .clear ×
+      .button(tabindex=0) + #[img.cube(src="images/cube-0.svg" width=40 height=40)]
+      .button(tabindex=0) + #[img.cube(src="images/cube-1.svg" width=40 height=40)]
+      .button(tabindex=0) + #[img.cube(src="images/cube-2.svg" width=40 height=40)]
+      .button(tabindex=0) + #[img.cube(src="images/cube-3.svg" width=40 height=40)]
+      .button(tabindex=0) + #[img.cube(src="images/cube-4.svg" width=40 height=40)]
+      .button(tabindex=0) + #[img.cube(src="images/cube-5.svg" width=40 height=40)]
+      .button(tabindex=0) + #[img.cube(src="images/cube-6.svg" width=40 height=40)]
+      .button(tabindex=0) + #[img.cube(src="images/cube-7.svg" width=40 height=40)]
 
 ---
-
 > id: symmetry-arithmetic
 
-Hãy dành một chút thời gian để chơi với “máy tính cho phép đối xứng” này, và thử tự tìm kết quả. Bạn có thể dự đoán các kết quả cho các phép toán dưới đây không?
+Hãy dành một chút thời gian để chơi với “máy tính cho phép đối xứng” này, và thử
+tự tìm kết quả. Bạn có thể dự đoán các kết quả cho các phép toán dưới đây không?
 
-- Ta sẽ nhận được [[một phép quay|một phép đối xứng]] khi cộng hai phép quay (hoặc phép đồng nhất).
-- Ta sẽ nhận được [[một phép quay|một phép đối xứng trục]] khi cộng hai phép đối xứng trục (hoặc phép đồng nhất).
-- Giao hoán hai phép đối xứng khi thực hiện phép cộng [[đôi khi nhận được một kết quả khác|luôn luôn nhận được một kết quả khác|luôn luôn nhận được cùng một kết quả ]].
-- Ta sẽ [[không nhận được gì mới|nhận được một phép đối xứng|nhận được một phép đảo ngược]] khi cộng với phép đồng nhất.
-
----
-
-> id: group-axioms Bạn cũng có thể đã nhận ra rằng phép cộng của **{.m-orange}các phép đối xứng** là tương tự với phép cộng của **{.m-green}các số nguyên**:
-
-Ở ví dụ trên, chúng ta đã bắt đầu với tám phép đối xứng của hình vuông. Thực tế, mọi hình hình học đều có **nhóm đối xứng** riêng và có thể có các phép biến hình khác nhau nhưng đều phải có ba tính chất trên.
-
-```
-ol.proof
-
-  li.r
-    | Cộng hai #[strong.m-orange phép đối xứng]/#[strong.m-green số nguyên] ta luôn nhận được một #[strong.m-orange phép đối xứng]/#[strong.m-green số nguyên] khác:
-    .text-center.axiom
-      img.cube(src="images/cube-2.svg" width=32 height=32)
-      mo +
-      img.cube(src="images/cube-6.svg" width=32 height=32)
-      mo(value="=") =
-      img.cube(src="images/cube-4.svg" width=32 height=32)
-    .text-center.axiom
-      mn 12
-      mo +
-      mn 7
-      mo =
-      mn 19
-    .next-step Continue
-
-  li.r.reveal(when="next-0")
-    span.md Phép cộng của #[strong.m-orange các phép đối xứng]/#[strong.m-green các số nguyên] là [có tính kết hợp](gloss:associative):
-    .text-center.axiom
-      mfenced
-        img.cube(src="images/cube-1.svg" width=32 height=32)
-        mo +
-        img.cube(src="images/cube-4.svg" width=32 height=32)
-      mo +
-      img.cube(src="images/cube-3.svg" width=32 height=32)
-      mo(value="=") =
-      img.cube(src="images/cube-1.svg" width=32 height=32)
-      mo +
-      mfenced
-        img.cube(src="images/cube-4.svg" width=32 height=32)
-        mo +
-        img.cube(src="images/cube-3.svg" width=32 height=32)
-    .text-center.axiom
-      mfenced #[mn 4]#[mo +]#[mn 2]
-      mo +
-      mn 5
-      mo =
-      mn 4
-      mo +
-      mfenced #[mn 2]#[mo +]#[mn 5]
-    .next-step Continue
-
-  li.r.reveal(when="next-1")
-    | Mọi #[strong.m-orange phép đối xứng]/#[strong.m-green số nguyên] đều có một #[strong nghịch đảo], là một #[strong.m-orange phép đối xứng]/#[strong.m-green số nguyên] khác mà khi thực hiện phép cộng, ta nhận được phép đồng nhất:
-    .text-center.axiom
-      img.cube(src="images/cube-1.svg" width=32 height=32)
-      mo +
-      img.cube(src="images/cube-3.svg" width=32 height=32)
-      mo(value="=") =
-      img.cube(src="images/cube-0.svg" width=32 height=32)
-    .text-center.axiom
-      mn 4
-      mo +
-      mn –4
-      mo(value="=") =
-      mn 0
-    .next-step Continue
-```
+* Ta sẽ nhận được [[một phép quay|một phép đối xứng]] khi cộng hai phép quay
+ (hoặc phép đồng nhất).
+* Ta sẽ nhận được [[một phép quay|một phép đối xứng trục]] khi cộng hai phép
+đối xứng trục (hoặc phép đồng nhất).
+* Giao hoán hai phép đối xứng khi thực hiện phép cộng
+  [[đôi khi nhận được một kết quả khác|luôn luôn nhận được một kết quả khác|luôn luôn nhận được cùng một kết quả ]].
+* Ta sẽ [[không nhận được gì mới|nhận được một phép đối xứng|nhận được một phép đảo ngược]] khi cộng với phép đồng nhất.
 
 ---
+> id: group-axioms
+Bạn cũng có thể đã nhận ra rằng phép cộng của __{.m-orange}các phép đối xứng__
+là tương tự với phép cộng của __{.m-green}các số nguyên__: 
 
+    ol.proof
+
+      li.r
+        | Cộng hai #[strong.m-orange phép đối xứng]/#[strong.m-green số nguyên] ta luôn nhận được một #[strong.m-orange phép đối xứng]/#[strong.m-green số nguyên] khác:
+        .text-center.axiom
+          img.cube(src="images/cube-2.svg" width=32 height=32)
+          mo +
+          img.cube(src="images/cube-6.svg" width=32 height=32)
+          mo(value="=") =
+          img.cube(src="images/cube-4.svg" width=32 height=32)
+        .text-center.axiom
+          mn 12
+          mo +
+          mn 7
+          mo =
+          mn 19
+        .next-step Continue
+
+      li.r.reveal(when="next-0")
+        span.md Phép cộng của #[strong.m-orange các phép đối xứng]/#[strong.m-green các số nguyên] là [có tính kết hợp](gloss:associative):
+        .text-center.axiom
+          mfenced
+            img.cube(src="images/cube-1.svg" width=32 height=32)
+            mo +
+            img.cube(src="images/cube-4.svg" width=32 height=32)
+          mo +
+          img.cube(src="images/cube-3.svg" width=32 height=32)
+          mo(value="=") =
+          img.cube(src="images/cube-1.svg" width=32 height=32)
+          mo +
+          mfenced
+            img.cube(src="images/cube-4.svg" width=32 height=32)
+            mo +
+            img.cube(src="images/cube-3.svg" width=32 height=32)
+        .text-center.axiom
+          mfenced #[mn 4]#[mo +]#[mn 2]
+          mo +
+          mn 5
+          mo =
+          mn 4
+          mo +
+          mfenced #[mn 2]#[mo +]#[mn 5]
+        .next-step Continue
+
+      li.r.reveal(when="next-1")
+        | Mọi #[strong.m-orange phép đối xứng]/#[strong.m-green số nguyên] đều có một #[strong nghịch đảo], là một #[strong.m-orange phép đối xứng]/#[strong.m-green số nguyên] khác mà khi thực hiện phép cộng, ta nhận được phép đồng nhất:
+        .text-center.axiom
+          img.cube(src="images/cube-1.svg" width=32 height=32)
+          mo +
+          img.cube(src="images/cube-3.svg" width=32 height=32)
+          mo(value="=") =
+          img.cube(src="images/cube-0.svg" width=32 height=32)
+        .text-center.axiom
+          mn 4
+          mo +
+          mn –4
+          mo(value="=") =
+          mn 0
+        .next-step Continue
+
+---
 > id: groups-1
 
-In mathematics, any collection that has these properties is called a [**group**](gloss:group). Some groups (like the **{.m-orange}symmetries** of a square) only have a finite number of elements. Others (like the **{.m-green}integers**) are infinite.
+Trong Toán học, bất kì một họ các đối tượng nào mà có cả ba tính chất trên được gọi 
+là một [__nhóm__](gloss:group). Có một số nhóm (chẳng hạn như họ __{.m-orange}các phép
+đối xứng__ của một hình vuông) chỉ có hữu hạn phần tử. Bên cạnh đó, cũng có nhiều nhóm khác
+(chẳng hạn như tập __{.m-green}số nguyên__) là có vô hạn phần tử.
 
-::: column.grow Ví dụ, nhóm đối xứng của các phân tử khác nhau có thể giúp các nhà khoa học dự đoán và giải thích các tính chất của các vật liệu tương ứng.
+Ở ví dụ trên, chúng ta đã bắt đầu với tám phép đối xứng của hình vuông.
+Thực tế, mọi hình hình học đều có __nhóm đối xứng__ riêng và có thể có
+các phép biến hình khác nhau nhưng đều phải có ba tính chất trên.
 
-Nhóm cũng có thể được dùng để phân tích chiến lược để chiến thắng trong các trò chơi may rủi, xu hướng của vi-rút trong y học, các cách hòa âm phối khí trong âm nhạc, và nhiều ứng dụng khác,... ::: column(width=340)
+Khái niệm nhóm có mặt ở mọi ngành Toán. Các phần tử của một nhóm có thể 
+là các con số, hoặc các phép đối xứng, và cũng có thể là các đa thức, hoán vị, ma
+trận, hàm số... và tất nhiên _bất kì_ là gì thì cũng phải thỏa mãn ba tính chất trên.
+Ý tưởng chính của _lý thuyết nhóm_ là chúng ta không quan tâm đến những 
+phần tử riêng lẻ, mà chỉ _quan tâm đến cách mà chúng tương tác với nhau_.
 
-::: column.grow For example, the symmetry groups of different molecules can help scientists predict and explain the properties of the corresponding materials.
+::: column.grow
+Ví dụ, nhóm đối xứng của các phân tử khác nhau có thể giúp các nhà khoa 
+học dự đoán và giải thích các tính chất của các vật liệu tương ứng.
 
-Ở [chương trước](/course/transformations/symmetry), chúng ta đã thấy hai dạng khác nhau của phép đối xứng tương ứng với hai phép biến hình: phép quay và phép đối xứng trục. Nhưng chúng ta vẫn còn một phép đối xứng nữa và cũng là phép dời hình: [[phép tịnh tiến|phép quay|phép đối xứng trục]].
+Nhóm cũng có thể được dùng để phân tích chiến lược để chiến thắng trong 
+các trò chơi may rủi, xu hướng của vi-rút trong y học, các cách hòa âm phối
+khí trong âm nhạc, và nhiều ứng dụng khác,...
+::: column(width=340)
 
-```
-img(src="images/molecule.jpg" width=160 height=160 style="margin-right: 20px")
-img(src="images/virus.jpg" width=160 height=160)
-```
+    img(src="images/molecule.jpg" width=160 height=160 style="margin-right: 20px")
+    img(src="images/virus.jpg" width=160 height=160)
 
-{.caption} Các tính chất của phân tử CCl<sub>4</sub> (trái) và Adenovirus (phải) được xác định bởi tính đối xứng của chúng. :::
+{.caption} Các tính chất của phân tử CCl<sub>4</sub> (trái) và
+Adenovirus (phải) được xác định bởi tính đối xứng của chúng.
+:::
 
 ---
 
@@ -1022,430 +1001,525 @@ img(src="images/virus.jpg" width=160 height=160)
 
 > id: wallpaper-groups
 
+Ở [chương trước](/course/transformations/symmetry), chúng ta đã thấy hai
+dạng khác nhau của phép đối xứng tương ứng với hai phép biến hình: phép 
+quay và phép đối xứng trục. Nhưng chúng ta vẫn còn một phép đối xứng nữa 
+và cũng là phép dời hình: [[phép tịnh tiến|phép quay|phép đối xứng trục]].
+
+---
+> id: wallpaper-groups-1
+> goals: play-0 play-1
+
+[__Phép đối xứng tịnh tiến__](gloss:translational-symmetry) không hoạt động đối 
+với các đối tượng cô lập và đơn lẻ như hình một bông hoa hoặc hình một con bướm,
+mà nó hoạt động với các họa tiết có thể mở rộng ra mọi hướng:
+
 ::: column.grow
 
----
+    .symmetry(style="width: 320px; height: 240px;")
+      img(src="images/honeycomb.jpg" width=376 height=276 style="margin: 0 0 -36px -56px; max-width: none;")
+      img(src="images/honeycomb.jpg" width=376 height=276 style="margin: 0 0 -36px -56px; max-width: none;")
+      x-play-btn
 
-> id: wallpaper-groups-1 goals: play-0 play-1
+{.caption} Hình lục giác tổ ong
+::: column.grow
 
-{.caption} Hình lục giác tổ ong ::: column.grow
+    .symmetry(style="width: 320px; height: 240px;")
+      img(src="images/tiling.jpg" width=376 height=240 style="margin-left: -56px; max-width: none;")
+      img(src="images/tiling.jpg" width=376 height=240 style="margin-left: -56px; max-width: none;")
+      x-play-btn
 
-{.caption} Hoa văn gạch ốp tường :::
-
-```
-.symmetry(style="width: 320px; height: 240px;")
-  img(src="images/honeycomb.jpg" width=376 height=276 style="margin: 0 0 -36px -56px; max-width: none;")
-  img(src="images/honeycomb.jpg" width=376 height=276 style="margin: 0 0 -36px -56px; max-width: none;")
-  x-play-btn
-```
-
-Ngoài phép đối xứng trục, phép quay và phép đối xứng tịnh tiến, ta còn có tới bốn loại phép dời hình: [**phép đối xứng lướt**](gloss:glide-reflection). Đây là sự kết hợp của một phép đối xứng trục và một phép tịnh tiến theo cùng một hướng của trục đối xứng.
-
-```
-.symmetry(style="width: 320px; height: 240px;")
-  img(src="images/tiling.jpg" width=376 height=240 style="margin-left: -56px; max-width: none;")
-  img(src="images/tiling.jpg" width=376 height=240 style="margin-left: -56px; max-width: none;")
-  x-play-btn
-```
-
-Một mẫu hoa văn có thể được tạo nên bởi nhiều loại phép đối xứng. Giống như đối với hình vuông, chúng ta có thể tìm [nhóm đối xứng](gloss:symmetry-group) chứa tất cả các phép đối xứng khác nhau cho một mẫu hoa văn.
+{.caption} Hoa văn gạch ốp tường
+:::
 
 ---
-
 > id: footsteps
 
-Những nhóm đối xứng này không giúp chúng ta có được những họa tiết bắt mắt (ví dụ như màu sắc và hình dáng), mà chỉ mô tả cho chúng ta cách *lặp đi lặp lại* các họa tiết này. Nhiều họa tiết phức tạp khác nhau có thể tạo nên bởi cùng một nhóm đối xứng – miễn là được sắp xếp và lặp đi lặp lại theo cùng một cách.
+Ngoài phép đối xứng trục, phép quay và phép đối xứng tịnh tiến, ta còn có tới bốn
+loại phép dời hình: [__phép đối xứng lướt__](gloss:glide-reflection). Đây là sự kết 
+hợp của một phép đối xứng trục và một phép tịnh tiến theo cùng một hướng của
+trục đối xứng.
 
-```
-figure
-  .footsteps
-     img(src="images/footsteps.svg" width=650 height=120)
-     img(src="images/footsteps.svg" width=650 height=120)
-  x-slider(steps=100, style="max-width: 400px; margin: 24px auto")
-```
+    figure
+      .footsteps
+         img(src="images/footsteps.svg" width=650 height=120)
+         img(src="images/footsteps.svg" width=650 height=120)
+      x-slider(steps=100, style="max-width: 400px; margin: 24px auto")
 
 ---
-
 > id: wallpaper-groups-2
+
+Một mẫu hoa văn có thể được tạo nên bởi nhiều loại phép đối xứng. Giống
+như đối với hình vuông, chúng ta có thể tìm [nhóm đối xứng](gloss:symmetry-group)
+chứa tất cả các phép đối xứng khác nhau cho một mẫu hoa văn. 
+
+Những nhóm đối xứng này không giúp chúng ta có được những họa tiết bắt 
+mắt (ví dụ như màu sắc và hình dáng), mà chỉ mô tả cho chúng ta cách _lặp đi lặp lại_
+các họa tiết này. Nhiều họa tiết phức tạp khác nhau có thể tạo nên bởi cùng một
+nhóm đối xứng – miễn là được sắp xếp và lặp đi lặp lại theo cùng một cách.
 
 ::: column.grow
 
-{.caption} Hai họa tiết này có cùng kiểu đối xứng, cho dù trông khác nhau. Bởi vì các phép đối xứng không đề cập đến màu sắc, hoặc hình dạng cụ thể. ::: column.grow
+    .text-center
+      img(src="images/wallpaper-1.svg" width=150 height=150 style="margin: 0 10px")
+      img(src="images/wallpaper-2.svg" width=150 height=150 style="margin: 0 10px")
 
-{.caption} Hai họa tiết này cũng có cùng kiểu đối xứng – mặc dù chúng trông giống với nhóm bên trái hơn là trông giống nhau. :::
+{.caption} Hai họa tiết này có cùng kiểu đối xứng, cho dù trông khác nhau.
+Bởi vì các phép đối xứng không đề cập đến màu sắc, hoặc hình dạng cụ thể.
+::: column.grow
 
-```
-.text-center
-  img(src="images/wallpaper-1.svg" width=150 height=150 style="margin: 0 10px")
-  img(src="images/wallpaper-2.svg" width=150 height=150 style="margin: 0 10px")
-```
+    .text-center
+      img(src="images/wallpaper-3.svg" width=150 height=150 style="margin: 0 10px")
+      img(src="images/wallpaper-4.svg" width=150 height=150 style="margin: 0 10px")
 
-Như vậy, chúng ta có thể tạo ra vô số các họa tiết hoa văn từ 17 nhóm đối xứng khác nhau. Đây được gọi là **các nhóm hình họa**. Mọi nhóm hình họa được xác định bằng một sự kết hợp gồm các phép tịnh tiến, phép quay, phép đối xứng trục và phép đối xứng trục lướt. Bạn có nhận ra [tâm quay](gloss:center-of-rotation) và [trục đối xứng](gloss:axis-of-symmetry) ở các ví dụ dưới đây?
-
-```
-.text-center
-  img(src="images/wallpaper-3.svg" width=150 height=150 style="margin: 0 10px")
-  img(src="images/wallpaper-4.svg" width=150 height=150 style="margin: 0 10px")
-```
-
-Thật không may là rất khó để giải thích cặn kẽ và chứng minh tại sao lại có *17* nhóm đối xứng như vậy, điều này đòi hỏi rất nhiều kiến thức Toán cao cấp. Thay vào đó, bạn có thể tự vẽ và thiết kế họa tiết lặp đi lặp lại cho riêng bạn với mỗi nhóm đối xứng đã được liệt kê ở trên:
+{.caption} Hai họa tiết này cũng có cùng kiểu đối xứng – mặc dù chúng trông 
+giống với nhóm bên trái hơn là trông giống nhau.
+:::
 
 ---
+> id: wallpaper-groups-3
+> goals: gallery
 
-> id: wallpaper-groups-3 goals: gallery
+Như vậy, chúng ta có thể tạo ra vô số các họa tiết hoa văn từ 17 nhóm đối xứng
+khác nhau. Đây được gọi là __các nhóm hình họa__. Mọi nhóm hình họa được 
+xác định bằng một sự kết hợp gồm các phép tịnh tiến, phép quay, phép đối xứng trục và
+phép đối xứng trục lướt. Bạn có nhận ra [tâm quay](gloss:center-of-rotation) và
+[trục đối xứng](gloss:axis-of-symmetry) ở các ví dụ dưới đây?
 
-::: column.grow Các nhóm hình họa chỉ được xây dựng trên mặt phẳng, với các họa tiết hai chiều. Chúng ta cũng có thể làm điều tương tự dành cho các họa tiết ba chiều: đây được gọi là các nhóm tinh thể, và có tất cả 219 nhóm!
-
-```
-x-gallery(slide-width="320")
-  div
-    img(src="images/wallpapers/p1.svg" width=360, height=240)
-    p.caption <strong>Nhóm 1 – P1</strong><br>Chỉ có các phép tịnh tiến
-  div
-    img(src="images/wallpapers/p2.svg" width=360, height=240)
-    p.caption <strong>Nhóm 2 – P2</strong><br>Phép quay bậc 2, phép tịnh tiến
-  div
-    img(src="images/wallpapers/p3.svg" width=360, height=240)
-    p.caption <strong>Nhóm 3 – P3</strong><br>Phép quay bậc 3 (120°), phép tịnh tiến
-  div
-    img(src="images/wallpapers/p4.svg" width=360, height=240)
-    p.caption <strong>Nhóm 4 – P4</strong><br>Bốn phép quay bậc 2 (180°), phép tịnh tiến
-  div
-    img(src="images/wallpapers/p6.svg" width=360, height=240)
-    p.caption <strong>Nhóm 5 – P6</strong><br>Phép quay bậc 2, 3 và 6 (60°), phép tịnh tiến
-  div
-    img(src="images/wallpapers/pm.svg" width=360, height=240)
-    p.caption <strong>Nhóm 6 – PM</strong><br>Các trục đối xứng song song, phép tịnh tiến
-  div
-    img(src="images/wallpapers/pmm.svg" width=360, height=240)
-    p.caption <strong>Nhóm 7 – PMM</strong><br>Phép đối xứng trục vuông góc, phép quay bậc 2, phép tịnh tiến
-  div
-    img(src="images/wallpapers/p4m.svg" width=360, height=240)
-    p.caption <strong>Nhóm 8 – P4M</strong><br>Phép quay (bậc 2 + 4), phép đối xứng trục, phép đối xứng trục lướt, phép tịnh tiến
-  div
-    img(src="images/wallpapers/p6m.svg" width=360, height=240)
-    p.caption <strong>Nhóm 9 – P6M</strong><br>Phép quay (bậc 2 + 6), phép đối xứng trục, phép đối xứng trục lướt, phép tịnh tiến
-  div
-    img(src="images/wallpapers/p3m1.svg" width=360, height=240)
-    p.caption <strong>Nhóm 10 – P3M1</strong><br>Phép quay 3, phép đối xứng trục, phép đối xứng trục lướt, phép tịnh tiến
-  div
-    img(src="images/wallpapers/p31m.svg" width=360, height=240)
-    p.caption <strong>Nhóm 11 – P31M</strong><br>Phép quay 3, phép đối xứng trục, phép đối xứng trục lướt, phép tịnh tiến
-  div
-    img(src="images/wallpapers/p4g.svg" width=360, height=240)
-    p.caption <strong>Nhóm 12 – P4G</strong><br>Phép quay (bậc 2 + 4), phép đối xứng trục, phép đối xứng trục lướt, phép tịnh tiến
-  div
-    img(src="images/wallpapers/cmm.svg" width=360, height=240)
-    p.caption <strong>Nhóm 13 – CMM</strong><br>Phép đối xứng trục vuông góc, phép quay bậc 2, phép tịnh tiến
-  div
-    img(src="images/wallpapers/pmg.svg" width=360, height=240)
-    p.caption <strong>Nhóm 14 – PMG</strong><br>Phép đối xứng trục, phép đối xứng trục lướt, phép quay 2, phép tịnh tiến
-  div
-    img(src="images/wallpapers/pg.svg" width=360, height=240)
-    p.caption <strong>Nhóm 15 – PG</strong><br>phép đối xứng trục lướt song song, phép tịnh tiến
-  div
-    img(src="images/wallpapers/cm.svg" width=360, height=240)
-    p.caption <strong>Nhóm 16 – CM</strong><br>Phép đối xứng trục, phép đối xứng trục lướt, phép tịnh tiến
-  div
-    img(src="images/wallpapers/pgg.svg" width=360, height=240)
-    p.caption <strong>Nhóm 17 – PGG</strong><br>Phép đối xứng trục lướt vuông góc, phép quay bậc 2, phép tịnh tiến
-```
-
----
-
-> id: drawing title: Drawing Wallpaper Symmetries goals: draw-1 draw-2 switch
-
-Ngoài các phép tịnh tiến, phép đối xứng trục, phép quay, và phép đối xứng trục lướt, các nhóm tinh thể này còn bao gồm thêm các phép đối xứng như **mặt phẳng lướt** và **trục vít**  (hãy nghĩ đến chuyển động khi mở nắp chai). ::: column(width=300)
-
-```
-figure: x-wallpaper
-.other-students.reveal(when="draw-1 switch")
-  h4 Một số sản phẩm của các bạn học sinh
-  .row.padded-thin
-    div(style="width: 224px"): img(src="images/user/wallpaper-1.png" width=240 height=160)
-    div(style="width: 224px"): img(src="images/user/wallpaper-2.png" width=240 height=160)
-    div(style="width: 224px"): img(src="images/user/wallpaper-3.png" width=240 height=160)
-```
+    x-gallery(slide-width="320")
+      div
+        img(src="images/wallpapers/p1.svg" width=360, height=240)
+        p.caption <strong>Nhóm 1 – P1</strong><br>Chỉ có các phép tịnh tiến
+      div
+        img(src="images/wallpapers/p2.svg" width=360, height=240)
+        p.caption <strong>Nhóm 2 – P2</strong><br>Phép quay bậc 2, phép tịnh tiến
+      div
+        img(src="images/wallpapers/p3.svg" width=360, height=240)
+        p.caption <strong>Nhóm 3 – P3</strong><br>Phép quay bậc 3 (120°), phép tịnh tiến
+      div
+        img(src="images/wallpapers/p4.svg" width=360, height=240)
+        p.caption <strong>Nhóm 4 – P4</strong><br>Bốn phép quay bậc 2 (180°), phép tịnh tiến
+      div
+        img(src="images/wallpapers/p6.svg" width=360, height=240)
+        p.caption <strong>Nhóm 5 – P6</strong><br>Phép quay bậc 2, 3 và 6 (60°), phép tịnh tiến
+      div
+        img(src="images/wallpapers/pm.svg" width=360, height=240)
+        p.caption <strong>Nhóm 6 – PM</strong><br>Các trục đối xứng song song, phép tịnh tiến
+      div
+        img(src="images/wallpapers/pmm.svg" width=360, height=240)
+        p.caption <strong>Nhóm 7 – PMM</strong><br>Phép đối xứng trục vuông góc, phép quay bậc 2, phép tịnh tiến
+      div
+        img(src="images/wallpapers/p4m.svg" width=360, height=240)
+        p.caption <strong>Nhóm 8 – P4M</strong><br>Phép quay (bậc 2 + 4), phép đối xứng trục, phép đối xứng trục lướt, phép tịnh tiến
+      div
+        img(src="images/wallpapers/p6m.svg" width=360, height=240)
+        p.caption <strong>Nhóm 9 – P6M</strong><br>Phép quay (bậc 2 + 6), phép đối xứng trục, phép đối xứng trục lướt, phép tịnh tiến
+      div
+        img(src="images/wallpapers/p3m1.svg" width=360, height=240)
+        p.caption <strong>Nhóm 10 – P3M1</strong><br>Phép quay 3, phép đối xứng trục, phép đối xứng trục lướt, phép tịnh tiến
+      div
+        img(src="images/wallpapers/p31m.svg" width=360, height=240)
+        p.caption <strong>Nhóm 11 – P31M</strong><br>Phép quay 3, phép đối xứng trục, phép đối xứng trục lướt, phép tịnh tiến
+      div
+        img(src="images/wallpapers/p4g.svg" width=360, height=240)
+        p.caption <strong>Nhóm 12 – P4G</strong><br>Phép quay (bậc 2 + 4), phép đối xứng trục, phép đối xứng trục lướt, phép tịnh tiến
+      div
+        img(src="images/wallpapers/cmm.svg" width=360, height=240)
+        p.caption <strong>Nhóm 13 – CMM</strong><br>Phép đối xứng trục vuông góc, phép quay bậc 2, phép tịnh tiến
+      div
+        img(src="images/wallpapers/pmg.svg" width=360, height=240)
+        p.caption <strong>Nhóm 14 – PMG</strong><br>Phép đối xứng trục, phép đối xứng trục lướt, phép quay 2, phép tịnh tiến
+      div
+        img(src="images/wallpapers/pg.svg" width=360, height=240)
+        p.caption <strong>Nhóm 15 – PG</strong><br>phép đối xứng trục lướt song song, phép tịnh tiến
+      div
+        img(src="images/wallpapers/cm.svg" width=360, height=240)
+        p.caption <strong>Nhóm 16 – CM</strong><br>Phép đối xứng trục, phép đối xứng trục lướt, phép tịnh tiến
+      div
+        img(src="images/wallpapers/pgg.svg" width=360, height=240)
+        p.caption <strong>Nhóm 17 – PGG</strong><br>Phép đối xứng trục lướt vuông góc, phép quay bậc 2, phép tịnh tiến
 
 ---
+> id: drawing
+> title: Drawing Wallpaper Symmetries
+> goals: draw-1 draw-2 switch
 
+Thật không may là rất khó để giải thích cặn kẽ và chứng minh tại sao lại có _17_ nhóm đối xứng
+như vậy, điều này đòi hỏi rất nhiều kiến thức Toán cao cấp. Thay vào đó, bạn có thể tự vẽ và thiết 
+kế họa tiết lặp đi lặp lại cho riêng bạn với mỗi nhóm đối xứng đã được liệt kê ở trên:
+
+    figure: x-wallpaper
+    .other-students.reveal(when="draw-1 switch")
+      h4 Một số sản phẩm của các bạn học sinh
+      .row.padded-thin
+        div(style="width: 224px"): img(src="images/user/wallpaper-1.png" width=240 height=160)
+        div(style="width: 224px"): img(src="images/user/wallpaper-2.png" width=240 height=160)
+        div(style="width: 224px"): img(src="images/user/wallpaper-3.png" width=240 height=160)
+
+---
 > id: crystallographic-groups
 
-{.caption} Các phân tử của Boron-Nitride được sắp xếp trong mạng tinh thể này có một nhóm đối xứng ba chiều. :::
+::: column.grow
+Các nhóm hình họa chỉ được xây dựng trên mặt phẳng, với các họa tiết hai 
+chiều. Chúng ta cũng có thể làm điều tương tự dành cho các họa tiết ba chiều: 
+đây được gọi là các nhóm tinh thể, và có tất cả 219 nhóm!
 
-Cho đến nay, tất cả các nhóm đối xứng mà chúng ta thấy đều mang tính *trực quan* theo một nghĩa nào đó gồm các hình dạng, hình ảnh hoặc hoa văn. Thực tế, tính đối xứng còn có thể là một khái niệm rộng và trù tượng hơn: *tính bất biến*.
+Ngoài các phép tịnh tiến, phép đối xứng trục, phép quay, và phép đối xứng
+trục lướt, các nhóm tinh thể này còn bao gồm thêm các phép đối xứng như 
+__mặt phẳng lướt__ và __trục vít__  (hãy nghĩ đến chuyển động khi mở nắp chai).
+::: column(width=300)
 
-```
-img(src="images/crystal.jpg" width=300 height=240)
-```
+    img(src="images/crystal.jpg" width=300 height=240)
 
-Ví dụ, nếu như bạn thích nước ép táo như nước ép cam, thì khi đó sở thích của bạn là “đối xứng” dưới tác động của phép biến hình biến táo thành cam.
+{.caption} Các phân tử của Boron-Nitride được sắp xếp trong mạng tinh thể này
+có một nhóm đối xứng ba chiều.
+:::
 
 ---
 
 ## Tính đối xứng trong Vật lý
 
-> id: planets sectionBackground: dark stars section: physics
+> id: planets
+> sectionBackground: dark stars
+> section: physics
 
-Vào năm 1915, nhà Toán học người Đức [Emmy Noether](bio:noether) đã quan sát thấy rằng một "điều gì đó tương tự" là đúng với [quy luật tự nhiên](gloss:laws-of-nature).
+Cho đến nay, tất cả các nhóm đối xứng mà chúng ta thấy đều mang tính 
+_trực quan_ theo một nghĩa nào đó gồm các hình dạng, hình ảnh hoặc hoa văn.
+Thực tế, tính đối xứng còn có thể là một khái niệm rộng và trù tượng hơn: 
+_tính bất biến_.
 
-::: column.grow Ví dụ, kinh nghiệm của chúng ta chỉ ra rằng các định luật Vật lý là giống nhau ở mọi nơi trong vũ trụ. Không quan trọng nếu bạn tiến hành một thí nghiệm ở London, New York hoặc trên Sao Hỏa – các định luật Vật lý phải luôn giống nhau. Theo một cách nào đó, chúng ta có [[tính đối xứng tịnh tiến|tính đối xứng trục]].
+Ví dụ, nếu như bạn thích nước ép táo như nước ép cam, thì khi đó sở thích của
+bạn là “đối xứng” dưới tác động của phép biến hình biến táo thành cam.
 
-{.reveal(when="blank-0")} Tương tự, không quan trọng nếu chúng ta tiến hành một thí nghiệm khi hướng về phía Bắc, phía Nam, phía Đông hoặc phía Tây: các định luật tự nhiên cũng có [[tính đối xứng quay|tính đối xứng trục lướt]].
+Vào năm 1915, nhà Toán học người Đức [Emmy Noether](bio:noether) đã quan 
+sát thấy rằng một "điều gì đó tương tự" là đúng với [quy luật tự nhiên](gloss:laws-of-nature).
 
-{.reveal(when="blank-1")} Và cuối cùng, không quan trọng nếu chúng ta tiến hành một thí nghiệm trong hôm nay, ngày mai, hoặc trong cả một năm. Các định luật tự nhiên cũng có “tính đối xứng thời gian”. ::: column(width=300)
+::: column.grow
+Ví dụ, kinh nghiệm của chúng ta chỉ ra rằng các định luật Vật lý là giống nhau
+ở mọi nơi trong vũ trụ. Không quan trọng nếu bạn tiến hành một thí nghiệm ở
+London, New York hoặc trên Sao Hỏa – các định luật Vật lý phải luôn giống nhau.
+Theo một cách nào đó, chúng ta có [[tính đối xứng tịnh tiến|tính đối xứng trục]].
+
+{.reveal(when="blank-0")} Tương tự, không quan trọng nếu chúng ta tiến hành một 
+thí nghiệm khi hướng về phía Bắc, phía Nam, phía Đông hoặc phía Tây: các định luật 
+tự nhiên cũng có [[tính đối xứng quay|tính đối xứng trục lướt]].
+
+{.reveal(when="blank-1")} Và cuối cùng, không quan trọng nếu chúng ta tiến hành một 
+thí nghiệm trong hôm nay, ngày mai, hoặc trong cả một năm. Các định luật 
+tự nhiên cũng có “tính đối xứng thời gian”.
+::: column(width=300)
+
+    include svg/planets.svg
 
 :::
 
-Các “tính đối xứng” này thoạt đầu có vẻ khá vô nghĩa, nhưng chúng thực sự có thể cho chúng ta biết rất nhiều điều về vũ trụ. Emmy Noether đã cố gắng chứng minh mọi tính đối xứng đều tương ứng với một đại lượng Vật lý nhất định được *bảo toàn*.
-
-```
-include svg/planets.svg
-```
-
-Ví dụ, tính đối xứng thời gian hàm ý rằng **Năng lượng** phải được bảo toàn trong vũ trụ của chúng ta: bạn có thể chuyển đổi năng lượng từ dạng này sang dạng khác (ví dụ: ánh sáng thành điện), nhưng bạn không thể tạo ra hoặc triệt tiêu năng lượng. Tổng lượng năng lượng trong vũ trụ sẽ không đổi.
-
 ---
-
 > id: planets-1
+
+Các “tính đối xứng” này thoạt đầu có vẻ khá vô nghĩa, nhưng chúng thực sự có thể
+cho chúng ta biết rất nhiều điều về vũ trụ. Emmy Noether đã cố gắng chứng minh
+mọi tính đối xứng đều tương ứng với một đại lượng Vật lý nhất định được _bảo toàn_.
+
+Ví dụ, tính đối xứng thời gian hàm ý rằng __Năng lượng__ phải được bảo toàn
+trong vũ trụ của chúng ta: bạn có thể chuyển đổi năng lượng từ dạng này sang
+dạng khác (ví dụ: ánh sáng thành điện), nhưng bạn không thể tạo ra hoặc triệt tiêu
+năng lượng. Tổng lượng năng lượng trong vũ trụ sẽ không đổi.
+
+    figure
+      x-img(src="images/cern.jpg" width=760 height=400 credit="© CERN" alt="Large Hadron Collider in CERN")
+      p.caption CERN là máy gia tốc hạt lớn nhất thế giới. Các nhà khoa học phá vỡ các hạt cơ bản với tốc độ cực lớn, để có thể nghiên cứu thêm các tính chất của chúng. Bạn có thể hình dung được kích cỡ của máy này khi so sánh với người đang đứng ở phía dưới bức tranh.
 
 ::: column(width=220)
 
-::: column.grow Hóa ra, chỉ với các kiến thức về tính đối xứng, các nhà Vật lý có thể suy ra hầu hết các định luật tự nhiên chi phối vu trụ của chúng ta – mà không cần thực hiện bất kì một thí nghiệm hay quan sát gì cả.
-
-```
-figure
-  x-img(src="images/cern.jpg" width=760 height=400 credit="© CERN" alt="Large Hadron Collider in CERN")
-  p.caption CERN là máy gia tốc hạt lớn nhất thế giới. Các nhà khoa học phá vỡ các hạt cơ bản với tốc độ cực lớn, để có thể nghiên cứu thêm các tính chất của chúng. Bạn có thể hình dung được kích cỡ của máy này khi so sánh với người đang đứng ở phía dưới bức tranh.
-```
-
-Tính đối xứng thậm chí có thể dự đoán sự tồn tại của các hạt cơ bản. Một ví dụ nỗi tiếng là sự tồn tại của hạt **Higgs Boson**: nó được các nhà Vật lý lý thuyết dự đoán vào những năm 1960, nhưng chưa từng được quan sát thực tế cho mãi đến năm 2012 :::
-
-```
-x-img(src="images/higgs.png" width=220 height=150 alt="Particle Fragments")
-p.caption Các đường đi của các mảnh hạt sau khi va chạm.
-```
-
-Đến bây giờ, chúng ta chỉ mới nghiên cứu về các [[phép dời hình|phép đồng dạng|phép trực quan]]. *{span.reveal(when="blank-0")} Giờ đây, chúng ta sẽ tiếp tục nghiên cứu về [**phép vị tự**](gloss:dilation): phép biến hình thay đổi kích thước của hình ban đầu bằng cách phóng to hoặc thu nhỏ hình đó.*
+    x-img(src="images/higgs.png" width=220 height=150 alt="Particle Fragments")
+    p.caption Các đường đi của các mảnh hạt sau khi va chạm.
 
 ::: column.grow
+Hóa ra, chỉ với các kiến thức về tính đối xứng, các nhà Vật lý có thể suy ra 
+hầu hết các định luật tự nhiên chi phối vu trụ của chúng ta – mà không cần thực
+hiện bất kì một thí nghiệm hay quan sát gì cả.
 
----
-
-## Dilations
-
-> id: dilations section: dilations
-
-Phép vị tự có một [**tâm vị tự**](target:center) và một [**tỉ số vị tự**](-%3E.scale-target). Tâm vị tự là một điểm tham chiếu cho phép vị tự và tỉ số vị tự cho ta biết mức độ kéo dài hoặc thu nhỏ.
-
----
-
-> id: dilations-1
-
-Nếu [tỉ số vị tự](gloss:scale-factor) nằm giữa khoảng 0 đến 1, ảnh nhận được sẽ [[nhỏ|lớn]] hơn hình ban đầu. Nếu tỉ số vị tự lớn hơn 1, ảnh nhận được sẽ [[lớn|nhỏ]] hơn hình ban đầu.
-
-::: column(width=300)
-
-{.text-center.scale-target} Tỉ số vị tự: ${s}{s|2|0,3,0.1} :::
-
-{.todo} Các phần tiếp theo về phép vị tự sẽ được đưa đến quý bạn đọc sớm nhất có thể.
-
-```
-x-geopad(width=300 height=240): svg
-  circle.move(name="C" cx=40 cy=35 target="center")
-
-  circle(hidden name="a" x="point(140,55)")
-  circle(hidden name="b" x="point(160,115)")
-  circle(hidden name="c" x="point(60,130)")
-
-  circle(hidden name="a1" x="a.subtract(C).scale(s).add(C)")
-  circle(hidden name="b1" x="b.subtract(C).scale(s).add(C)")
-  circle(hidden name="c1" x="c.subtract(C).scale(s).add(C)")
-
-  path.fill.green(x="polygon(a,b,c)" label="A" label-class="white")
-  path.fill.blue(x="polygon(a1,b1,c1)" label="A’" label-class="white")
-
-  path.light.thin(x="segment(C,s<1?a:a1)")
-  path.light.thin(x="segment(C,s<1?b:b1)")
-  path.light.thin(x="segment(C,s<1?c:c1)")
-```
-
-::: column.grow For rigid transformations, the image is always [[congruent|larger|smaller]] to the original – but this is [[no longer|still]] true for dilations. Instead, we say that two shapes are [**similar**](gloss:similar). They have the same overall shape, but not necessarily the same size.
-
-The symbol for similarity is `?` (similar to the symbol for congruence, which was `?`). In this example, we would write `A ? A'`.
-
-```
-// Here is how we can construct the dilation of a geometric shape:
-//
-// ::: column(width=300)
-// {.todo} COMING SOON – Animation
-// ::: column.grow
-// First we draw rays from the center of dilation to every point in the shape.
-//
-// Now let’s measure the distance of all these points from the center of dilation.
-// Then we can multiply the distance by the scale factor, and the measure the
-// image of the point along the same ray.
-//
-// All that’s left is to connect the transformed points in the image … all done!
-// :::
-```
+Tính đối xứng thậm chí có thể dự đoán sự tồn tại của các hạt cơ bản. Một ví dụ
+nỗi tiếng là sự tồn tại của hạt __Higgs Boson__: nó được các nhà Vật lý lý thuyết 
+dự đoán vào những năm 1960, nhưng chưa từng được quan sát thực tế cho mãi 
+đến năm 2012
+:::
 
 ---
 
 ## Phép vị tự
 
-> section: similarity sectionStatus: dev id: similarity
+> id: dilations
+> section: dilations
 
-::: column(width=240) {.todo} COMING SOON – Illustration :::
+Đến bây giờ, chúng ta chỉ mới nghiên cứu về các [[phép dời hình|phép đồng dạng|phép trực quan]].
+_{span.reveal(when="blank-0")} Giờ đây, chúng ta sẽ tiếp tục nghiên cứu về [__phép vị tự__](gloss:dilation):
+phép biến hình thay đổi kích thước của hình ban đầu bằng cách phóng to hoặc thu nhỏ hình đó._
 
-You might have noticed that these dilations with the connecting rays almost look like **perspective drawings**. The center of dilation is called the **vanishing point**, because it looks like this is where everything is “vanishing in the distance”.
+---
+> id: dilations-1
 
-Find the vanishing point in the figure below:
+::: column.grow
+
+Phép vị tự có một [__tâm vị tự__](target:center) và một [__tỉ số vị tự__](->.scale-target).
+Tâm vị tự là một điểm tham chiếu cho phép vị tự và tỉ số vị tự cho ta biết mức độ
+kéo dài hoặc thu nhỏ.
+
+Nếu [tỉ số vị tự](gloss:scale-factor) nằm giữa khoảng 0 đến 1, ảnh nhận được
+sẽ [[nhỏ|lớn]] hơn hình ban đầu. Nếu tỉ số vị tự lớn hơn 1, ảnh nhận được
+sẽ [[lớn|nhỏ]] hơn hình ban đầu.
+
+::: column(width=300)
+
+    x-geopad(width=300 height=240): svg
+      circle.move(name="C" cx=40 cy=35 target="center")
+
+      circle(hidden name="a" x="point(140,55)")
+      circle(hidden name="b" x="point(160,115)")
+      circle(hidden name="c" x="point(60,130)")
+
+      circle(hidden name="a1" x="a.subtract(C).scale(s).add(C)")
+      circle(hidden name="b1" x="b.subtract(C).scale(s).add(C)")
+      circle(hidden name="c1" x="c.subtract(C).scale(s).add(C)")
+
+      path.fill.green(x="polygon(a,b,c)" label="A" label-class="white")
+      path.fill.blue(x="polygon(a1,b1,c1)" label="A’" label-class="white")
+
+      path.light.thin(x="segment(C,s<1?a:a1)")
+      path.light.thin(x="segment(C,s<1?b:b1)")
+      path.light.thin(x="segment(C,s<1?c:c1)")
+
+{.text-center.scale-target} Tỉ số vị tự: ${s}{s|2|0,3,0.1}
+:::
+
+{.todo} Các phần tiếp theo về phép vị tự sẽ được đưa đến quý bạn đọc sớm nhất có thể.
+
+    // Here is how we can construct the dilation of a geometric shape:
+    //
+    // ::: column(width=300)
+    // {.todo} COMING SOON – Animation
+    // ::: column.grow
+    // First we draw rays from the center of dilation to every point in the shape.
+    //
+    // Now let’s measure the distance of all these points from the center of dilation.
+    // Then we can multiply the distance by the scale factor, and the measure the
+    // image of the point along the same ray.
+    //
+    // All that’s left is to connect the transformed points in the image … all done!
+    // :::
 
 ---
 
+## Tính đồng dạng
+
+> section: similarity
+> sectionStatus: dev
+> id: similarity
+
+::: column.grow
+For rigid transformations, the image is always [[congruent|larger|smaller]] to
+the original – but this is [[no longer|still]] true for dilations. Instead, we
+say that two shapes are [__similar__](gloss:similar). They have the same overall
+shape, but not necessarily the same size.
+
+The symbol for similarity is `?` (similar to the symbol for congruence, which
+was `?`). In this example, we would write `A ? A'`.
+
+::: column(width=240)
+{.todo} COMING SOON – Illustration
+:::
+
+---
 > id: perspective
 
 ### Perspective Drawings
+
+You might have noticed that these dilations with the connecting rays almost look
+like __perspective drawings__. The center of dilation is called the __vanishing
+point__, because it looks like this is where everything is “vanishing in the
+distance”.
+
+Find the vanishing point in the figure below:
 
 {.todo} COMING SOON – Interactive
 
 Now can you draw another house that matches the existing ones?
 
-Similarity can tell us a lot about shapes. For example, [circles](gloss:circle), [squares](gloss:square) and [equilateral triangles](gloss:equilateral-triangle) are [[always|sometimes|never]] similar. They might have different sizes, but always the same general shape.
-
-::: column.grow The two quadrilaterals on the right are similar. Our first important observation is that in similar polygons, all the matching pairs of angles are [congruent](gloss:congruent-angles). This means that
-
 ---
-
 > id: similar-polygons
 
 ### Similar Polygons
 
-{.text-center} [*{.m-red}?ABC* ? *{.m-red}?A'B'C'*](target:a)*{.space}* [*{.m-blue}?BCD* ? *{.m-blue}?B'C'D'*](target:b) [*{.m-green}?CDE* ? *{.m-green}?C'D'E'*](target:c)*{.space}* [*{.m-yellow}?DEA* ? *{.m-yellow}?D'E'A'*](target:d)
+Similarity can tell us a lot about shapes. For example, [circles](gloss:circle),
+[squares](gloss:square) and [equilateral triangles](gloss:equilateral-triangle)
+are [[always|sometimes|never]] similar. They might have different sizes, but
+always the same general shape.
 
-The second important fact is that in similar polygons, all sides are scaled **proportionally** by the scale factor of the corresponding dilation. If the scale factor is ${k}{k|1.5|0.5,2,0.1}, then
+::: column.grow
+The two quadrilaterals on the right are similar. Our first important observation
+is that in similar polygons, all the matching pairs of angles are
+[congruent](gloss:congruent-angles). This means that
 
-{.text-center} `abs(AB) ×` ${k} `= abs(A'B')`*{.space}*`abs(BC) ×` ${k} `= abs(B'C')` `abs(CD) ×` ${k} `= abs(C'D')`*{.space}*`abs(DE) ×` ${k} `= abs(D'E')`
+{.text-center} [_{.m-red}?ABC_ ? _{.m-red}?A'B'C'_](target:a)_{.space}_
+[_{.m-blue}?BCD_ ? _{.m-blue}?B'C'D'_](target:b)
+[_{.m-green}?CDE_ ? _{.m-green}?C'D'E'_](target:c)_{.space}_
+[_{.m-yellow}?DEA_ ? _{.m-yellow}?D'E'A'_](target:d)
 
-We can instead rearrange these equations and eliminate the scale factor entirely:
+The second important fact is that in similar polygons, all sides are scaled
+__proportionally__ by the scale factor of the corresponding dilation. If the
+scale factor is ${k}{k|1.5|0.5,2,0.1}, then
+
+{.text-center} `abs(AB) ×` ${k} `= abs(A'B')`_{.space}_`abs(BC) ×` ${k} `= abs(B'C')`
+`abs(CD) ×` ${k} `= abs(C'D')`_{.space}_`abs(DE) ×` ${k} `= abs(D'E')`
+
+We can instead rearrange these equations and eliminate the scale factor
+entirely:
 
 {.text-center} `abs(AB)/abs(A'B') = abs(BC)/abs(B'C') = abs(AB)/abs(A'B') = abs(AB)/abs(A'B')`
 
-We can use this to solve real life problems that involve similar polygons – for example finding the length of missing sides, if we know some of the other sides. In the following section you will see a few examples. ::: column(width=240)
+    // This proportional relationship is true not just for the sides of the
+    // polygon, but also for properties like diagonals.
 
+We can use this to solve real life problems that involve similar polygons – for
+example finding the length of missing sides, if we know some of the other sides.
+In the following section you will see a few examples.
+::: column(width=240)
+
+    x-geopad.sticky(width=240 height=360): svg
+      - var x = ['a', 'b', 'c', 'd']
+      - var initial = {a:[50,70], b:[160,50], c:[200,110], d:[150,160]}
+      - var next = {a:'b', b:'c', c:'d', d:'a'}
+      - var prev = {a:'d', b:'a', c:'b', d:'c'}
+      - var classes = {a:'red', b:'blue', c:'green', d:'yellow'}
+      each l in x
+        circle(name=l x=`point(${initial[l][0]},${initial[l][1]})` r=4 target=l)
+        path(x=`angle(${prev[l]},${l},${next[l]})` target=l class=classes[l])
+        path(x=`segment(${l},${next[l]})` target=`${l} ${next[l]}`)
+        circle(name=l+'1' r=4 x=`${l}.subtract({x:120,y:90}).scale(k).rotate(3).add({x:120,y:270})` target=l)
+        path(x=`angle(${prev[l]}1,${l}1,${next[l]}1)` target=l class=classes[l])
+        path(x=`segment(${l}1,${next[l]}1)` target=`${l} ${next[l]}`)
 :::
 
-```
-// This proportional relationship is true not just for the sides of the
-// polygon, but also for properties like diagonals.
-```
-
-The concept of similarity is particularly powerful with triangles. We already know that the corresponding internal angles in similar polygons are equal.
-
-```
-x-geopad.sticky(width=240 height=360): svg
-  - var x = ['a', 'b', 'c', 'd']
-  - var initial = {a:[50,70], b:[160,50], c:[200,110], d:[150,160]}
-  - var next = {a:'b', b:'c', c:'d', d:'a'}
-  - var prev = {a:'d', b:'a', c:'b', d:'c'}
-  - var classes = {a:'red', b:'blue', c:'green', d:'yellow'}
-  each l in x
-    circle(name=l x=`point(${initial[l][0]},${initial[l][1]})` r=4 target=l)
-    path(x=`angle(${prev[l]},${l},${next[l]})` target=l class=classes[l])
-    path(x=`segment(${l},${next[l]})` target=`${l} ${next[l]}`)
-    circle(name=l+'1' r=4 x=`${l}.subtract({x:120,y:90}).scale(k).rotate(3).add({x:120,y:270})` target=l)
-    path(x=`angle(${prev[l]}1,${l}1,${next[l]}1)` target=l class=classes[l])
-    path(x=`segment(${l}1,${next[l]}1)` target=`${l} ${next[l]}`)
-```
-
-For triangles, the opposite is also true: this means that if you have two triangles with the same three angle sizes, then the triangles must be similar.
-
 ---
-
 > id: similar-triangles
 
 ### Similar Triangles
 
-And it gets even better! We know that the internal angles in a triangle always add up to [[180]]°. This means that if we know two angles in a triangle, we can always work out the third one.
+The concept of similarity is particularly powerful with triangles. We already
+know that the corresponding internal angles in similar polygons are equal.
 
-For similarity, this means that we also just need to check *two angles* to determine if triangles are similar. If two triangles have two angles of the same size, then the third angle must also be the same in both.
+For triangles, the opposite is also true: this means that if you have two
+triangles with the same three angle sizes, then the triangles must be similar.
 
-This result is sometimes called the [**AA Similarity Condition**](gloss:triangle-aa) for triangles. (The two *As* stand for the two *angles* we compare.)
+And it gets even better! We know that the internal angles in a triangle always
+add up to [[180]]°. This means that if we know two angles in a triangle, we can
+always work out the third one.
 
-::: .theorem If two angles in one triangle are congruent to two angles in another triangle, the two triangles are similar. :::
+For similarity, this means that we also just need to check _two angles_ to
+determine if triangles are similar. If two triangles have two angles of the same
+size, then the third angle must also be the same in both.
+
+This result is sometimes called the [__AA Similarity Condition__](gloss:triangle-aa)
+for triangles. (The two _As_ stand for the two _angles_ we compare.)
+
+::: .theorem
+If two angles in one triangle are congruent to two angles in another triangle,
+the two triangles are similar.
+:::
+
+---
+> id: similar-triangles-1
 
 Let’s have a look at a few examples where this is useful:
 
-::: column(width=320) {.todo} COMING SOON – Animation
+::: column(width=320)
+{.todo} COMING SOON – Animation
 
----
+::: column.grow
+Here you can see the image of a large lighthouse. Together with a friend, you
+want to measure the height of the lighthouse, but unfortunately we cannot climb
+to the top.
 
-> id: similar-triangles-1
+It turns out that, very well hidden, the diagram contains two similar triangles:
+one is formed by the lighthouse and its shadow, and one is formed by your friend
+and her shadow.
 
-::: column.grow Here you can see the image of a large lighthouse. Together with a friend, you want to measure the height of the lighthouse, but unfortunately we cannot climb to the top.
+Both triangles have one right angle at the bottom. The sun rays are parallel,
+which means that the other two angles at the bottom are corresponding angles,
+and also equal. By the AA condition for triangles, these two must be similar.
 
-It turns out that, very well hidden, the diagram contains two similar triangles: one is formed by the lighthouse and its shadow, and one is formed by your friend and her shadow.
-
-Both triangles have one right angle at the bottom. The sun rays are parallel, which means that the other two angles at the bottom are corresponding angles, and also equal. By the AA condition for triangles, these two must be similar.
-
-We can easily measure the length of the shadows, and we also know the height of your friend. Now we can use the proportionality of sides in similar triangles to find the height of the lighthouse:
+We can easily measure the length of the shadows, and we also know the height of
+your friend. Now we can use the proportionality of sides in similar triangles
+to find the height of the lighthouse:
 
 {.todo} COMING SOON – Equation
 
-Therefore the lighthouse is 1.5m tall. :::
+Therefore the lighthouse is 1.5m tall.
+:::
 
-::: column(width=320) {.todo} COMING SOON – Animation ::: column.grow We can use the same technique to measure distances on the ground. Here we want to find the width of a large river. There is a big tree on one side of the river, and I’ve got a stick that is one meter long.
+---
+> id: similar-triangles-2
+
+::: column(width=320)
+{.todo} COMING SOON – Animation
+::: column.grow
+We can use the same technique to measure distances on the ground. Here we want
+to find the width of a large river. There is a big tree on one side of the
+river, and I’ve got a stick that is one meter long.
 
 Try drawing another two similar triangles in this diagram.
 
----
+You can mark the point along the side of the river, that lies directly on the
+line of sight from the end of the stick to the tree. Then we can measure the
+distances to the stick, and to the point directly opposite the tree.
 
-> id: similar-triangles-2
-
-You can mark the point along the side of the river, that lies directly on the line of sight from the end of the stick to the tree. Then we can measure the distances to the stick, and to the point directly opposite the tree.
-
-Once again, these two triangles are similar because of the AA condition. They both have a right angle, and on pair of opposite angles.
+Once again, these two triangles are similar because of the AA condition. They
+both have a right angle, and on pair of opposite angles.
 
 According to the proportionality rule, this means that
 
 {.todo} COMING SOON – Equation
 
-Therefore the width of the river is 45 meters. :::
-
-Theorem: If a ray bisects an angle of a triangle, then it divides the opposite side into segments that are proportional to the lengths of the other two sides.
-
-We can extend this theorem to a situation outside of triangles where we have multiple parallel lines cut by transverals.
+Therefore the width of the river is 45 meters.
+:::
 
 ---
 
 ### Similarity on Rays
 
-Theorem: If three or more parallel lines are cut by two transversals, then they divide the transversals proportionally.
+Theorem: If a ray bisects an angle of a triangle, then it divides the
+opposite side into segments that are proportional to the lengths of the
+other two sides.
 
-Think about a midsegment of a triangle. A midsegment is parallel to one side of a triangle and divides the other two sides into congruent halves. The midsegment divides those two sides proportionally.
+We can extend this theorem to a situation outside of triangles where we
+have multiple parallel lines cut by transverals.
 
-Triangle Proportionality Theorem: If a line parallel to one side of a triangle intersects the other two sides, then it divides those sides proportionally.
+Theorem: If three or more parallel lines are cut by two transversals, then they
+divide the transversals proportionally.
 
-Triangle Proportionality Theorem Converse: If a line divides two sides of a triangle proportionally, then it is parallel to the third side.
+Think about a midsegment of a triangle. A midsegment is parallel to one side of
+a triangle and divides the other two sides into congruent halves. The midsegment
+divides those two sides proportionally.
 
-There are some curious mathematical shapes that are similar to a smaller part *of themselves*. An example is the **Sierpinksi Triangle**: the entire triangle is similar to any one of the smaller triangles it consists on. You could zoom in and infinitely many smaller and smaller triangles.
+Triangle Proportionality Theorem: If a line parallel to one side of a triangle
+intersects the other two sides, then it divides those sides proportionally.
 
-Triangle Proportionality Theorem Converse: If a line divides two sides of a triangle proportionally, then it is parallel to the third side.
+Triangle Proportionality Theorem Converse: If a line divides two sides of a
+triangle proportionally, then it is parallel to the third side.
 
 ---
 
 ### Self Similarity
 
-There are some curious mathematical shapes that are similar to a smaller part *of themselves*. An example is the **Sierpinksi Triangle**: the entire triangle is similar to any one of the smaller triangles it consists on. You could zoom in and infinitely many smaller and smaller triangles.
+There are some curious mathematical shapes that are similar to a smaller part
+_of themselves_. An example is the __Sierpinksi Triangle__: the entire triangle
+is similar to any one of the smaller triangles it consists on. You could zoom
+in and infinitely many smaller and smaller triangles.
 
-Shapes with this property are called **Fractals**. They have some surprising and truly XXX properties, which you will learn about more in the future.
+Shapes with this property are called __Fractals__. They have some surprising
+and truly XXX properties, which you will learn about more in the future.
 
 ---
 
-<<<<<<< Updated upstream
-Triangles are not just useful for measuring distances. In the next course we will learn a lot more about triangles and their properties.
-=======
 Triangles are not just useful for measuring distances. In the next course we
 will learn a lot more about triangles and their properties.
->>>>>>> Stashed changes
