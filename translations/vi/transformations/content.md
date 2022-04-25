@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 # Các phép biến hình và Tính đối xứng
+=======
+﻿# Các phép biến hình và Tính đối xứng
+>>>>>>> Stashed changes
 
 ## Giới thiệu
 
@@ -198,6 +202,7 @@ x-geopad(width=220 height=140 grid=20 no-points): svg
 {.caption} Tịnh tiến bởi  ([[4]], [[-2]]) :::
 
 ---
+<<<<<<< Updated upstream
 
 > id: translations-1 goals: drag-0 drag-1 drag-2
 
@@ -205,6 +210,15 @@ Bây giờ đến lượt bạn - hãy tịnh tiến các hình sau đây:
 
 ::: column(width=220)
 
+=======
+
+> id: translations-1 goals: drag-0 drag-1 drag-2
+
+Bây giờ đến lượt bạn - hãy tịnh tiến các hình sau đây:
+
+::: column(width=220)
+
+>>>>>>> Stashed changes
 ```
 svg(width=220 height=140)
   each i in [10,30,50,70,90,110,130,150,170,190,210]
@@ -668,11 +682,19 @@ x-geopad.draw(width=220 height=180 grid=20 no-points): svg
 ---
 
 > id: palindromes goals: p0 p1 p2
+<<<<<<< Updated upstream
 
 Các hình, chữ và ảnh có thể có tính đối xứng, và các con số, các từ và các đoạn văn cũng vậy!
 
 Ví dụ như “25352” và “ANNA” khi đọc xuôi và đọc ngược đều giống nhau. Các con số và các từ như vậy được gọi là [**Palindrome**](gloss:palindrome). Bạn có thể nghĩ ra thêm các palindrome khác không?
 
+=======
+
+Các hình, chữ và ảnh có thể có tính đối xứng, và các con số, các từ và các đoạn văn cũng vậy!
+
+Ví dụ như “25352” và “ANNA” khi đọc xuôi và đọc ngược đều giống nhau. Các con số và các từ như vậy được gọi là [**Palindrome**](gloss:palindrome). Bạn có thể nghĩ ra thêm các palindrome khác không?
+
+>>>>>>> Stashed changes
 ```
 form.palindromes.text-center.form-field
   input(type="text")
@@ -688,9 +710,15 @@ form.palindromes.text-center.form-field
 > id: palindromes-1
 
 Nếu chúng ta bỏ qua khoảng cách và dấu câu, các câu ngắn dưới đây cũng có tính đối xứng trục. Bạn có thể tự nghĩ ra một câu như vậy không?
+<<<<<<< Updated upstream
 
 {.text-center} Never odd or even.<br> A [[nut]] for a jar of tuna.<br> Yo, banana [[boy]]!
 
+=======
+
+{.text-center} Never odd or even.<br> A [[nut]] for a jar of tuna.<br> Yo, banana [[boy]]!
+
+>>>>>>> Stashed changes
 {.reveal(when="blank-0 blank-1")} Tuy nhiên các Palindrome không chỉ để cho vui, chúng có vai trò quan trọng trong thực tế. Vài năm trước, các nhà khoa học phát hiện ra rằng [DNA](gloss:dna) của chúng ta có tính palindrome. Điều này giúp chúng ta chống chịu các sự đột biến và tổn thương tốt hơn – bởi mỗi mảnh DNA có một bản sao dự phòng.
 
 ---
@@ -752,11 +780,19 @@ img(src="images/flower.jpg" width=200 height=200)
 ---
 
 > id: rotational-symmetry-2 goals: r0 r1 r2
+<<<<<<< Updated upstream
 
 Giờ hãy hoàn thiện các hình sau sao cho chúng có tính đối xứng quay:
 
 ::: column(width=220)
 
+=======
+
+Giờ hãy hoàn thiện các hình sau sao cho chúng có tính đối xứng quay:
+
+::: column(width=220)
+
+>>>>>>> Stashed changes
 ```
 x-geopad.draw(width=220 height=180 grid=20 no-points): svg
   circle.red(x="point(5,4)")
@@ -1407,4 +1443,9 @@ Shapes with this property are called **Fractals**. They have some surprising and
 
 ---
 
+<<<<<<< Updated upstream
 Triangles are not just useful for measuring distances. In the next course we will learn a lot more about triangles and their properties.
+=======
+Triangles are not just useful for measuring distances. In the next course we
+will learn a lot more about triangles and their properties.
+>>>>>>> Stashed changes
