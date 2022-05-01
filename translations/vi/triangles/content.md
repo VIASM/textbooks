@@ -1,5 +1,6 @@
 # Tam giác và lượng giác
-#Giới thiệu
+
+## Giới thiệu
 
 > id: intro
 > section: introduction
@@ -7,10 +8,11 @@
 > color: "#3566DE"
 > level: Intermediate
 > next: polyhedra
- ::: column.grow
 
-     Vào đầu thế kỷ 19, các nhà thám hiểm đã khám phá hầu hết thế giới. Hoạt động giao thương  và vận tải  bùng nổ giữa các quốc gia xa xôi và điều này tạo ra nhu cầu về  bản đồ tổng hợp  của toàn thế giới.
-      Ngày nay chúng ta có các vệ tinh có thể chụp ảnh từ trên cao, nhưng cách đây 200 năm  việc lập bản đồ là một công việc khó khăn và tốn nhiều thời gian. Nó được thực hiện bởi các nhà toán học như [Radhanath Sikdar] (bio: sikdar), người đã làm việc trong _Great Trigonometrical Survey_: một dự án  hàng thế kỷ để khảo sát toàn bộ Ấn Độ, bao gồm cả dãy  Himalaya.
+::: column.grow
+Vào đầu thế kỷ 19, các nhà thám hiểm đã khám phá hầu hết thế giới. Hoạt động giao thương  và vận tải  bùng nổ giữa các quốc gia xa xôi và điều này tạo ra nhu cầu về  bản đồ tổng hợp  của toàn thế giới.
+
+Ngày nay chúng ta có các vệ tinh có thể chụp ảnh từ trên cao, nhưng cách đây 200 năm  việc lập bản đồ là một công việc khó khăn và tốn nhiều thời gian. Nó được thực hiện bởi các nhà toán học như [Radhanath Sikdar] (bio: sikdar), người đã làm việc trong _Great Trigonometrical Survey_: một dự án  hàng thế kỷ để khảo sát toàn bộ Ấn Độ, bao gồm cả dãy  Himalaya.
 
 ::: column(width=240)
 
