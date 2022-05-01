@@ -21,8 +21,9 @@ Ngày nay chúng ta có các vệ tinh có thể chụp ảnh từ trên cao, nh
 {.caption} The _theodolite_, a surveying instrument
 :::
 
-       Mối quan tâm đặc biệt là tìm kiếm được ngọn núi cao nhất trên Trái đất. Có một vài ứng cử viên khác nhau, tuy nhiên  từ cách xa hàng trăm km, rất khó để phân biệt ngọn núi nào là cao nhất.
-       Vậy làm cách nào để có thể đo được chiều cao của một ngọn núi?
+Mối quan tâm đặc biệt là tìm kiếm được ngọn núi cao nhất trên Trái đất. Có một vài ứng cử viên khác nhau, tuy nhiên  từ cách xa hàng trăm km, rất khó để phân biệt ngọn núi nào là cao nhất.
+
+Vậy làm cách nào để có thể đo được chiều cao của một ngọn núi?
  
    figure.mountain: include svg/mountain.svg
 
