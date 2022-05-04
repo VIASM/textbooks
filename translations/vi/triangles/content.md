@@ -27,9 +27,10 @@ Vậy làm cách nào để có thể đo được chiều cao của một ngọ
  
    figure.mountain: include svg/mountain.svg
 
-{.r}  Ngày nay chúng ta có thể sử dụng vệ tinh để đo chiều cao của các ngọn núi trong phạm vi vài cm - nhưng chúng không tồn tại khi Radhanath khảo sát Ấn Độ.[Tiếp tục](btn:next)
+{.r} Ngày nay chúng ta có thể sử dụng vệ tinh để đo chiều cao của các ngọn núi trong phạm vi vài cm - nhưng chúng không tồn tại khi Radhanath khảo sát Ấn Độ.[Tiếp tục](btn:next)
 
-{.r.reveal(when="next-0")}  Những người leo núi sử dụng _ altimeter _ để xác định độ cao của những ngọn núi. Các thiết bị này sử dụng sự chênh lệch áp suất không khí ở các độ cao khác nhau. Tuy nhiên, điều này sẽ đòi hỏi người đo phải thực sự leo lên [đỉnh của mọi ngọn núi] (->. Mountain-top) - một kỳ tích cực kỳ khó khăn mà mãi một thế kỷ sau mới đạt được. [Tiếp tục](btn:next)
+{.r.reveal(when="next-0")} Những người leo núi sử dụng _ altimeter _ để xác định độ cao của những ngọn núi. Các thiết bị này sử dụng sự chênh lệch áp suất không khí ở các độ cao khác nhau. Tuy nhiên, điều này sẽ đòi hỏi người đo phải thực sự leo lên [đỉnh của mọi ngọn núi] (->. Mountain-top) - một kỳ tích cực kỳ khó khăn mà mãi một thế kỷ sau mới đạt được. 
+[Tiếp tục](btn:next)
 
 {.r.reveal(when="next-1")} Bạn cũng có thể thử sử dụng các tam giác đồng dạng, giống như chúng ta đã làm trong [khóa học trước] (/ khóa học / phép biến đổi / phép tương tự). Phương pháp này yêu cầu biết [khoảng cách] (->. Núi-khoảng cách) đến [chân núi] (->. núi-base): điểm ở mực nước biển nằm ngay dưới đỉnh của nó. Chúng ta có thể áp dụng cách  này đối với cây cối hoặc nhà cao tầng, nhưng đối với những ngọn núi, điểm này nằm khuất bên dưới những tảng đá hàng trăm mét.
 [Tiếp tục](btn:next)
@@ -45,11 +46,10 @@ Vậy làm cách nào để có thể đo được chiều cao của một ngọ
 Mount Everest, in 1953.
 
 ::: column.grow
+Có những kỹ thuật hình học tiên tiến hơn, mà [Radhanath] (sinh học: sikdar) đã sử dụng để khám phá ngọn núi cao nhất trên Trái đất: hiện nay ngọn núi đó  được gọi là _ Núi Everest_. Số đo của anh ấy chỉ chênh lệch vài mét so với chiều cao chính thức của ngày hôm nay là 8848 mét.
 
-     Có những kỹ thuật hình học tiên tiến hơn, mà [Radhanath] (sinh học: sikdar) đã sử dụng để khám phá ngọn núi cao nhất trên Trái đất: hiện nay ngọn núi đó  được gọi là _ Núi Everest_. Số đo của anh ấy chỉ chênh lệch vài mét so với chiều cao chính thức của ngày hôm nay là 8848 mét.
-    Trong khóa học này, bạn sẽ tìm hiểu về những đặc điểm và tính chất khác nhau của hình tam giác. Chúng sẽ cho phép bạn đo chiều cao của núi. Những đặc điểm, tính chất đó cũng đóng vai trò quan trọng cơ bản trong nhiều lĩnh vực toán học, khoa học và kỹ thuật khác.
+Trong khóa học này, bạn sẽ tìm hiểu về những đặc điểm và tính chất khác nhau của hình tam giác. Chúng sẽ cho phép bạn đo chiều cao của núi. Những đặc điểm, tính chất đó cũng đóng vai trò quan trọng cơ bản trong nhiều lĩnh vực toán học, khoa học và kỹ thuật khác.
 [Tiếp tục](btn:next)
-
 :::
 
 ---
