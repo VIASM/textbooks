@@ -1364,16 +1364,17 @@ Mô tả mặt cắt được tạo ra bởi phần giao nhau của mặt phẳn
 
 Mặt cắt là phần giao nhau giữa một mặt phẳng và một khối hình. 
 Một cách khác để biểu diễn hình khối trong mặt phẳng 2 chiều là sử dụng hình khai triển. Hình khai triển là một biểu diễn phẳng, không bị gấp của các cạnh của một hình 3 chiều.
+
 Xoay hình lập phương để tạo ra một mặt cắt có dạng hình lục giác
 
----
+    // ---
 
-## Scaling Shapes and Solids
+    // ## Scaling Shapes and Solids
 
-> section: scaling
-> sectionStatus: dev
+    // > section: scaling
+    // > sectionStatus: dev
 
-TODO
+    // TODO
 
 ---
 
