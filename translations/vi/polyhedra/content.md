@@ -1326,6 +1326,7 @@ lỗ hổng nào.
 
 Nếu bạn muốn thử các đa diện khác, giống như những cái phía trên, bạn sẽ thấy rằng công thức Ơ-clit luôn đúng. Trong [một khóa học sau](/course/graph-theory/planar-graphs)
 bạn sẽ học cách chứng minh nó.
+
 ---
 
 ## Nets and Cross Sections
