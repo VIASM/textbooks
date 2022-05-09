@@ -1321,7 +1321,8 @@ Ví dụ, nếu một đa diện có 12 mặt và 18 đỉnh, chúng ta biết r
 > id: euler-1
 
 Phương trình này được phát hiện bởi một nhà Toán học nổi tiếng người Thụy Sĩ [Leonard
-Euler](bio:euler). Điều này đúng cho mọi đa diện, miễn là nó không chứ bất kì lỗ hổng nào. 
+Euler](bio:euler). Điều này đúng cho mọi đa diện, miễn là nó không chứ bất kì 
+lỗ hổng nào. 
 
 Nếu bạn muốn thử các đa diện khác, giống như những cái phía trên, bạn sẽ thấy rằng công thức Ơ-clit luôn đúng. Trong [một khóa học sau](/course/graph-theory/planar-graphs)
 bạn sẽ học cách chứng minh nó.
