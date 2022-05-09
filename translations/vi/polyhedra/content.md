@@ -1387,7 +1387,8 @@ Xoay hình lập phương để tạo ra một mặt cắt có dạng hình lụ
 Cũng như hình đa giác đối xứng đặc biệt, nơi mà tất cả các cạnh và các góc bằng nhau.
 Chúng ta có thể làm tương tự với hình đa diện.
 
-Trong một hình _đa diện đều_ tất cả [các mặt](gloss:polyhedron-face) sẽ cùng một loại đa giác đều, và cùng số lượng mặt gặp nhau tại mỗi
+Trong một hình _đa diện đều_ tất cả [các mặt](gloss:polyhedron-face) sẽ cùng
+một loại đa giác đều, và cùng số lượng mặt gặp nhau tại mỗi
 [đỉnh](gloss:polyhedron-vertex). Hình đa diện với hai tính chất này được gọi là [__Khối Platonic __](gloss:platonic-solid), được đặt tên theo nhà triết học người Hy Lạp [Plato](bio:plato).
 
     //- Hình chóp ở bên phải không phải là khối Platonic. Nó chứa 2
