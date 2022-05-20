@@ -1,4 +1,5 @@
 # Đường tròn và số Pi
+
 ## Giới thiệu 
 > section: introduction
 > id: intro
@@ -10,6 +11,7 @@
 ::: column.grow
 
 Kể từ khi loài người xuất hiện, chúng ta không ngừng khám phá bầu trời, dùng chuyển động của các vì sao, các hành tinh và mặt trăng để lý giải những sự sống trên Trái đất.
+
 Các nhà thiên văn học Hy Lạp cổ đại là những người đầu tiên phát hiện ra rằng tất cả các thiên thể đều chuyển động theo một đường nhất định, được gọi là “quỹ đạo”. Họ tin rằng những quỹ đạo này luôn là hình tròn. Xét cho cùng, hình tròn là “hình hoàn hảo nhất” trong tất cả các hình khối: nó đối xứng theo mọi hướng, do đó hình tròn là một lựa chọn phù hợp cho trật tự cơ bản của vũ trụ của chúng ta.
 
 ::: column(width=320)
@@ -40,27 +42,27 @@ Tất cả các điểm nằm trên [__circle__](gloss:circle) đều cách tâm
 
 ::: column.grow
 
-{.reveal(when="compass")} có ba đại lượng quan trọng liên quan đến đường tròn mà bạn cần biết: 
+{.reveal(when="compass")} có ba đại lượng quan trọng liên quan đến 
+đường tròn mà bạn cần biết: 
 
 * {.reveal(when="compass" delay="1000")} 
 [{.red.b}radius](target:r) Bán kính của một đường tròn là đoạn thẳng (hoặc độ dài đoạn thẳng) nối tâm với một điểm bất kì trên đường tròn.
-
 * {.reveal(when="compass" delay="4000")} The [{.blue.b}diameter](target:d)
 Đường kính là đoạn thẳng (hoặc độ dài đoạn thẳng) có 2 đầu mút nằm trên đường tròn. Đường kính là dây cung đi qua tâm, và có độ dài bằng [[twice|half|the same as]] bán kính.
-
 * {.reveal(when="blank-0")} The [{.green.b}circumference](target:c)
 Độ dài đường tròn (chu vi hình tròn) là độ dài đường biên giới hạn hình tròn.
+
 :::
 
 ---
 > id: similar
 > goals: circle-0 circle-1 circle-2
 
-Một tính chất quan trọng của đường tròn là mọi đường tròn đều đồng dạng.
-
-[similar](gloss:similar). 
-Bạn có thể chứng minh rằng mọi đường tròn đều đồng dạng bằng cách sử dụng một phép tịnh tiến[translations](gloss:translation) đơn giản và phép vị tự [dilations](gloss:dilation). 
-    figure: svg.similar-circles(width=640 height=380 viewBox="0 0 640 380")
+Một tính chất quan trọng của đường tròn là mọi đường tròn đều
+[similar](gloss:similar).
+Bạn có thể chứng minh rằng mọi đường tròn đều đồng dạng bằng cách sử dụng một phép tịnh tiến[translations](gloss:translation) đơn giản và phép vị tự [dilations](gloss:dilation):
+    
+	figure: svg.similar-circles(width=640 height=380 viewBox="0 0 640 380")
 
 ---
 > id: pi-definition
